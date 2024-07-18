@@ -20,27 +20,40 @@
   background-color: black;
 }
 
-.title-container {
+.global-navbar {
+  background-color: rebeccapurple;
+  width: 100%;
   padding: 8px;
+}
+
+.title-container {
 }
 
 .home-header {
   display: flex;
-  padding-top: 16px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 8px;
   position: relative;
 }
 
 .header-left {
   margin-right: auto;
+  display: flex;
+  justify-items: center;
 }
 
 .header-right {
   margin-left: auto;
+  display: flex;
 }
 
-.navbar-items {
-  display: flex;
-  padding: 8px;
+.navbar-item {
+  color: white;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-search {
+  border-radius: 2rem;
+  padding: 9px 0 9px 2.5rem;
 }
