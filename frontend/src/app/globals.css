@@ -55,9 +55,10 @@
 
 .primary-search {
   border-radius: 2rem;
-  padding: 9px 0 9px 2.5rem;
+  padding: 9px 2.5rem 9px 2.5rem;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 32px;
 }
 
 .search-form {
@@ -92,4 +93,14 @@
 
 .header-left a:first-of-type {
   margin-left: 0; /* Remove margin from the first a element */
+}
+
+.button-submit {
+  background-color: white;
+  color: black;
+}
+
+.search-button-div {
+  display: flex;
+  justify-content: center;
 }
