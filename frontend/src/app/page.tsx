@@ -8,7 +8,9 @@ const Home: React.FC = () => {
       <div className={"all-container"}>
           {/*<UserInterface backendName={"flask"}/>*/}
           <NavBar/>
-          <HomePage/>
+          <div className={"all-homepage-container"}>
+            <HomePage/>
+          </div>
       </div>
   )
 }

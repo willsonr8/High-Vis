@@ -2,9 +2,14 @@ import Search from "@/components/Search"
 
 function HomePage() {
     return (
-        <div className="w-full">
+        <div>
+            <div className={"home-container"}>
+                <p className={"text-white center"}>
+                    Hello World! This is High-Vis, a novel, data-centered fantasy football analytics platform.
+                </p>
+            </div>
             <div className="mt-4 mb-4 flex items-center justify-between gap-2 md:mt-8 md:mb-8">
-                <Search placeholder="Search invoices..."/>
+                <Search placeholder="Search players..."/>
             </div>
         </div>
     )
