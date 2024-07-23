@@ -1,13 +1,18 @@
+import Search from "@/components/Search"
 
 function HomePage() {
     return (
-        <div className={"all-container"}>
-            <div className={"bg-white items-center"}>
-                <div>
-                </div>
-            <h2 className="text-xl text-black font-bold text-center mb-6">{"NFL DATA VISUALIZER"}</h2>
+        <div>
+            <div className={"home-container"}>
+                <p className={"text-white center"}>
+                    Hello World! This is High-Vis, a novel, data-centered fantasy football analytics platform.
+                </p>
+            </div>
+            <div className="mt-4 mb-4 flex items-center justify-between gap-2 md:mt-8 md:mb-8">
+                <Search/>
             </div>
         </div>
-)}
+    )
+}
 
 export default HomePage

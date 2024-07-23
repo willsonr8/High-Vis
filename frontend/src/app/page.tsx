@@ -1,12 +1,16 @@
 import React from "react";
 import UserInterface from "@/components/UserInterface";
+import NavBar from "@/components/NavBar";
 import HomePage from "@/components/HomePage";
 
 const Home: React.FC = () => {
   return (
-      <div>
+      <div className={"all-container"}>
           {/*<UserInterface backendName={"flask"}/>*/}
-          <HomePage></HomePage>
+          <NavBar/>
+          <div className={"all-homepage-container"}>
+            <HomePage/>
+          </div>
       </div>
   )
 }
