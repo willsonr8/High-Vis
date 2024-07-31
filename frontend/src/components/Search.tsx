@@ -1,12 +1,14 @@
 'use client';
 
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { getPlayerData } from '@/api/ApiCalls';
+import {useRouter} from "next/navigation";
 
-const Search = ({ onSearch }) => {
+const Search = () => {
   const [term, setTerm] = useState('');
-  const [data, setData] = useState('');
+  const [player, setPlayer] = useState('');
+  const router = useRouter();
 
   const handleChange = (e) => {
     setTerm(e.target.value);
@@ -15,14 +17,14 @@ const Search = ({ onSearch }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const playerData = await handleSearch(term);
-    setData(playerData)
+    setPlayer(playerData.name);
+    router.push(`/players/${playerData.name}`);
   };
 
   const handleSearch = async (term: string) => {
-    //console.log(term);
     const playerData = await getPlayerData(term);
     console.log(playerData)
-    return playerData
+    return playerData;
   }
 
   return (
@@ -38,10 +40,10 @@ const Search = ({ onSearch }) => {
         {/*<MagnifyingGlassIcon className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-full text-gray-500 peer-focus:text-gray-900" />*/}
           <div className={"search-button-div"}><button className={"button-submit"} type="submit">Search</button></div>
       </form>
-      {data && (
+      {player && (
         <div>
           {/* Render player data here */}
-          <div className={"bg-white"}>{data}</div>
+          <div className={"bg-white"}>{JSON.stringify(player)}</div>
         </div>
       )}
     </div>
