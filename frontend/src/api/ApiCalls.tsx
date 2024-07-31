@@ -9,6 +9,6 @@ export const getPlayerData = async (playerName: string) => {
         return response.data;
     } catch (error) {
         console.error("Failed to get player information", error);
-        throw error;
+        return null;
     }
 };

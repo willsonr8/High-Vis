@@ -1,6 +1,7 @@
 import Search from "@/components/Search"
+import Link from "next/link"
 
-function HomePage() {
+const HomePage = () => {
     return (
         <div>
             <div className={"home-container"}>
