@@ -17,8 +17,9 @@ const Search = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const playerData = await handleSearch(term);
-    setPlayer(playerData.name);
-    router.push(`/players/${playerData.name}`);
+    setPlayer(playerData);
+    console.log(playerData)
+    router.push(`/players/${playerData}`);
   };
 
   const handleSearch = async (term: string) => {
