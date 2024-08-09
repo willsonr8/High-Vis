@@ -1,5 +1,5 @@
 import http.client
-from Player import PlayerInfo
+from .Player import PlayerInfo
 import json
 from dotenv import load_dotenv
 import os
@@ -20,6 +20,8 @@ class APICalls:
 
     @classmethod
     def make_request(cls, endpoint):
+        if cls.url is None:
+            raise ValueError("URL is not set. Please configure cls.url before making a request.")
         conn = http.client.HTTPSConnection(cls.url)
         conn.request("GET", endpoint, headers=cls.headers)
         response = conn.getresponse()
@@ -52,8 +54,9 @@ class APICalls:
     def get_player_info(cls, player_name):  # Get Player Information
 
         endpoint = f"/getNFLPlayerInfo?playerName={player_name}&getStats=true"
-
-        return cls.make_request(endpoint)
+        data = cls.make_request(endpoint)
+        print(data)
+        return data["body"][0]
 
     @classmethod
     def get_weekly_schedule(cls, week):
