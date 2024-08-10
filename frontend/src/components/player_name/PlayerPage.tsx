@@ -7,12 +7,23 @@ const PlayerPage = ({player}) => {
     }
     return (
         <div>
-            <div className={"player-container"}>
-                <p className={"text-white center"}>
-                    {`Hello World! This is the player page for ${player.espnName}.`}
-                </p>
-                <div className={"headshot-container"}>
-                    <img src={player["espnHeadshot"]} alt="Player image"/>.
+            <div className={"container-1"}>
+                <div className={"player-bio-container"}>
+                    <div className={"headshot-container"}>
+                        <img src={player["espnHeadshot"]} alt="Player image"/>.
+                    </div>
+                    <div className={"bio-text-container text-white"}>
+                        <span>{`${player.espnName}`}</span>
+                        <br/>
+                        <span>{`${player.pos}`}</span>
+                        <br/>
+                        <span>{`${player.team}, #${player.jerseyNum}`}</span>
+                        <br/>
+                        <span>{`${player.age} y/o, ${player.bDay}`}</span>
+                    </div>
+                    <div className={"team-image-container"}>
+                        <img src={"/team_logos/bears-logo.png"} alt="team logo"/>.
+                    </div>
                 </div>
             </div>
         </div>
