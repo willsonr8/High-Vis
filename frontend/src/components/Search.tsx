@@ -7,8 +7,16 @@ import {useRouter} from "next/navigation";
 
 const Search = () => {
   const [term, setTerm] = useState('');
-  const [player, setPlayer] = useState('');
   const router = useRouter();
+
+  const validateTerm = (value) => {
+    for (let i=0; i < value.length; i++) {
+      if (value[i] == " "){
+        value[i] = "_"
+      }
+    }
+    return value
+  }
 
   const handleChange = (e) => {
     setTerm(e.target.value);
@@ -16,18 +24,20 @@ const Search = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const playerData = await handleSearch(term);
-    setPlayer(playerData); // kinda unecessary
-    const playerID = playerData.player_ID;
-    console.log(playerID)
-    router.push(`/players/${playerID}`);
-  };
-
-  const handleSearch = async (term: string) => {
+    //const validTerm = validateTerm(term)
     const playerData = await getPlayerData(term);
+    if (typeof window !== "undefined") {
+            sessionStorage.setItem('player', JSON.stringify(playerData));
+    }
+    const player_name = playerData.player.espnName
     console.log(playerData)
-    return playerData;
-  }
+    if (player_name !== null) {
+      router.push(`/players?player-name=${term}`);
+    }
+    else {
+      router.push('/players')
+    }
+  };
 
   return (
     <div className="relative flex flex-1 flex-shrink-0">
@@ -42,12 +52,6 @@ const Search = () => {
         {/*<MagnifyingGlassIcon className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-full text-gray-500 peer-focus:text-gray-900" />*/}
           <div className={"search-button-div"}><button className={"button-submit"} type="submit">Search</button></div>
       </form>
-      {player && (
-        <div>
-          {/* Render player data here */}
-          <div className={"bg-white"}>{JSON.stringify(player)}</div>
-        </div>
-      )}
     </div>
   );
 }
