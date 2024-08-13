@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import {getFantasyPlayerStats} from "@/api/ApiCalls";
 
 const team_dict = {
     "ARI": "cardinals",
@@ -34,12 +35,40 @@ const team_dict = {
     "WAS": "commanders"
 }
 
-const PlayerPage = ({player}) => {
-    if (!player) {
-        return <p className={"text-white center"}>Loading player data...</p>;
+const renderFantasyData = async (player_id: string, team: string) => {
+    const playerData = await getFantasyPlayerStats(player_id, team);
+    if (playerData !== null) {
+      return playerData
     }
+    else {
+      return "Cannot validate player data"
+    }
+  };
+
+const PlayerPage = ({player_json}) => {
+    const [playerData, setPlayerData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const raw_player = JSON.parse(player_json.player);
+    const player = raw_player.body[0]
     const logo = team_dict[player.team];
     const id = player.espnID;
+
+    useEffect(() => {
+        const fetchPlayerData = async () => {
+            const data = await renderFantasyData(id, player.team);
+            if (data) {
+                setPlayerData(data);
+            } else {
+                setPlayerData(null);
+            }
+            setLoading(false);
+        };
+        fetchPlayerData();
+    }, [id, player.team]);
+
+    if (loading) {
+        return <p className={"text-white center"}>Loading fantasy data...</p>;
+    }
     return (
         <div>
             <div className={"container-1"}>
@@ -60,6 +89,11 @@ const PlayerPage = ({player}) => {
                         <img src={`/team_logos/${logo}-logo.png`} alt="team logo"/>.
                     </div>
                 </div>
+            </div>
+            <div className={"container-2"}>
+                <p className={"text-white"}>
+                    <pre>{JSON.stringify(playerData, null, 2)}</pre>
+                </p>
             </div>
         </div>
     )

@@ -10,7 +10,6 @@ const PlayerHome: React.FC = () => {
         const storedPlayer = sessionStorage.getItem('player');
         if(storedPlayer) {
             setPlayer(JSON.parse(storedPlayer))
-            console.log(storedPlayer)
         }
     }, [])
     console.log(player)
@@ -18,11 +17,12 @@ const PlayerHome: React.FC = () => {
         <div className={"all-container"}>
             <NavBar/>
             {player ? (
-                <div className={"all-player-page-container"}>
-                  <PlayerPage player={player["player"]}/>
+                <div className={"all-player-page-container text-white"}>
+                    <PlayerPage player_json={player}/>
+                    <p>Player data loaded</p>
                 </div>
             ) : (
-                <p>Loading player data...</p>
+                <p className={"text-white"}>Loading player data...</p>
             )}
         </div>
     )
