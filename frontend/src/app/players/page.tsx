@@ -1,12 +1,31 @@
+"use client"
 import React from 'react';
+import NavBar from "@/components/NavBar";
+import PlayerPage from "@/components/player_name/PlayerPage";
+import { useState, useEffect } from "react";
 
-const Players = () => {
-  return (
-    <div>
-      <h1>Players Page</h1>
-      <p>This is the players page.</p>
-    </div>
-  );
-};
+const PlayerHome: React.FC = () => {
+    const [player, setPlayer] = useState(null)
+    useEffect(() => {
+        const storedPlayer = sessionStorage.getItem('player');
+        if(storedPlayer) {
+            setPlayer(JSON.parse(storedPlayer))
+        }
+    }, [])
+    console.log(player)
+    return (
+        <div className={"all-container"}>
+            <NavBar/>
+            {player ? (
+                <div className={"all-player-page-container text-white"}>
+                    <PlayerPage player_json={player}/>
+                    <p>Player data loaded</p>
+                </div>
+            ) : (
+                <p className={"text-white"}>Loading player data...</p>
+            )}
+        </div>
+    )
+}
 
-export default Players;
+export default PlayerHome;

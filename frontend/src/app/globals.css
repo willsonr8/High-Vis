@@ -104,3 +104,39 @@
   display: flex;
   justify-content: center;
 }
+
+/*........................... PLAYER PAGE................................... */
+.container-1 {
+  background-color: gray;
+}
+
+.player-bio-container {
+  display: flex;
+  margin: 36px;
+}
+
+.bio-text-container {
+  text-align: left;
+  align-items: center;
+  padding-left: 36px;
+  line-height: 2;
+  font-size: 24px;
+}
+
+.headshot-container {
+  background-color: gray;
+  width: 20%;
+  line-height: 0;
+  img {
+    display: block;
+    vertical-align: bottom;
+    width: auto;
+    height: auto;
+  }
+}
+
+.team-image-container {
+  margin-left: auto;
+  line-height: 0;
+  width: 25%;
+}

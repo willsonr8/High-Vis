@@ -1,5 +1,5 @@
 import http.client
-from Player import PlayerInfo
+from .Player import PlayerInfo
 import json
 from dotenv import load_dotenv
 import os
@@ -20,24 +20,27 @@ class APICalls:
 
     @classmethod
     def make_request(cls, endpoint):
+        if cls.url is None:
+            raise ValueError("URL is not set. Please configure cls.url before making a request.")
         conn = http.client.HTTPSConnection(cls.url)
         conn.request("GET", endpoint, headers=cls.headers)
         response = conn.getresponse()
         data = response.read().decode("utf-8")
         parsed_data = json.loads(data)
+        #print(f"DATA AFTER JSON LOADS: {parsed_data}")
         return parsed_data
 
     @classmethod
     def get_player_news(cls, player_id):
         endpoint = f"/getNFLNews?playerID={player_id}&topNews=true&fantasyNews=true&recentNews=true&maxItems=10"
 
-        return cls.make_request(endpoint)
+        return json.dumps(cls.make_request(endpoint))
 
     @classmethod
     def get_nfl_teams(cls):
         endpoint = "/getNFLTeams?rosters=false&schedules=true&topPerformers=false&teamStats=true"
 
-        return cls.make_request(endpoint)
+        return json.dumps(cls.make_request(endpoint))
 
     @classmethod
     def get_single_player_stats(cls, player_id):  # Get NFL Games and Stats for Single Player
@@ -46,35 +49,35 @@ class APICalls:
                    f"passYards=.04&passTD=4&passInterceptions=-2&pointsPerReception=1&carries=.2&rushYards=.1&" \
                    f"rushTD=6&fumbles=-2&receivingYards=.1&receivingTD=6&targets=0&defTD=6"
 
-        return cls.make_request(endpoint)
+        return json.dumps(cls.make_request(endpoint))
 
     @classmethod
     def get_player_info(cls, player_name):  # Get Player Information
 
         endpoint = f"/getNFLPlayerInfo?playerName={player_name}&getStats=true"
-
-        return cls.make_request(endpoint)
+        return json.dumps(cls.make_request(endpoint))
 
     @classmethod
     def get_weekly_schedule(cls, week):
 
         endpoint = f"/getNFLGamesForWeek?week={week}&seasonType=reg&season=2023"
 
-        return cls.make_request(endpoint)
+        return json.dumps(cls.make_request(endpoint))
 
     @classmethod
     def get_team_schedule(cls, team_abv):
 
         endpoint = f"/getNFLTeamSchedule?teamAbv={team_abv}&season=2023"
 
-        return cls.make_request(endpoint)
+        data = json.dumps(cls.make_request(endpoint))
+        return data
 
     @classmethod
     def get_game_info(cls, game_id):
 
         endpoint = f"/getNFLGameInfo?gameID={game_id}"
 
-        return cls.make_request(endpoint)
+        return json.dumps(cls.make_request(endpoint))
 
     @classmethod
     def valid_player(cls, player_name):
@@ -87,15 +90,15 @@ class APICalls:
             return True
 
     @classmethod
-    def update_scoring_type(cls, player, scoring_type):
-        parsed_data = cls.get_single_player_stats(player.ID)
+    def update_scoring_type(cls, player_id, team, scoring_type="PPR"): # TODO
+        parsed_data = json.loads(cls.get_single_player_stats(player_id))
 
         fantasy_points = []
         player_games = []
 
         seen_games = set()
 
-        completed_team_games, all_team_games = cls.store_team_games(player.team)
+        completed_team_games, all_team_games = cls.store_team_games(team)
 
         for key in parsed_data["body"].keys():
             game_ID = parsed_data["body"][key]["gameID"]
@@ -127,13 +130,12 @@ class APICalls:
                     if game_week <= len(fantasy_points):
                         fantasy_points[game_week - 1] = float(parsed_data["body"][game]["fantasyPointsDefault"][f"{scoring_type}"])
 
-        player.fantasy_points = fantasy_points
+        return fantasy_points
 
     @classmethod
-    def pull_fantasy_info(cls, player, scoring_type):  # uses Get NFL Games and Stats For a Single Player
+    def get_fantasy_info(cls, player_id, team, scoring_type="PPR"):  # uses Get NFL Games and Stats For a Single Player
 
-        parsed_data = cls.get_single_player_stats(player.ID)
-
+        parsed_data = json.loads(cls.get_single_player_stats(player_id))
         fantasy_points = []
         # "Rushing"
         rush_avg = []
@@ -164,7 +166,7 @@ class APICalls:
 
         seen_games = set()
 
-        completed_team_games, all_team_games = cls.store_team_games(player.team)
+        completed_team_games, all_team_games = cls.store_team_games(team)
 
         for key in parsed_data["body"].keys():
             game_ID = parsed_data["body"][key]["gameID"]
@@ -321,51 +323,53 @@ class APICalls:
                         pass_completions[game_week - 1] = float(
                             parsed_data["body"][game].get("Passing", {}).get("passCompletions", 0.0))
 
-                    # Assign lists to player attributes
-        player.rush_avg = rush_avg
-        player.rush_yards = rush_yards
-        player.carries = carries
-        player.long_rush = long_rush
-        player.rush_td = rush_td
-        player.fumbles = fumbles
-        player.fumbles_lost = fumbles_lost
-        player.receptions = receptions
-        player.rec_td = rec_td
-        player.long_rec = long_rec
-        player.targets = targets
-        player.rec_yards = rec_yards
-        player.rec_avg = rec_avg
-        player.two_point_conversions = two_point_conversions
-        player.pass_attempts = pass_attempts
-        player.pass_avg = pass_avg
-        player.pass_td = pass_td
-        player.pass_yds = pass_yds
-        player.interceptions = interceptions
-        player.pass_completions = pass_completions
-        player.fantasy_points = fantasy_points
+        stats_dict = {
+            "rush_avg": rush_avg,
+            "rush_yards": rush_yards,
+            "carries": carries,
+            "long_rush": long_rush,
+            "rush_td": rush_td,
+            "fumbles": fumbles,
+            "fumbles_lost": fumbles_lost,
+            "receptions": receptions,
+            "rec_td": rec_td,
+            "long_rec": long_rec,
+            "targets": targets,
+            "rec_yards": rec_yards,
+            "rec_avg": rec_avg,
+            "two_point_conversions": two_point_conversions,
+            "pass_attempts": pass_attempts,
+            "pass_avg": pass_avg,
+            "pass_td": pass_td,
+            "pass_yds": pass_yds,
+            "interceptions": interceptions,
+            "pass_completions": pass_completions,
+            "fantasy_points": fantasy_points}
+
+        return json.dumps(stats_dict)
 
     @classmethod
     def pull_player(cls, name):  # uses Get Player Information API endpoint
         if name == "":
             return
 
-        parsed_data = cls.get_player_info(name)
+        parsed_data = json.loads(cls.get_player_info(name))
 
         player = PlayerInfo.from_api_response(parsed_data)
 
         return player
 
     @classmethod
-    def store_team_games(cls, teamAbv):
+    def store_team_games(cls, team):
 
-        parsed_data = cls.get_team_schedule(teamAbv)
+        parsed_data = json.loads(cls.get_team_schedule(team))
 
         completed_team_games = []
 
         all_team_games = []
 
         game_weeks = []
-
+        print(f"team schedule: ................. {parsed_data}")
         for game_data in parsed_data["body"]["schedule"]:
             game_type = game_data.get("seasonType")
             game_status = game_data.get("gameStatus")
@@ -404,15 +408,16 @@ class APICalls:
     @classmethod
     def get_game_week(cls, game_id):
 
-        parsed_data = cls.get_game_info(game_id)
-
-        game_week = int(parsed_data["body"]["gameWeek"][5:])
-
-        return game_week
+        parsed_data = json.loads(cls.get_game_info(game_id))
+        game_week = parsed_data["body"]["gameWeek"][5:]
+        if game_week.isdigit():
+            return int(game_week)
+        else:
+            return 99
 
     @classmethod
     def player_news_stack(cls, player, option, option_dict):
-        parsed_data = cls.get_player_news(player.ID)
+        parsed_data = json.loads(cls.get_player_news(player.ID))
         news_dict = []
         for news in parsed_data["body"]:
             real_title = news.get("title")

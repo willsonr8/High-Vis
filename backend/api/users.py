@@ -4,6 +4,7 @@ from ..db_models import db
 
 users_bp = Blueprint('users', __name__)
 
+
 @users_bp.route('/test', methods=['GET'])
 def test():
     return jsonify({'message': 'The server is running'})
