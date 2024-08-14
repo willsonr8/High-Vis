@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar";
 import PlayerPage from "@/components/player_name/PlayerPage";
 import { useState, useEffect } from "react";
 
+
 const PlayerHome: React.FC = () => {
     const [player, setPlayer] = useState(null)
     useEffect(() => {
@@ -19,7 +20,6 @@ const PlayerHome: React.FC = () => {
             {player ? (
                 <div className={"all-player-page-container text-white"}>
                     <PlayerPage player_json={player}/>
-                    <p>Player data loaded</p>
                 </div>
             ) : (
                 <p className={"text-white"}>Loading player data...</p>

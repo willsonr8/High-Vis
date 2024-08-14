@@ -12,10 +12,14 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
+    "@nextui-org/react": "^2.4.6",
+    "@nextui-org/table": "^2.0.39",
     "axios": "^1.7.2",
     "next": "14.2.4",
+    "nextui-cli": "^0.3.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "recharts": "^2.12.7"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",

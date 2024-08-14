@@ -1,21 +1,23 @@
-'use client';
-
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import React, { useState } from 'react';
-import { getPlayerData } from '@/api/ApiCalls';
+import { getPlayerBio } from '@/api/ApiCalls';
 import {useRouter} from "next/navigation";
 
 const Search = () => {
   const [term, setTerm] = useState('');
   const router = useRouter();
 
-  const validateTerm = (value) => {
-    for (let i=0; i < value.length; i++) {
-      if (value[i] == " "){
-        value[i] = "_"
+  const validateTerm = (inputTerm) => {
+    let newTerm = "";
+    for (let i=0; i < inputTerm.length; i++) {
+      if (inputTerm[i] == " "){
+        newTerm += "_";
+      }
+      else {
+        newTerm += inputTerm[i];
       }
     }
-    return value
+    return newTerm
   }
 
   const handleChange = (e) => {
@@ -24,15 +26,14 @@ const Search = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    //const validTerm = validateTerm(term)
-    const playerData = await getPlayerData(term);
+    const cleanTerm = validateTerm(term)
+    const playerData = await getPlayerBio(cleanTerm);
     if (typeof window !== "undefined") {
             sessionStorage.setItem('player', JSON.stringify(playerData));
     }
     const player_name = playerData.player.espnName
-    console.log(playerData)
     if (player_name !== null) {
-      router.push(`/players?player-name=${term}`);
+      router.push(`/players?player-name=${cleanTerm}`);
     }
     else {
       router.push('/players')
