@@ -43,15 +43,17 @@ const Search = () => {
   return (
     <div className="relative flex flex-1 flex-shrink-0">
       <form className="search-form" onSubmit={handleSubmit}>
-        <input
-            type={"text"}
-            className="primary-search peer block border w-3/5 border-gray-200 text-sm outline-2 placeholder:text-gray-500"
-            placeholder={"Search players"}
-            value={term}
-            onChange={handleChange}
-        />
-        {/*<MagnifyingGlassIcon className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-full text-gray-500 peer-focus:text-gray-900" />*/}
-          <div className={"search-button-div"}><button className={"button-submit"} type="submit">Search</button></div>
+        <div className={"primary-search-container"}>
+          <MagnifyingGlassIcon className="absolute h-[18px] w-[18px] -translate-y-full text-gray-500 peer-focus:text-gray-900" style={{ top: '29%', left: '17%' }}/>
+          <input
+              type={"text"}
+              className="primary-search peer block border border-gray-200 text-sm w-full outline-2 placeholder:text-gray-500"
+              placeholder={"Search players"}
+              value={term}
+              onChange={handleChange}
+          />
+        </div>
+        <div className={"search-button-div"}><button className={"button-submit"} type="submit">Search</button></div>
       </form>
     </div>
   );

@@ -1,20 +1,18 @@
 # Base image
-FROM node:alpine AS base
-RUN apk add --no-cache libc6-compat
+FROM node:18-alpine AS base
+RUN apk add --no-cache libc6-compat xdg-utils
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
+# Install dependencies
 COPY package.json package-lock.json* ./
-RUN \
-  if [ -f package-lock.json ]; then npm ci; \
-  else echo "package-lock.json not found." && exit 1; \
-  fi
+RUN npm ci
 
 # Copy all files
 COPY . .
 
 # Install Storybook
-RUN npm install @storybook/react
+RUN npm install @storybook/react @storybook/addon-essentials @storybook/addon-links --save-dev
 
 # Expose the port for Storybook
 EXPOSE 6006
@@ -22,6 +20,7 @@ EXPOSE 6006
 # Set environment variables for Storybook
 ENV PORT 6006
 ENV HOSTNAME "0.0.0.0"
+ENV NODE_ENV=development
 
 # Command to run Storybook
 CMD ["npm", "run", "storybook"]

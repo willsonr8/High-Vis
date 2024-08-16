@@ -92,8 +92,10 @@ const PlayerPage = ({player_json}) => {
                 </div>
             </div>
             <div className={"container-2"}>
-                <RenderTable data={playerData}/>
-                {/*{JSON.stringify(playerData, null, 2)}*/}
+                <div className={"data-table"}>
+                    <RenderTable data={playerData}/>
+                    {/*{JSON.stringify(playerData, null, 2)}*/}
+                </div>
             </div>
         </div>
     )

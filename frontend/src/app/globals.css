@@ -56,9 +56,6 @@
 .primary-search {
   border-radius: 2rem;
   padding: 9px 2.5rem 9px 2.5rem;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 32px;
 }
 
 .search-form {
@@ -95,17 +92,34 @@
   margin-left: 0; /* Remove margin from the first a element */
 }
 
-.button-submit {
-  background-color: white;
-  color: black;
-}
-
 .search-button-div {
   display: flex;
   justify-content: center;
 }
 
+.primary-search-container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 24px;
+}
+
+/*........................... BUTTONS....................................... */
+
+.button-submit {
+  background-color: white;
+  color: black;
+  padding: 8px;
+  width: 20%;
+  border-radius: 24px;
+}
+
 /*........................... PLAYER PAGE................................... */
+
+/*PLAYER BIO*/
 .container-1 {
   background-color: gray;
 }
@@ -139,4 +153,14 @@
   margin-left: auto;
   line-height: 0;
   width: 25%;
+}
+
+/*PLAYER DATA TABLE*/
+
+.container-2 {
+  display: flex;
+  justify-content: center;
+  .data-table {
+    width: 60%;
+  }
 }
