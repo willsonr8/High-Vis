@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {getFantasyPlayerStats} from "@/api/ApiCalls";
+import RenderTable from "@/components/player_name/Table";
 
 const team_dict = {
     "ARI": "cardinals",
@@ -74,7 +75,7 @@ const PlayerPage = ({player_json}) => {
             <div className={"container-1"}>
                 <div className={"player-bio-container"}>
                     <div className={"headshot-container"}>
-                        <img src={player["espnHeadshot"]} alt="Player image"/>.
+                        <img src={player["espnHeadshot"]} alt="Player image"/>
                     </div>
                     <div className={"bio-text-container text-white"}>
                         <span>{`${player.espnName}`}</span>
@@ -86,14 +87,15 @@ const PlayerPage = ({player_json}) => {
                         <span>{`${player.age} y/o, ${player.bDay}`}</span>
                     </div>
                     <div className={"team-image-container"}>
-                        <img src={`/team_logos/${logo}-logo.png`} alt="team logo"/>.
+                        <img src={`/team_logos/${logo}-logo.png`} alt="team logo"/>
                     </div>
                 </div>
             </div>
             <div className={"container-2"}>
-                <p className={"text-white"}>
-                    <pre>{JSON.stringify(playerData, null, 2)}</pre>
-                </p>
+                <div className={"data-table"}>
+                    <RenderTable data={playerData}/>
+                    {/*{JSON.stringify(playerData, null, 2)}*/}
+                </div>
             </div>
         </div>
     )

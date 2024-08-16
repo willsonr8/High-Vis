@@ -8,24 +8,30 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_bfbe06bedd3076d"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
+    "@nextui-org/react": "^2.4.6",
+    "@nextui-org/table": "^2.0.39",
     "axios": "^1.7.2",
     "next": "14.2.4",
+    "nextui-cli": "^0.3.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "recharts": "^2.12.7",
+    "vite": "^5.4.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
-    "@storybook/addon-essentials": "^8.1.11",
+    "@storybook/addon-essentials": "^8.2.9",
     "@storybook/addon-interactions": "^8.1.11",
-    "@storybook/addon-links": "^8.1.11",
+    "@storybook/addon-links": "^8.2.9",
     "@storybook/addon-onboarding": "^8.1.11",
     "@storybook/blocks": "^8.1.11",
     "@storybook/nextjs": "^8.1.11",
-    "@storybook/react": "^8.1.11",
+    "@storybook/react": "^8.2.9",
     "@storybook/test": "^8.1.11",
     "@types/node": "^20",
     "@types/react": "^18",
