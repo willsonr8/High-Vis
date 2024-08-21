@@ -6,6 +6,7 @@ import {
   TableRow,
   TableCell,
   getKeyValue} from "@nextui-org/table";
+import React from "react";
 
 interface PlayerStats {
     rush_avg: number[];
@@ -29,6 +30,7 @@ interface PlayerStats {
     interceptions: number[];
     pass_completions: number[];
     fantasy_points: number[];
+    team_games: string[];
 }
 
 interface PlayerData {
@@ -37,7 +39,7 @@ interface PlayerData {
 
 function getRows(data: PlayerStats) {
   const all_rows = []
-  for (let i = 0; i < 18; i++) {
+  for (let i = 0; i < data.team_games.length; i++) {
     const newRow = {
       week: i + 1,
       fantasy_points: data.fantasy_points[i],
@@ -61,6 +63,7 @@ function getRows(data: PlayerStats) {
       pass_yds: data.pass_yds[i],
       interceptions: data.interceptions[i],
       pass_completions: data.pass_completions[i],
+      team_games: data.team_games[i]
     }
     all_rows.push(newRow)
   }
@@ -70,7 +73,11 @@ function getRows(data: PlayerStats) {
 const qb_columns = [
   {
     key: "week",
-    label: "Game Week"
+    label: "Week"
+  },
+  {
+    key: "team_games",
+    label: "Game",
   },
   {
     key: "fantasy_points",
@@ -162,16 +169,33 @@ export default function RenderTable({ data }: { data: PlayerData }) {
   const jsonString = data.player_stats.replace(/\\/g, "");
   const parsedPlayerStats: PlayerStats = JSON.parse(jsonString);
 
+  const classNames = React.useMemo(
+    () => ({
+      wrapper: ["p-0", "rounded-none", "shadow-none"],
+      th: ["bg-transparent", "text-default-500", "border-x","border-divider", "whitespace-nowrap", "text-center", "text-base"], // changes headers
+      td: [
+        "border",
+        "border-divider",
+        "whitespace-nowrap",
+        "text-center",
+      ],
+      loadingWrapper: []
+    }),
+    [],
+  );
+
   const rows = getRows(parsedPlayerStats);
   return (
-  <Table aria-label="Example table with dynamic content">
+  <Table
+    aria-label="Example table with dynamic content"
+    classNames={classNames}>
     <TableHeader columns={qb_columns}>
-      {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}
+      {(column) => <TableColumn align={"center"} key={column.key}><div className={"w-24 flex justify-center"}>{column.label}</div></TableColumn>}
     </TableHeader>
     <TableBody items={rows}>
       {(item) => (
-        <TableRow key={item.week}>
-          {(columnKey) => <TableCell>{getKeyValue(item, columnKey)}</TableCell>}
+        <TableRow className={"table-row"} key={item.week}>
+          {(columnKey: string) => <TableCell><div className={"w-24 flex justify-center"}>{getKeyValue(item, columnKey)}</div></TableCell>}
         </TableRow>
       )}
     </TableBody>

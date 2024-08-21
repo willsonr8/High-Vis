@@ -92,7 +92,7 @@ const PlayerPage = ({player_json}) => {
                 </div>
             </div>
             <div className={"container-2"}>
-                <div className={"data-table"}>
+                <div className={"data-table shadow-small"}>
                     <RenderTable data={playerData}/>
                     {/*{JSON.stringify(playerData, null, 2)}*/}
                 </div>
