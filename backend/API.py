@@ -32,13 +32,13 @@ class APICalls:
     def get_player_news(cls, player_id):
         endpoint = f"/getNFLNews?playerID={player_id}&topNews=true&fantasyNews=true&recentNews=true&maxItems=10"
 
-        return json.dumps(cls.make_request(endpoint))
+        return cls.make_request(endpoint)
 
     @classmethod
     def get_nfl_teams(cls):
         endpoint = "/getNFLTeams?rosters=false&schedules=true&topPerformers=false&teamStats=true"
 
-        return json.dumps(cls.make_request(endpoint))
+        return cls.make_request(endpoint)
 
     @classmethod
     def get_single_player_stats(cls, player_id):  # Get NFL Games and Stats for Single Player
@@ -47,34 +47,34 @@ class APICalls:
                    f"passYards=.04&passTD=4&passInterceptions=-2&pointsPerReception=1&carries=.2&rushYards=.1&" \
                    f"rushTD=6&fumbles=-2&receivingYards=.1&receivingTD=6&targets=0&defTD=6"
 
-        return json.dumps(cls.make_request(endpoint))
+        return cls.make_request(endpoint)
 
     @classmethod
     def get_player_info(cls, player_name):  # Get Player Information
 
         endpoint = f"/getNFLPlayerInfo?playerName={player_name}&getStats=true"
-        return json.dumps(cls.make_request(endpoint))
+        return cls.make_request(endpoint)
 
     @classmethod
     def get_weekly_schedule(cls, week, season="2024"):
 
         endpoint = f"/getNFLGamesForWeek?week={week}&seasonType=reg&season={season}"
 
-        return json.dumps(cls.make_request(endpoint))
+        return cls.make_request(endpoint)
 
     @classmethod
     def get_team_schedule(cls, team_abv, season="2024"):
 
         endpoint = f"/getNFLTeamSchedule?teamAbv={team_abv}&season={season}"
 
-        return json.dumps(cls.make_request(endpoint))
+        return cls.make_request(endpoint)
 
     @classmethod
     def get_game_info(cls, game_id):
 
         endpoint = f"/getNFLGameInfo?gameID={game_id}"
 
-        return json.dumps(cls.make_request(endpoint))
+        return cls.make_request(endpoint)
 
     @classmethod
     def valid_player(cls, player_name):
@@ -88,7 +88,7 @@ class APICalls:
 
     @classmethod
     def update_scoring_type(cls, player_id, team, scoring_type="PPR"): # TODO
-        parsed_data = json.loads(cls.get_single_player_stats(player_id))
+        parsed_data = cls.get_single_player_stats(player_id)
 
         fantasy_points = []
         player_games = []
@@ -132,7 +132,7 @@ class APICalls:
     @classmethod
     def get_fantasy_info(cls, player_id, team, scoring_type="PPR", year="2024"):  # uses Get NFL Games and Stats For a Single Player
 
-        parsed_data = json.loads(cls.get_single_player_stats(player_id))
+        parsed_data = cls.get_single_player_stats(player_id)
         fantasy_points = []
         # "Rushing"
         rush_avg = []
@@ -346,7 +346,7 @@ class APICalls:
             "pass_completions": pass_completions,
             "fantasy_points": fantasy_points}
 
-        return json.dumps(stats_dict)
+        return stats_dict
 
     # @classmethod
     # def pull_player(cls, name):  # uses Get Player Information API endpoint
@@ -362,7 +362,7 @@ class APICalls:
     @classmethod
     def store_team_games(cls, team):
 
-        parsed_data = json.loads(cls.get_team_schedule(team))
+        parsed_data = cls.get_team_schedule(team)
 
         completed_team_games = []
 
@@ -434,3 +434,9 @@ class APICalls:
             if week_number and 1 <= week_number <= 18:
                 news_dict.append((week_number, option_dict[option][week_number - 1], real_title, link))
         return news_dict
+
+    @classmethod
+    def get_all_players(cls):
+
+        endpoint = "/getNFLPlayerList"
+        return cls.make_request(endpoint)

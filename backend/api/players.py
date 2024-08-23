@@ -4,6 +4,11 @@ from ..API import APICalls
 player_bp = Blueprint('player', __name__)
 
 
+@player_bp.route('/all_players', methods=['GET'])
+def get_player_list():
+    player_list = APICalls.get_all_players()
+    return jsonify({"player_list": player_list})
+
 @player_bp.route('/player_name/<player_name>', methods=['GET'])
 def get_player(player_name):
     player = APICalls.get_player_info(player_name)  # player is a dict

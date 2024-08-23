@@ -5,6 +5,7 @@ import {useRouter} from "next/navigation";
 
 const Search = () => {
   const [term, setTerm] = useState('');
+  const [searchError, setSearchError] = useState(false);
   const router = useRouter();
 
   const validateTerm = (inputTerm) => {
@@ -31,17 +32,17 @@ const Search = () => {
     if (typeof window !== "undefined") {
             sessionStorage.setItem('player', JSON.stringify(playerData));
     }
-    const player_name = playerData.player.espnName
-    if (player_name !== null) {
+    if (!playerData["player"]["error"]) {
+      setSearchError(false)
       router.push(`/players?player-name=${cleanTerm}`);
     }
     else {
-      router.push('/players')
+      setSearchError(true)
     }
   };
 
   return (
-    <div className="relative flex flex-1 flex-shrink-0">
+      <div className="relative flex flex-1 flex-shrink-0">
       <form className="search-form" onSubmit={handleSubmit}>
         <div className={"primary-search-container"}>
           <MagnifyingGlassIcon className="absolute h-[18px] w-[18px] -translate-y-full text-gray-500 peer-focus:text-gray-900" style={{ top: '29%', left: '17%' }}/>
@@ -53,6 +54,7 @@ const Search = () => {
               onChange={handleChange}
           />
         </div>
+        {searchError && <div><p>Invalid player. Please try again.</p></div>}
         <div className={"search-button-div"}><button className={"button-submit"} type="submit">Search</button></div>
       </form>
     </div>

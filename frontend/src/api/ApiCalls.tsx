@@ -23,3 +23,13 @@ export const getFantasyPlayerStats = async (playerID: string, team: string) => {
         return null;
     }
 };
+
+export const getAllPlayers = async () => {
+    try {
+        const response = await axios.get(`${API_URL}/player/all_players`);
+        return response.data;
+    } catch (error) {
+        console.error("Failed to get all players", error);
+        return null;
+    }
+};
