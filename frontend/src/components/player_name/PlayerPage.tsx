@@ -49,7 +49,7 @@ const renderFantasyData = async (player_id: string, team: string) => {
 const PlayerPage = ({player_json}) => {
     const [playerData, setPlayerData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const raw_player = JSON.parse(player_json.player);
+    const raw_player = player_json.player;
     const player = raw_player.body[0]
     const logo = team_dict[player.team];
     const id = player.espnID;

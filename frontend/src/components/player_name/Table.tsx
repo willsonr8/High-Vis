@@ -33,10 +33,6 @@ interface PlayerStats {
     team_games: string[];
 }
 
-interface PlayerData {
-    player_stats: string;
-}
-
 function getRows(data: PlayerStats) {
   const all_rows = []
   for (let i = 0; i < data.team_games.length; i++) {
@@ -165,9 +161,9 @@ const qb_columns = [
   },
 ];
 
-export default function RenderTable({ data }: { data: PlayerData }) {
-  const jsonString = data.player_stats.replace(/\\/g, "");
-  const parsedPlayerStats: PlayerStats = JSON.parse(jsonString);
+export default function RenderTable({ data }) {
+  //const jsonString = data.player_stats.replace(/\\/g, "");
+  const parsedPlayerStats: PlayerStats = data.player_stats
 
   const classNames = React.useMemo(
     () => ({
