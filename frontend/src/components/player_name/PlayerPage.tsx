@@ -36,27 +36,28 @@ const team_dict = {
     "WAS": "commanders"
 }
 
-const renderFantasyData = async (player_id: string, team: string) => {
+const renderFantasyData = async (player_id: string, team: string, player_pos: string) => {
     const playerData = await getFantasyPlayerStats(player_id, team);
     if (playerData !== null) {
-      return playerData
+        playerData["player_pos"] = player_pos;
+        return playerData
     }
     else {
-      return "Cannot validate player data"
+        return "Cannot validate player data"
     }
   };
 
 const PlayerPage = ({player_json}) => {
     const [playerData, setPlayerData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const raw_player = JSON.parse(player_json.player);
+    const raw_player = player_json.player;
     const player = raw_player.body[0]
     const logo = team_dict[player.team];
     const id = player.espnID;
 
     useEffect(() => {
         const fetchPlayerData = async () => {
-            const data = await renderFantasyData(id, player.team);
+            const data = await renderFantasyData(id, player.team, player.pos);
             if (data) {
                 setPlayerData(data);
             } else {
@@ -65,7 +66,7 @@ const PlayerPage = ({player_json}) => {
             setLoading(false);
         };
         fetchPlayerData();
-    }, [id, player.team]);
+    }, [id, player.team, player.pos]);
 
     if (loading) {
         return <p className={"text-white center"}>Loading fantasy data...</p>;
@@ -92,9 +93,8 @@ const PlayerPage = ({player_json}) => {
                 </div>
             </div>
             <div className={"container-2"}>
-                <div className={"data-table"}>
+                <div className={"data-table shadow-small"}>
                     <RenderTable data={playerData}/>
-                    {/*{JSON.stringify(playerData, null, 2)}*/}
                 </div>
             </div>
         </div>

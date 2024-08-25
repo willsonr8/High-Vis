@@ -1,5 +1,4 @@
 import http.client
-from .Player import PlayerInfo
 import json
 from dotenv import load_dotenv
 import os
@@ -27,20 +26,19 @@ class APICalls:
         response = conn.getresponse()
         data = response.read().decode("utf-8")
         parsed_data = json.loads(data)
-        #print(f"DATA AFTER JSON LOADS: {parsed_data}")
         return parsed_data
 
     @classmethod
     def get_player_news(cls, player_id):
         endpoint = f"/getNFLNews?playerID={player_id}&topNews=true&fantasyNews=true&recentNews=true&maxItems=10"
 
-        return json.dumps(cls.make_request(endpoint))
+        return cls.make_request(endpoint)
 
     @classmethod
     def get_nfl_teams(cls):
         endpoint = "/getNFLTeams?rosters=false&schedules=true&topPerformers=false&teamStats=true"
 
-        return json.dumps(cls.make_request(endpoint))
+        return cls.make_request(endpoint)
 
     @classmethod
     def get_single_player_stats(cls, player_id):  # Get NFL Games and Stats for Single Player
@@ -49,35 +47,34 @@ class APICalls:
                    f"passYards=.04&passTD=4&passInterceptions=-2&pointsPerReception=1&carries=.2&rushYards=.1&" \
                    f"rushTD=6&fumbles=-2&receivingYards=.1&receivingTD=6&targets=0&defTD=6"
 
-        return json.dumps(cls.make_request(endpoint))
+        return cls.make_request(endpoint)
 
     @classmethod
     def get_player_info(cls, player_name):  # Get Player Information
 
         endpoint = f"/getNFLPlayerInfo?playerName={player_name}&getStats=true"
-        return json.dumps(cls.make_request(endpoint))
+        return cls.make_request(endpoint)
 
     @classmethod
-    def get_weekly_schedule(cls, week):
+    def get_weekly_schedule(cls, week, season="2024"):
 
-        endpoint = f"/getNFLGamesForWeek?week={week}&seasonType=reg&season=2023"
+        endpoint = f"/getNFLGamesForWeek?week={week}&seasonType=reg&season={season}"
 
-        return json.dumps(cls.make_request(endpoint))
+        return cls.make_request(endpoint)
 
     @classmethod
-    def get_team_schedule(cls, team_abv):
+    def get_team_schedule(cls, team_abv, season="2024"):
 
-        endpoint = f"/getNFLTeamSchedule?teamAbv={team_abv}&season=2023"
+        endpoint = f"/getNFLTeamSchedule?teamAbv={team_abv}&season={season}"
 
-        data = json.dumps(cls.make_request(endpoint))
-        return data
+        return cls.make_request(endpoint)
 
     @classmethod
     def get_game_info(cls, game_id):
 
         endpoint = f"/getNFLGameInfo?gameID={game_id}"
 
-        return json.dumps(cls.make_request(endpoint))
+        return cls.make_request(endpoint)
 
     @classmethod
     def valid_player(cls, player_name):
@@ -91,14 +88,14 @@ class APICalls:
 
     @classmethod
     def update_scoring_type(cls, player_id, team, scoring_type="PPR"): # TODO
-        parsed_data = json.loads(cls.get_single_player_stats(player_id))
+        parsed_data = cls.get_single_player_stats(player_id)
 
         fantasy_points = []
         player_games = []
 
         seen_games = set()
 
-        completed_team_games, all_team_games = cls.store_team_games(team)
+        completed_team_games, all_team_games, opponents = cls.store_team_games(team)
 
         for key in parsed_data["body"].keys():
             game_ID = parsed_data["body"][key]["gameID"]
@@ -124,7 +121,7 @@ class APICalls:
         for game in player_games:
             if game not in seen_games:
 
-                if int(game[0:8]) > 20230827:  # acts as a date comparison
+                if int(game[0:8]) > 20240827:  # acts as a date comparison
                     game_week = cls.get_game_week(game)
 
                     if game_week <= len(fantasy_points):
@@ -133,9 +130,9 @@ class APICalls:
         return fantasy_points
 
     @classmethod
-    def get_fantasy_info(cls, player_id, team, scoring_type="PPR"):  # uses Get NFL Games and Stats For a Single Player
+    def get_fantasy_info(cls, player_id, team, scoring_type="PPR", year="2024"):  # uses Get NFL Games and Stats For a Single Player
 
-        parsed_data = json.loads(cls.get_single_player_stats(player_id))
+        parsed_data = cls.get_single_player_stats(player_id)
         fantasy_points = []
         # "Rushing"
         rush_avg = []
@@ -166,7 +163,7 @@ class APICalls:
 
         seen_games = set()
 
-        completed_team_games, all_team_games = cls.store_team_games(team)
+        completed_team_games, all_team_games, opponents = cls.store_team_games(team)
 
         for key in parsed_data["body"].keys():
             game_ID = parsed_data["body"][key]["gameID"]
@@ -284,7 +281,7 @@ class APICalls:
         for game in player_games:
             if game not in seen_games:
 
-                if int(game[0:8]) > 20230827:  # should be a way to clean this up
+                if int(game[0:8]) > 20240827:  # should be a way to clean this up
                     game_week = cls.get_game_week(game)
 
                     if game_week <= len(fantasy_points):
@@ -324,6 +321,7 @@ class APICalls:
                             parsed_data["body"][game].get("Passing", {}).get("passCompletions", 0.0))
 
         stats_dict = {
+            "team_games": opponents,
             "rush_avg": rush_avg,
             "rush_yards": rush_yards,
             "carries": carries,
@@ -346,34 +344,24 @@ class APICalls:
             "pass_completions": pass_completions,
             "fantasy_points": fantasy_points}
 
-        return json.dumps(stats_dict)
+        return stats_dict
 
-    @classmethod
-    def pull_player(cls, name):  # uses Get Player Information API endpoint
-        if name == "":
-            return
-
-        parsed_data = json.loads(cls.get_player_info(name))
-
-        player = PlayerInfo.from_api_response(parsed_data)
-
-        return player
 
     @classmethod
     def store_team_games(cls, team):
 
-        parsed_data = json.loads(cls.get_team_schedule(team))
+        parsed_data = cls.get_team_schedule(team)
 
         completed_team_games = []
 
         all_team_games = []
 
         game_weeks = []
-        print(f"team schedule: ................. {parsed_data}")
         for game_data in parsed_data["body"]["schedule"]:
             game_type = game_data.get("seasonType")
             game_status = game_data.get("gameStatus")
             game_ID = game_data.get("gameID")
+            game_time = game_data.get("gameTime_epoch")
             game_string = game_data.get('away') + ' @ ' + game_data.get('home')
 
             if game_type == "Regular Season" and game_data.get('away') != game_data.get('home'):
@@ -388,7 +376,7 @@ class APICalls:
 
         indices_to_remove = []
 
-        for i in range(len(game_weeks) - 1):
+        for i in range(len(game_weeks) - 1): # TODO: combine below into one function, possible performance increase
 
             if game_weeks[i] == game_weeks[i + 1]:
                 indices_to_remove.append(i + 1)
@@ -403,7 +391,10 @@ class APICalls:
                 completed_team_games.insert(i + 1, None)
                 all_team_games.insert(i + 1, (i + 2, "Bye"))
 
-        return completed_team_games, all_team_games
+        opponents = []
+        for i in all_team_games:
+            opponents.append(i[1])
+        return completed_team_games, all_team_games, opponents
 
     @classmethod
     def get_game_week(cls, game_id):
@@ -413,7 +404,7 @@ class APICalls:
         if game_week.isdigit():
             return int(game_week)
         else:
-            return 99
+            return -1
 
     @classmethod
     def player_news_stack(cls, player, option, option_dict):
@@ -431,3 +422,9 @@ class APICalls:
             if week_number and 1 <= week_number <= 18:
                 news_dict.append((week_number, option_dict[option][week_number - 1], real_title, link))
         return news_dict
+
+    @classmethod
+    def get_all_players(cls):
+
+        endpoint = "/getNFLPlayerList"
+        return cls.make_request(endpoint)

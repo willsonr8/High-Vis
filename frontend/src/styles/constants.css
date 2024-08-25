@@ -1,0 +1,37 @@
+/* _variables.css */
+:root {
+  /* Purple Colors */
+  --purple-50: #FEECFE;
+  --purple-100: #FDD5F9;
+  --purple-200: #FCADF9;
+  --purple-300: #F182F6;
+  --purple-400: #DD62ED;
+  --purple-500: #c031e2;
+  --purple-600: #9823C2;
+  --purple-700: #7318A2;
+  --purple-800: #520F83;
+  --purple-900: #3B096C;
+
+  /* Blue Colors */
+  --blue-50: #F0FCFF;
+  --blue-100: #E6FAFE;
+  --blue-200: #D7F8FE;
+  --blue-300: #C3F4FD;
+  --blue-400: #A5EEFD;
+  --blue-500: #7EE7FC;
+  --blue-600: #06B7DB;
+  --blue-700: #09AACD;
+  --blue-800: #0E8AAA;
+  --blue-900: #053B48;
+
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DB;
+  --gray-400: #9CA3AF;
+  --gray-500: #6B7280;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+}
