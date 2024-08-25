@@ -6,7 +6,8 @@ import {
   TableRow,
   TableCell,
   getKeyValue} from "@nextui-org/table";
-import React from "react";
+import React, {useEffect, useState} from "react";
+import {useDeepCompareEffect} from 'react-use';
 
 interface PlayerStats {
     rush_avg: number[];
@@ -32,6 +33,12 @@ interface PlayerStats {
     fantasy_points: number[];
     team_games: string[];
 }
+
+type CachedData = {
+  parsedPlayerStats: PlayerStats | null;
+  rows: any[];
+  cols: any[];
+};
 
 function getRows(data: PlayerStats) {
   const all_rows = []
@@ -64,6 +71,21 @@ function getRows(data: PlayerStats) {
     all_rows.push(newRow)
   }
   return all_rows;
+}
+
+function getCols(position: string) {
+  if (position == "QB") {
+    return qb_columns
+  }
+  else if (position == "WR" || position == "TE") {
+    return wr_columns
+  }
+  else if (position == "RB") {
+    return rb_columns
+  }
+  else {
+    return wr_columns
+  }
 }
 
 const qb_columns = [
@@ -161,9 +183,207 @@ const qb_columns = [
   },
 ];
 
+const wr_columns = [
+  {
+    key: "week",
+    label: "Week"
+  },
+  {
+    key: "team_games",
+    label: "Game",
+  },
+  {
+    key: "fantasy_points",
+    label: "Points",
+  },
+    {
+    key: "receptions",
+    label: "Receptions",
+  },
+  {
+    key: "targets",
+    label: "Targets",
+  },
+  {
+    key: "rec_yards",
+    label: "Rec Yards"
+  },
+  {
+    key: "rec_td",
+    label: "Rec TDs",
+  },
+  {
+    key: "long_rec",
+    label: "Long Rec",
+  },
+  {
+    key: "rec_avg",
+    label: "Yds/Reception",
+  },
+  {
+    key: "rush_yards",
+    label: "Rush Yds",
+  },
+  {
+    key: "rush_td",
+    label: "Rush TDs"
+  },
+  {
+    key: "carries",
+    label: "Carries",
+  },
+  {
+    key: "long_rush",
+    label: "Long Rush",
+  },
+  {
+    key: "rush_avg",
+    label: "Yds/Rush",
+  },
+  {
+    key: "fumbles",
+    label: "Fumbles"
+  },
+  {
+    key: "fumbles_lost",
+    label: "Fumbles Lost",
+  },
+  {
+    key: "two_point_conversions",
+    label: "2 Point Conv."
+  },
+    {
+    key: "pass_yds",
+    label: "Pass Yards",
+  },
+  {
+    key: "pass_td",
+    label: "Pass TDs",
+  },
+  {
+    key: "interceptions",
+    label: "Ints",
+  },
+  {
+    key: "pass_attempts",
+    label: "Attempts"
+  },
+  {
+    key: "pass_completions",
+    label: "Completions",
+  },
+  {
+    key: "pass_avg",
+    label: "Yds/Attempt",
+  },
+];
+
+const rb_columns = [
+  {
+    key: "week",
+    label: "Week"
+  },
+  {
+    key: "team_games",
+    label: "Game",
+  },
+  {
+    key: "fantasy_points",
+    label: "Points",
+  },
+  {
+    key: "rush_yards",
+    label: "Rush Yds",
+  },
+  {
+    key: "rush_td",
+    label: "Rush TDs"
+  },
+  {
+    key: "carries",
+    label: "Carries",
+  },
+  {
+    key: "long_rush",
+    label: "Long Rush",
+  },
+  {
+    key: "rush_avg",
+    label: "Yds/Rush",
+  },
+  {
+    key: "fumbles",
+    label: "Fumbles"
+  },
+  {
+    key: "fumbles_lost",
+    label: "Fumbles Lost",
+  },
+  {
+    key: "receptions",
+    label: "Receptions",
+  },
+  {
+    key: "targets",
+    label: "Targets",
+  },
+  {
+    key: "rec_yards",
+    label: "Rec Yards"
+  },
+  {
+    key: "rec_td",
+    label: "Rec TDs",
+  },
+  {
+    key: "long_rec",
+    label: "Long Rec",
+  },
+  {
+    key: "rec_avg",
+    label: "Yds/Reception",
+  },
+  {
+    key: "two_point_conversions",
+    label: "2 Point Conv."
+  },
+    {
+    key: "pass_yds",
+    label: "Pass Yards",
+  },
+  {
+    key: "pass_td",
+    label: "Pass TDs",
+  },
+    {
+    key: "interceptions",
+    label: "Ints",
+  },
+  {
+    key: "pass_attempts",
+    label: "Attempts"
+  },
+  {
+    key: "pass_completions",
+    label: "Completions",
+  },
+  {
+    key: "pass_avg",
+    label: "Yds/Attempt",
+  },
+];
+
 export default function RenderTable({ data }) {
-  //const jsonString = data.player_stats.replace(/\\/g, "");
-  const parsedPlayerStats: PlayerStats = data.player_stats
+  const [cachedData, setCachedData] = useState<CachedData>({ parsedPlayerStats: null, rows: [], cols: [] });
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const parsedPlayerStats: PlayerStats = data.player_stats;
+    const rows = getRows(parsedPlayerStats);
+    const cols = getCols(data.player_pos || "WR");
+    setCachedData({ parsedPlayerStats, rows, cols });
+    setLoading(false)
+  }, [data]);
 
   const classNames = React.useMemo(
     () => ({
@@ -179,16 +399,18 @@ export default function RenderTable({ data }) {
     }),
     [],
   );
+  if (loading) {
+    return <p className={"text-white center"}>Loading fantasy data...</p>;
+  }
 
-  const rows = getRows(parsedPlayerStats);
   return (
   <Table
     aria-label="Example table with dynamic content"
     classNames={classNames}>
-    <TableHeader columns={qb_columns}>
+    <TableHeader columns={cachedData.cols}>
       {(column) => <TableColumn align={"center"} key={column.key}><div className={"w-24 flex justify-center"}>{column.label}</div></TableColumn>}
     </TableHeader>
-    <TableBody items={rows}>
+    <TableBody items={cachedData.rows}>
       {(item) => (
         <TableRow className={"table-row"} key={item.week}>
           {(columnKey: string) => <TableCell><div className={"w-24 flex justify-center"}>{getKeyValue(item, columnKey)}</div></TableCell>}

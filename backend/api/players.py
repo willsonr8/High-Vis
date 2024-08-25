@@ -6,21 +6,21 @@ player_bp = Blueprint('player', __name__)
 
 
 @player_bp.route('/all_players', methods=['GET'])
-@cache.cached(timeout=60 * 10)
+@cache.cached(timeout=60 * 10, key_prefix="get_player_list")
 def get_player_list():
     player_list = APICalls.get_all_players()
     return jsonify({"player_list": player_list})
 
 
 @player_bp.route('/player_name/<player_name>', methods=['GET'])
-@cache.cached(timeout=60 * 10)
+@cache.cached(timeout=60 * 10, key_prefix="get_player")
 def get_player(player_name):
     player = APICalls.get_player_info(player_name)
     return jsonify({"player": player})
 
 
 @player_bp.route('/player_stats', methods=['GET'])
-@cache.cached(timeout=60 * 10)
+@cache.cached(timeout=60 * 10, key_prefix="get_fantasy_stats")
 def get_fantasy_stats():
     player_id = request.args.get('player_id')
     team = request.args.get('team')

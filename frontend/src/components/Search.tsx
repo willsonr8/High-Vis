@@ -54,7 +54,7 @@ const Search = () => {
               onChange={handleChange}
           />
         </div>
-        {searchError && <div><p>Invalid player. Please try again.</p></div>}
+        {searchError && <div><p>{"Invalid player. Please try again."}</p></div>}
         <div className={"search-button-div"}><button className={"button-submit"} type="submit">Search</button></div>
       </form>
     </div>

@@ -320,8 +320,6 @@ class APICalls:
                         pass_completions[game_week - 1] = float(
                             parsed_data["body"][game].get("Passing", {}).get("passCompletions", 0.0))
 
-
-
         stats_dict = {
             "team_games": opponents,
             "rush_avg": rush_avg,
@@ -348,16 +346,6 @@ class APICalls:
 
         return stats_dict
 
-    # @classmethod
-    # def pull_player(cls, name):  # uses Get Player Information API endpoint
-    #     if name == "":
-    #         return
-    #
-    #     parsed_data = json.loads(cls.get_player_info(name))
-    #
-    #     player = PlayerInfo.from_api_response(parsed_data)
-    #
-    #     return player
 
     @classmethod
     def store_team_games(cls, team):

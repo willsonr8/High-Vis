@@ -36,13 +36,16 @@ const team_dict = {
     "WAS": "commanders"
 }
 
-const renderFantasyData = async (player_id: string, team: string) => {
+const cache = new Map();
+
+const renderFantasyData = async (player_id: string, team: string, player_pos: string) => {
     const playerData = await getFantasyPlayerStats(player_id, team);
     if (playerData !== null) {
-      return playerData
+        playerData["player_pos"] = player_pos;
+        return playerData
     }
     else {
-      return "Cannot validate player data"
+        return "Cannot validate player data"
     }
   };
 
@@ -56,16 +59,20 @@ const PlayerPage = ({player_json}) => {
 
     useEffect(() => {
         const fetchPlayerData = async () => {
-            const data = await renderFantasyData(id, player.team);
-            if (data) {
-                setPlayerData(data);
+            if (!playerData) {
+                const data = await renderFantasyData(id, player.team, player.pos);
+                if (data) {
+                    setPlayerData(data);
+                } else {
+                    setPlayerData(null);
+                }
+                setLoading(false);
             } else {
-                setPlayerData(null);
+                setLoading(false)
             }
-            setLoading(false);
         };
         fetchPlayerData();
-    }, [id, player.team]);
+    }, [id, player.team, player.pos, playerData]);
 
     if (loading) {
         return <p className={"text-white center"}>Loading fantasy data...</p>;
@@ -94,7 +101,6 @@ const PlayerPage = ({player_json}) => {
             <div className={"container-2"}>
                 <div className={"data-table shadow-small"}>
                     <RenderTable data={playerData}/>
-                    {/*{JSON.stringify(playerData, null, 2)}*/}
                 </div>
             </div>
         </div>
