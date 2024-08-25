@@ -7,7 +7,6 @@ import {
   TableCell,
   getKeyValue} from "@nextui-org/table";
 import React, {useEffect, useState} from "react";
-import {useDeepCompareEffect} from 'react-use';
 
 interface PlayerStats {
     rush_avg: number[];

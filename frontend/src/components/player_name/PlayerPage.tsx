@@ -36,8 +36,6 @@ const team_dict = {
     "WAS": "commanders"
 }
 
-const cache = new Map();
-
 const renderFantasyData = async (player_id: string, team: string, player_pos: string) => {
     const playerData = await getFantasyPlayerStats(player_id, team);
     if (playerData !== null) {
@@ -59,20 +57,16 @@ const PlayerPage = ({player_json}) => {
 
     useEffect(() => {
         const fetchPlayerData = async () => {
-            if (!playerData) {
-                const data = await renderFantasyData(id, player.team, player.pos);
-                if (data) {
-                    setPlayerData(data);
-                } else {
-                    setPlayerData(null);
-                }
-                setLoading(false);
+            const data = await renderFantasyData(id, player.team, player.pos);
+            if (data) {
+                setPlayerData(data);
             } else {
-                setLoading(false)
+                setPlayerData(null);
             }
+            setLoading(false);
         };
         fetchPlayerData();
-    }, [id, player.team, player.pos, playerData]);
+    }, [id, player.team, player.pos]);
 
     if (loading) {
         return <p className={"text-white center"}>Loading fantasy data...</p>;
