@@ -12,6 +12,8 @@
     "chromatic": "npx chromatic --project-token=chpt_bfbe06bedd3076d"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@heroicons/react": "^2.1.5",
     "@nextui-org/react": "^2.4.6",
     "@nextui-org/table": "^2.0.39",

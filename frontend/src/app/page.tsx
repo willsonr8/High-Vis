@@ -8,7 +8,6 @@ import Link from "next/link";
 const Home: React.FC = () => {
   return (
       <div className={"all-container"}>
-          {/*<UserInterface backendName={"flask"}/>*/}
           <NavBar/>
           <div className={"all-homepage-container"}>
             <HomePage/>
