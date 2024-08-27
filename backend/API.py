@@ -77,16 +77,6 @@ class APICalls:
         return cls.make_request(endpoint)
 
     @classmethod
-    def valid_player(cls, player_name):
-
-        data = cls.get_player_info(player_name)
-
-        if "error" in data:
-            return False
-        else:
-            return True
-
-    @classmethod
     def update_scoring_type(cls, player_id, team, scoring_type="PPR"): # TODO
         parsed_data = cls.get_single_player_stats(player_id)
 
@@ -130,6 +120,14 @@ class APICalls:
         return fantasy_points
 
     @classmethod
+    def get_fantasy_projections(cls):
+        endpoint = ("/getNFLProjections?week=season&archiveSeason=2024&twoPointConversions=2&passYards=.04&passAttempts"
+                    "=-.5&passTD=4&passCompletions=1&passInterceptions=-2&pointsPerReception=1&carries=.2&rushYards=.1&"
+                    "rushTD=6&fumbles=-2&receivingYards=.1&receivingTD=6&targets=.1&fgMade=3&fgMissed=-1&xpMade=1&xp"
+                    "Missed=-1")
+        return cls.make_request(endpoint)
+
+    @classmethod
     def get_fantasy_info(cls, player_id, team, scoring_type="PPR", year="2024"):  # uses Get NFL Games and Stats For a Single Player
 
         parsed_data = cls.get_single_player_stats(player_id)
@@ -164,6 +162,7 @@ class APICalls:
         seen_games = set()
 
         completed_team_games, all_team_games, opponents = cls.store_team_games(team)
+        projections = cls.get_fantasy_projections()
 
         for key in parsed_data["body"].keys():
             game_ID = parsed_data["body"][key]["gameID"]
