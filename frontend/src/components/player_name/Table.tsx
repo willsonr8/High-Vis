@@ -381,8 +381,11 @@ export default function RenderTable({ data }) {
     const rows = getRows(parsedPlayerStats);
     const cols = getCols(data.player_pos || "WR");
     setCachedData({ parsedPlayerStats, rows, cols });
+    sessionStorage.setItem(cachedData, "playerData")
     setLoading(false)
   }, [data]);
+
+  const storedPlayer = sessionStorage.getItem('player');
 
   const classNames = React.useMemo(
     () => ({

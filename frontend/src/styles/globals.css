@@ -283,3 +283,19 @@
 }
   }
 }
+
+/*PLAYER LINE CHART */
+
+.container-3 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 48px;
+  height: 515px;
+
+  .line-chart {
+    width: 60%;
+    border-radius: 12px;
+    background-color: var(--gray-800);
+    padding: 8px;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {getFantasyPlayerStats} from "@/api/ApiCalls";
 import RenderTable from "@/components/player_name/Table";
+import RenderLineChart from "@/components/player_name/LineChart";
 
 const team_dict = {
     "ARI": "cardinals",
@@ -95,6 +96,11 @@ const PlayerPage = ({player_json}) => {
             <div className={"container-2"}>
                 <div className={"data-table shadow-small"}>
                     <RenderTable data={playerData}/>
+                </div>
+            </div>
+            <div className={"container-3"}>
+                <div className={"line-chart shadow-small"}>
+                    <RenderLineChart data={playerData} />
                 </div>
             </div>
         </div>

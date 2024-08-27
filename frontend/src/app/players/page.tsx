@@ -28,9 +28,9 @@ const PlayerHome: React.FC = () => {
                     <PlayerPage player_json={player}/>
                 </div>
             ) : error ? (
-                <p className={"text-white"}>Player data not found. Please try again later.</p>
+                <p className={"text-white text-center"}>Player data not found. Please try again later.</p>
             ) : (
-                <p className={"text-white"}>Loading player data...</p>
+                <p className={"text-white text-center"}>Loading player data...</p>
             )}
         </div>
     )
