@@ -3,6 +3,77 @@ import json
 from dotenv import load_dotenv
 import os
 
+PPR = {
+    "twoPointConversion": 2,
+    "rushYds": 0.1,
+    "carries": 0,
+    "rushTD": 6,
+    "passAttempts": 0,
+    "passTD": 4,
+    "passYds": 0.04,
+    "int": -2,
+    "passCompletions": 0,
+    "receptions": 1,
+    "recTD": 6,
+    "targets": 0,
+    "recYds": 0.1,
+    "fumblesLost": -2,
+}
+
+half_PPR = {
+    "twoPointConversion": 2,
+    "rushYds": 0.1,
+    "carries": 0,
+    "rushTD": 6,
+    "passAttempts": 0,
+    "passTD": 4,
+    "passYds": 0.04,
+    "int": -2,
+    "passCompletions": 0,
+    "receptions": 0.5,
+    "recTD": 6,
+    "targets": 0,
+    "recYds": 0.1,
+    "fumblesLost": -2,
+}
+
+standard = {
+    "twoPointConversion": 2,
+    "rushYds": 0.1,
+    "carries": 0,
+    "rushTD": 6,
+    "passAttempts": 0,
+    "passTD": 4,
+    "passYds": 0.04,
+    "int": -2,
+    "passCompletions": 0,
+    "receptions": 0,
+    "recTD": 6,
+    "targets": 0,
+    "recYds": 0.1,
+    "fumblesLost": -2,
+}
+
+
+def calculate_projections(projections, point_values=None):
+    if point_values is None:
+        point_values = PPR
+    weekly_projections = []
+
+    for week_data in projections:
+        total_projection = 0.0
+        for key, value in week_data.items():
+            if isinstance(value, dict):
+                for sub_key, sub_value in value.items():
+                    float_value = float(sub_value)
+                    total_projection += float_value * point_values.get(sub_key, 1)
+            elif key != "week":
+                float_value = float(value)
+                total_projection += float_value * point_values.get(key, 1)
+        weekly_projections.append(round(total_projection, 2))
+
+    return weekly_projections
+
 
 class APICalls:
     url = None
@@ -26,6 +97,7 @@ class APICalls:
         response = conn.getresponse()
         data = response.read().decode("utf-8")
         parsed_data = json.loads(data)
+        print(f"Cache miss on this call: {conn}")
         return parsed_data
 
     @classmethod
@@ -120,12 +192,15 @@ class APICalls:
         return fantasy_points
 
     @classmethod
-    def get_fantasy_projections(cls):
-        endpoint = ("/getNFLProjections?week=season&archiveSeason=2024&twoPointConversions=2&passYards=.04&passAttempts"
-                    "=-.5&passTD=4&passCompletions=1&passInterceptions=-2&pointsPerReception=1&carries=.2&rushYards=.1&"
-                    "rushTD=6&fumbles=-2&receivingYards=.1&receivingTD=6&targets=.1&fgMade=3&fgMissed=-1&xpMade=1&xp"
-                    "Missed=-1")
-        return cls.make_request(endpoint)
+    def get_fantasy_projections(cls, player_id):
+        endpoint = (f"/getNFLProjections?playerID={player_id}&archiveSeason=2024&twoPointConversions=2&passYards=.04&"
+                    "passAttempts=-.5&passTD=4&passCompletions=1&passInterceptions=-2&pointsPerReception=1&carries=.2&"
+                    "rushYards=.1&rushTD=6&fumbles=-2&receivingYards=.1&receivingTD=6&targets=.1&fgMade=3&fgMissed=-1"
+                    "&xpMade=1&xpMissed=-1")
+
+        data = cls.make_request(endpoint)
+        projections = calculate_projections(data['body']['projections'])
+        return projections
 
     @classmethod
     def get_fantasy_info(cls, player_id, team, scoring_type="PPR", year="2024"):  # uses Get NFL Games and Stats For a Single Player
@@ -161,8 +236,8 @@ class APICalls:
 
         seen_games = set()
 
-        completed_team_games, all_team_games, opponents = cls.store_team_games(team)
-        projections = cls.get_fantasy_projections()
+        completed_team_games, all_team_games, opponents, bye_week = cls.store_team_games(team)
+        projections = cls.get_fantasy_projections(player_id)
 
         for key in parsed_data["body"].keys():
             game_ID = parsed_data["body"][key]["gameID"]
@@ -172,7 +247,6 @@ class APICalls:
             if game in player_games:  # handles games where points accrued
 
                 game_data = parsed_data["body"].get(game, {})
-
                 game_points = float(game_data.get("fantasyPointsDefault", {}).get(f"{scoring_type}", 0.0))
                 game_rush_avg = float(game_data.get("Rushing", {}).get("rushAvg", 0.0))
                 game_rush_yards = float(game_data.get("Rushing", {}).get("rushYds", 0.0))
@@ -319,6 +393,9 @@ class APICalls:
                         pass_completions[game_week - 1] = float(
                             parsed_data["body"][game].get("Passing", {}).get("passCompletions", 0.0))
 
+        if bye_week is not None:
+            projections.insert(bye_week - 1, None)
+
         stats_dict = {
             "team_games": opponents,
             "rush_avg": rush_avg,
@@ -341,19 +418,18 @@ class APICalls:
             "pass_yds": pass_yds,
             "interceptions": interceptions,
             "pass_completions": pass_completions,
-            "fantasy_points": fantasy_points}
+            "fantasy_points": fantasy_points,
+            "projections": projections}
 
         return stats_dict
-
 
     @classmethod
     def store_team_games(cls, team):
 
         parsed_data = cls.get_team_schedule(team)
-
         completed_team_games = []
-
         all_team_games = []
+        bye_week = None
 
         game_weeks = []
         for game_data in parsed_data["body"]["schedule"]:
@@ -389,11 +465,12 @@ class APICalls:
             if (game_weeks[i] + 1) != (game_weeks[i + 1]):
                 completed_team_games.insert(i + 1, None)
                 all_team_games.insert(i + 1, (i + 2, "Bye"))
+                bye_week = i + 2
 
         opponents = []
         for i in all_team_games:
             opponents.append(i[1])
-        return completed_team_games, all_team_games, opponents
+        return completed_team_games, all_team_games, opponents, bye_week
 
     @classmethod
     def get_game_week(cls, game_id):

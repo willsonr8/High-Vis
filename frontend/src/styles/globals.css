@@ -243,6 +243,10 @@
     border-radius: 12px;
     background-color: var(--gray-800);
     padding: 8px;
+    .select-container {
+      padding: 8px 0;
+      margin-right: auto;
+    }
     .table-row {
 
     }
