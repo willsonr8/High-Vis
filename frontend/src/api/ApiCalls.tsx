@@ -14,9 +14,7 @@ export const getPlayerBio = async (playerName: string) => {
 
 export const getFantasyPlayerStats = async (playerID: string, team: string) => {
     try {
-        const response = await axios.get(`${API_URL}/player/player_stats`, {
-            params: { player_id: playerID, team: team }
-        });
+        const response = await axios.get(`${API_URL}/player/player_stats/${playerID}/${team}`);
         return response.data;
     } catch (error) {
         console.error("Failed to get fantasy stats", error);

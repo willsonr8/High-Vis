@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import {getFantasyPlayerStats} from "@/api/ApiCalls";
 import RenderTable from "@/components/player_name/Table";
 import RenderLineChart from "@/components/player_name/LineChart";
+import SeasonSelect from "@/components/player_name/Select";
 
 const team_dict = {
     "ARI": "cardinals",
@@ -59,6 +60,7 @@ export interface PlayerStats {
     interceptions: number[];
     pass_completions: number[];
     fantasy_points: number[];
+    projections: number[];
     team_games: string[];
 }
 
@@ -74,6 +76,7 @@ function getRows(data: PlayerStats) {
     const newRow = {
       week: i + 1,
       fantasy_points: data.fantasy_points[i],
+      projections: data.projections[i],
       rush_avg: data.rush_avg[i],
       rush_yards: data.rush_yards[i],
       carries: data.carries[i],
@@ -124,6 +127,10 @@ const qb_columns = [
   {
     key: "team_games",
     label: "Game",
+  },
+  {
+    key: "projections",
+    label: "Projected"
   },
   {
     key: "fantasy_points",
@@ -221,6 +228,10 @@ const wr_columns = [
     label: "Game",
   },
   {
+    key: "projections",
+    label: "Projected"
+  },
+  {
     key: "fantasy_points",
     label: "Points",
   },
@@ -314,6 +325,10 @@ const rb_columns = [
   {
     key: "team_games",
     label: "Game",
+  },
+  {
+    key: "projections",
+    label: "Projected"
   },
   {
     key: "fantasy_points",
@@ -410,22 +425,45 @@ const renderFantasyData = async (player_id: string, team: string, player_pos: st
     else {
         return "Cannot validate player data"
     }
-  };
+};
 
 const PlayerPage = ({player_json}) => {
     const [playerData, setPlayerData] = useState(null);
     const [rows, setRows] = useState([]);
     const [cols, setCols] = useState([])
+    const [year, setYear] = useState(sessionStorage.getItem("year") || "2024");
     const [loading, setLoading] = useState(true);
+
     const raw_player = player_json.player;
     const player = raw_player.body[0]
     const logo = team_dict[player.team];
     const id = player.espnID;
 
+    // useEffect(() => {
+    //     const handleStorageChange = () => {
+    //         const storedYear = sessionStorage.getItem("year");
+    //         if (storedYear) {
+    //             setYear(storedYear);
+    //         }
+    //     };
+    //     // Listen for sessionStorage changes
+    //     window.addEventListener("storage", handleStorageChange);
+    //     // Cleanup listener on unmount
+    //     handleStorageChange()
+    //     return () => {
+    //         window.removeEventListener("storage", handleStorageChange);
+    //     };
+    // }, []);
+    //
+    // useEffect(() => {
+    //     console.log(year);
+    // }, [year]);
+
     useEffect(() => {
         const fetchPlayerData = async () => {
             setLoading(true)
             const data = await renderFantasyData(id, player.team, player.pos);
+            console.log(data)
             if (data) {
                 setPlayerData(data);
                 const parsedPlayerStats: PlayerStats = data.player_stats;
@@ -468,6 +506,9 @@ const PlayerPage = ({player_json}) => {
             </div>
             <div className={"container-2"}>
                 <div className={"data-table shadow-small"}>
+                    <div className={"select-container"}>
+                        <SeasonSelect/>
+                    </div>
                     <RenderTable data={playerData.player_stats} rows={rows} cols={cols}/>
                 </div>
             </div>

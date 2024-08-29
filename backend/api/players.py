@@ -19,11 +19,9 @@ def get_player(player_name):
     return jsonify({"player": player})
 
 
-@player_bp.route('/player_stats', methods=['GET'])
+@player_bp.route('/player_stats/<player_id>/<team>', methods=['GET'])
 @cache.cached(timeout=60 * 10)
-def get_fantasy_stats():
-    player_id = request.args.get('player_id')
-    team = request.args.get('team')
+def get_fantasy_stats(player_id, team):
     if not player_id or not team:
         return jsonify({"error": "player_id and team are required"}), 400
     player_stats = APICalls.get_fantasy_info(player_id, team)
