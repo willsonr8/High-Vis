@@ -1,6 +1,10 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
+const labelStyle = {
+    color: 'black',
+};
+
 export default function RenderLineChart({ rows, selectionKey, selectionLabel }) {
   const yAxisDomain = [
     0,
@@ -17,7 +21,7 @@ export default function RenderLineChart({ rows, selectionKey, selectionLabel }) 
             top: 50,
             right: 20,
             left: 20,
-            bottom: 20,
+            bottom: 50,
           }}
       >
         <CartesianGrid strokeDasharray="3 3"/>
@@ -34,7 +38,7 @@ export default function RenderLineChart({ rows, selectionKey, selectionLabel }) 
           style: {textAnchor: 'middle'}
         }}
         />
-        <Tooltip/>
+        <Tooltip labelStyle={labelStyle} label={selectionLabel}/>
         <Line type="monotone" dataKey={selectionKey} labelHidden stroke="#8884d8" activeDot={{r: 8}}/>
         <text x={"50%"} y={"5%"} textAnchor="middle" dominantBaseline="middle" fill="#fff" fontSize={16} fontWeight="500">
             {`${selectionLabel} by Game Week`}
