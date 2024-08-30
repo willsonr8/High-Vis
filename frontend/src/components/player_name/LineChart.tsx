@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-export default function RenderLineChart({data, rows, cols}) {
+export default function RenderLineChart({ rows, cols }) {
 
   return (
     <ResponsiveContainer width="100%" height="100%">

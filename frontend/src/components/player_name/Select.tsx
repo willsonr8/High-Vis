@@ -6,23 +6,24 @@ const data = [
     {key: "2023", label: "2023"}
 ]
 
-export default function SeasonSelect() {
-  const [value, setValue] = React.useState<Selection>(new Set(["2024"]));
+export default function SeasonSelect({ year, setYear }) {
+  const [value, setValue] = React.useState<Selection>(new Set([year]));
   useEffect(() => {
       const selectedYear = Array.from(value)[0];
       if (typeof selectedYear === "string") {
-          sessionStorage.setItem("year", selectedYear);
+          setYear(selectedYear);
+          console.log("Year in Select.tsx: ", selectedYear)
       } else {
           console.log("Year is not a string")
       }
-  }, [value]);
+  }, [value, setYear]);
   return (
     <Select
       items={data}
       variant={"underlined"}
       color={"secondary"}
       className="max-w-xs"
-      defaultSelectedKeys={["2024"]}
+      defaultSelectedKeys={[year]}
       onSelectionChange={setValue}
       aria-label={"Year selection"}
     >

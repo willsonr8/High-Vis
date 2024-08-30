@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect, useMemo} from "react";
 import {getFantasyPlayerStats} from "@/api/ApiCalls";
 import RenderTable from "@/components/player_name/Table";
 import RenderLineChart from "@/components/player_name/LineChart";
@@ -416,10 +416,11 @@ const rb_columns = [
   },
 ];
 
-const renderFantasyData = async (player_id: string, team: string, player_pos: string) => {
-    const playerData = await getFantasyPlayerStats(player_id, team);
+const renderFantasyData = async (player_id: string, team: string, player_pos: string, year: string) => {
+    const playerData = await getFantasyPlayerStats(player_id, team, year);
     if (playerData !== null) {
         playerData["player_pos"] = player_pos;
+        console.log(playerData)
         return playerData
     }
     else {
@@ -432,38 +433,29 @@ const PlayerPage = ({player_json}) => {
     const [rows, setRows] = useState([]);
     const [cols, setCols] = useState([])
     const [year, setYear] = useState(sessionStorage.getItem("year") || "2024");
-    const [loading, setLoading] = useState(true);
+    const [loading1, setLoading1] = useState(true);
+    const [loading2, setLoading2] = useState(true);
 
-    const raw_player = player_json.player;
-    const player = raw_player.body[0]
-    const logo = team_dict[player.team];
-    const id = player.espnID;
+    const player = useMemo(() => {
+        setLoading1(true)
+        const raw_player = player_json.player;
+        setLoading1(false)
+        return raw_player.body[0];
+    }, [player_json.player]);
 
-    // useEffect(() => {
-    //     const handleStorageChange = () => {
-    //         const storedYear = sessionStorage.getItem("year");
-    //         if (storedYear) {
-    //             setYear(storedYear);
-    //         }
-    //     };
-    //     // Listen for sessionStorage changes
-    //     window.addEventListener("storage", handleStorageChange);
-    //     // Cleanup listener on unmount
-    //     handleStorageChange()
-    //     return () => {
-    //         window.removeEventListener("storage", handleStorageChange);
-    //     };
-    // }, []);
-    //
-    // useEffect(() => {
-    //     console.log(year);
-    // }, [year]);
+    const logo = useMemo(() => team_dict[player.team], [player.team]);
+    const id = useMemo(() => player.espnID, [player.espnID]);
+
+    useEffect(() => {
+        sessionStorage.setItem("year", year);
+    }, [year]);
 
     useEffect(() => {
         const fetchPlayerData = async () => {
-            setLoading(true)
-            const data = await renderFantasyData(id, player.team, player.pos);
-            console.log(data)
+            setLoading2(true)
+            console.log("Year in PlayerPage.tsx: ", year)
+            const data = await renderFantasyData(id, player.team, player.pos, year);
+            console.log("Fetched data for year:", year, data);
             if (data) {
                 setPlayerData(data);
                 const parsedPlayerStats: PlayerStats = data.player_stats;
@@ -474,18 +466,24 @@ const PlayerPage = ({player_json}) => {
             } else {
                 setPlayerData(null);
             }
-            setLoading(false);
+            setLoading2(false);
         };
         fetchPlayerData();
-    }, [id, player.team, player.pos]);
-    
+    }, [id, player.team, player.pos, year]);
 
-    if (loading) {
-        return <p className={"text-white center"}>Loading fantasy data...</p>;
-    }
+    useEffect(() => {
+        console.log("PlayerPage re-render with year:", year);
+    });
+
+
     return (
         <div>
             <div className={"container-1"}>
+                {loading1 ? (
+                <div className={"text-white text-center"}>
+                    Loading ...
+                </div>
+                ) : (
                 <div className={"player-bio-container"}>
                     <div className={"headshot-container"}>
                         <img src={player["espnHeadshot"]} alt="Player image"/>
@@ -502,20 +500,30 @@ const PlayerPage = ({player_json}) => {
                     <div className={"team-image-container"}>
                         <img src={`/team_logos/${logo}-logo.png`} alt="team logo"/>
                     </div>
-                </div>
+                </div>)}
             </div>
             <div className={"container-2"}>
+                {loading2 ? (
+                <div className={"text-white text-center"}>
+                    Loading ...
+                </div>
+                ) : (
                 <div className={"data-table shadow-small"}>
                     <div className={"select-container"}>
-                        <SeasonSelect/>
+                        <SeasonSelect year={year} setYear={setYear}/>
                     </div>
                     <RenderTable data={playerData.player_stats} rows={rows} cols={cols}/>
-                </div>
+                </div>)}
             </div>
             <div className={"container-3"}>
-                <div className={"line-chart shadow-small"}>
-                    <RenderLineChart data={playerData.player_stats} rows={rows} cols={cols}/>
+                {loading2 ? (
+                <div className={"text-white text-center"}>
+                    Loading ...
                 </div>
+                ) : (
+                <div className={"line-chart shadow-small"}>
+                    <RenderLineChart rows={rows} cols={cols}/>
+                </div>)}
             </div>
         </div>
     )
