@@ -1,7 +1,11 @@
-import React, { PureComponent } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import React from 'react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-export default function RenderLineChart({ rows, cols }) {
+export default function RenderLineChart({ rows, selectionKey, selectionLabel }) {
+  const yAxisDomain = [
+    0,
+    Math.max(...rows.map(row => (row[selectionKey] as number) || 0)) + 5,
+  ];
 
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -23,17 +27,17 @@ export default function RenderLineChart({ rows, cols }) {
           offset: -5,
           style: {marginTop: 8}
         }}/>
-        <YAxis dataKey={"fantasy_points"} type="number" domain={[0, 30]} allowDataOverflow label={{
-          value: "Fantasy Points",
+        <YAxis dataKey={selectionKey} domain={yAxisDomain} type="number" allowDataOverflow label={{
+          value: selectionLabel,
           angle: -90,
           position: 'insideLeft',
           style: {textAnchor: 'middle'}
-        }} ticks={[0, 5, 10, 15, 20, 25, 30]}
+        }}
         />
         <Tooltip/>
-        <Line type="monotone" dataKey="fantasy_points" labelHidden stroke="#8884d8" activeDot={{r: 8}}/>
+        <Line type="monotone" dataKey={selectionKey} labelHidden stroke="#8884d8" activeDot={{r: 8}}/>
         <text x={"50%"} y={"5%"} textAnchor="middle" dominantBaseline="middle" fill="#fff" fontSize={16} fontWeight="500">
-          Fantasy Points by Game Week
+            {`${selectionLabel} by Game Week`}
         </text>
       </LineChart>
     </ResponsiveContainer>

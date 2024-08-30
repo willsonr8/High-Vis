@@ -16,7 +16,7 @@ export default function SeasonSelect({ year, setYear }) {
       } else {
           console.log("Year is not a string")
       }
-  }, [value, setYear]);
+  }, [value, setYear, year]);
   return (
     <Select
       items={data}

@@ -3,6 +3,7 @@ import {getFantasyPlayerStats} from "@/api/ApiCalls";
 import RenderTable from "@/components/player_name/Table";
 import RenderLineChart from "@/components/player_name/LineChart";
 import SeasonSelect from "@/components/player_name/Select";
+import DataToggle from "@/components/player_name/DataToggle";
 
 const team_dict = {
     "ARI": "cardinals",
@@ -432,7 +433,9 @@ const PlayerPage = ({player_json}) => {
     const [playerData, setPlayerData] = useState(null);
     const [rows, setRows] = useState([]);
     const [cols, setCols] = useState([])
-    const [year, setYear] = useState(sessionStorage.getItem("year") || "2024");
+    const [year, setYear] = useState("2024");
+    const [selectionKey, setSelectionKey] = useState("fantasy_points");
+    const [selectionLabel, setSelectionLabel] = useState("Fantasy Points");
     const [loading1, setLoading1] = useState(true);
     const [loading2, setLoading2] = useState(true);
 
@@ -449,6 +452,11 @@ const PlayerPage = ({player_json}) => {
     useEffect(() => {
         sessionStorage.setItem("year", year);
     }, [year]);
+
+    useEffect(() => {
+        sessionStorage.setItem("selection_key", selectionKey);
+        sessionStorage.setItem("selection_label", selectionLabel);
+    }, [selectionKey, selectionLabel]);
 
     useEffect(() => {
         const fetchPlayerData = async () => {
@@ -508,12 +516,12 @@ const PlayerPage = ({player_json}) => {
                     Loading ...
                 </div>
                 ) : (
-                <div className={"data-table shadow-small"}>
-                    <div className={"select-container"}>
-                        <SeasonSelect year={year} setYear={setYear}/>
-                    </div>
-                    <RenderTable data={playerData.player_stats} rows={rows} cols={cols}/>
-                </div>)}
+                    <div className={"data-table shadow-small"}>
+                        <div className={"select-container"}>
+                            <SeasonSelect year={year} setYear={setYear}/>
+                        </div>
+                        <RenderTable data={playerData.player_stats} rows={rows} cols={cols}/>
+                    </div>)}
             </div>
             <div className={"container-3"}>
                 {loading2 ? (
@@ -521,9 +529,13 @@ const PlayerPage = ({player_json}) => {
                     Loading ...
                 </div>
                 ) : (
-                <div className={"line-chart shadow-small"}>
-                    <RenderLineChart rows={rows} cols={cols}/>
-                </div>)}
+                    <div className={"line-chart shadow-small"}>
+                        <div className={"select-container"}>
+                            <DataToggle selectionKey={selectionKey} setSelectionKey={setSelectionKey}
+                                        selectionLabel={selectionLabel} setSelectionLabel={setSelectionLabel}/>
+                        </div>
+                        <RenderLineChart rows={rows} selectionKey={selectionKey} selectionLabel={selectionLabel}/>
+                    </div>)}
             </div>
         </div>
     )
