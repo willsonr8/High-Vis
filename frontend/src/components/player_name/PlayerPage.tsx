@@ -429,8 +429,8 @@ const renderFantasyData = async (player_id: string, team: string, player_pos: st
 
 const PlayerPage = ({player_json}) => {
     const [playerData, setPlayerData] = useState(null);
-    const [rows, setRows] = useState([]);
-    const [cols, setCols] = useState([])
+    const [rows, setRows] = useState();
+    const [cols, setCols] = useState()
     const [year, setYear] = useState(sessionStorage.getItem("year") || "2024");
     const [loading, setLoading] = useState(true);
 

@@ -52,19 +52,6 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
-  storybook:
-    build:
-      context: ./frontend
-      dockerfile: storybook.dockerfile
-    image: nfl-storybook
-    container_name: nfl-storybook
-    ports:
-      - 6006:6006
-    environment:
-      - NODE_ENV=production
-      - PORT=6006
-      - HOSTNAME=0.0.0.0
-
 volumes:
   pgdata: {}
 
