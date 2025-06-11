@@ -81,6 +81,9 @@ class APICalls:
 
     @classmethod
     def initialize(cls):
+        """
+        This method initializes the API calls by loading environment variables.
+        """
         load_dotenv()
         cls.url = os.environ["RAPID_API_URL"]
         cls.headers = {
@@ -90,6 +93,11 @@ class APICalls:
 
     @classmethod
     def make_request(cls, endpoint):
+        """
+        Makes a GET request to the specified endpoint using the configured URL and headers.
+        :param endpoint: The API endpoint to which the request is made.
+        :return: Python dictionary containing the parsed JSON response.
+        """
         if cls.url is None:
             raise ValueError("URL is not set. Please configure cls.url before making a request.")
         conn = http.client.HTTPSConnection(cls.url)
