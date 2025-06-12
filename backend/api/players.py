@@ -1,9 +1,9 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify
+
 from ..API import APICalls
 from ..app import cache
 
 player_bp = Blueprint('player', __name__)
-
 
 @player_bp.route('/all_players', methods=['GET'])
 @cache.cached(timeout=60 * 10)
