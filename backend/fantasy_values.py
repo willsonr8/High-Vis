@@ -28,3 +28,25 @@ HALF_PPR_SCORING = {
     **PPR_SCORING,
     "points_per_reception": 0.5,
 }
+
+IDP_PPR_SCORING = {
+    **PPR_SCORING,
+    "idp_total_tackles": 0,
+    "idp_solo_tackles": 0,
+    "idp_tfl": 0,
+    "idp_qb_hits": 0,
+    "idp_int": 0,
+    "idp_sacks": 0,
+    "idp_pass_deflections": 0,
+    "idp_fumbles_recovered": 0,
+}
+
+IDP_STANDARD_SCORING = {
+    **IDP_PPR_SCORING,
+    "points_per_reception": 0,
+}
+
+IDP_HALF_PPR_SCORING = {
+    **IDP_PPR_SCORING,
+    "points_per_reception": 0.5,
+}
