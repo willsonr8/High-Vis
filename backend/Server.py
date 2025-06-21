@@ -225,6 +225,67 @@ class Server:
         data: dict = cls.make_request(endpoint)
         return data
 
+    @classmethod
+    def get_player_info(cls, player_name=None, player_id=None):
+        """
+        fetches overall stats and general info about a specific NFL player from the server.
+        :param player_name: the name of the player for whom to fetch information.
+        :param player_id: the ID of the player for whom to fetch information.
+        :return: a dictionary containing player information.
+        """
+        if not player_name and not player_id:
+            raise ValueError("Either player_name or player_id must be provided.")
+        name = f"playerName={player_name}&" if player_name else ""
+        pid = f"playerID={player_id}&" if player_id else ""
+        endpoint = f"/getNFLPlayerInfo?{name}{pid}&getStats=true"
+        data: dict = cls.make_request(endpoint)
+        return data
+
+    @classmethod
+    def get_nfl_games_and_stats_for_player(cls, player_id=None, team_id=None, game_id=None, number_of_games=None, season_year="2024", fantasy_stat_values: dict = fv.PPR_SCORING):
+        # the season year param is used in the middle of the url, see if it works out of order.
+        """
+        fetches the games by game stat line for a specific NFL player from the server.
+        :param player_id: the ID of the player for whom to fetch games and stats.
+        :param team_id: the ID of the team for which to fetch games and stats (optional). this will yield defensive stats for the team. fantasy point calculations are not working for this param.
+        :param game_id: the ID of a specific game for which to fetch stats (optional).
+        :param season_year: the year of the season for which to fetch stats (default is 2024).
+        :param number_of_games: the number of games to fetch stats for (optional).
+        :param fantasy_stat_values: a dictionary containing the scoring values for various fantasy stats (default is PPR scoring).
+        :return: a dictionary of dictionaries containing game by game player stats. parse the response with game_ids as keys.
+        """
+        if not player_id and not team_id:
+            raise ValueError("Either player_id or team_id must be provided.")
+        player = f"playerID={player_id}&" if player_id else ""
+        team = f"teamID={team_id}&" if team_id else ""
+        game = f"gameID={game_id}&" if game_id else ""
+        game_number = f"numberOfGames={number_of_games}&" if number_of_games else ""
+        season = f"season={season_year}&" if season_year else ""
+        params = '&'.join(f"{k}={v}" for k, v in fantasy_stat_values.items())
+        endpoint = (f"/getNFLGamesForPlayer?"
+                    f"{player}"
+                    f"{team}"
+                    f"{game}"
+                    f"{game_number}"
+                    f"fantasyPoints=true&"
+                    f"{season}"
+                    f"{params}")
+        data: dict = cls.make_request(endpoint)
+        return data
+
+    @classmethod
+    def get_dfs_salaries(cls, date=None):
+        """
+        fetches the daily fantasy sports (DFS) salaries for NFL players from the server.
+        :param date: the date for which to fetch DFS salaries (optional, format: YYYYMMDD).
+        :return: a dict of lists of dicts containing player DFS salary information.
+        """
+        if not date:
+            raise ValueError("date must be provided to fetch DFS salaries.")
+        endpoint = f"/getNFLDFS?date={date}"
+        data: dict = cls.make_request(endpoint)
+        return data
+
     ############################## GAME API CALLS ##############################
 
     @classmethod
@@ -297,6 +358,19 @@ class Server:
         game = f"gameID={game_id}&" if game_id else ""
         week = f"gameWeek={game_week}&" if game_week else ""
         endpoint = f"/getNFLScoresOnly?{date}{game}topPerformers={top_performers}&{week}season={season_year}&seasonType={season_type}"
+        data: dict = cls.make_request(endpoint)
+        return data
+
+    @classmethod
+    def get_daily_nfl_schedule(cls, game_date=None):
+        """
+        fetches the daily schedule for NFL games from the server.
+        :param game_date: the date of the games for which to fetch the schedule (optional, format: YYYYMMDD).
+        :return: a list of dictionaries containing the daily schedule.
+        """
+        if not game_date:
+            raise ValueError("game_date must be provided to fetch the daily schedule.")
+        endpoint = f"/getNFLGamesForDate?gameDate={game_date}"
         data: dict = cls.make_request(endpoint)
         return data
 
