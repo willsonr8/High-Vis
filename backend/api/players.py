@@ -1,6 +1,5 @@
 from flask import Blueprint, jsonify
 
-from ..Server import Server
 # from ..app import cache
 
 player_bp = Blueprint('player', __name__)

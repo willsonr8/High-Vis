@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 
-from ..Server import Server
+from backend.server.requests import Server
 
 team_bp = Blueprint("team", __name__)
 
