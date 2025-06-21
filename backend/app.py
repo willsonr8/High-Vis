@@ -2,8 +2,8 @@ from flask import Flask
 from flask_cors import CORS
 from flask_caching import Cache
 from backend.server.requests import Server
-from .api.players import player_bp
-from .api.teams import team_bp
+from backend.api.players import player_bp
+from backend.api.teams import team_bp
 
 cache = Cache()
 

@@ -1,0 +1,710 @@
+{
+    "statusCode": 200,
+    "body": {
+        "20250209_KC@PHI": {
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "0.77",
+                "defSnap": "0",
+                "stSnap": "2",
+                "stSnapPct": "0.07",
+                "offSnap": "57",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "4",
+                "recTD": "1",
+                "longRec": "46",
+                "targets": "5",
+                "recYds": "69",
+                "recAvg": "17.3"
+            },
+            "longName": "DeVonta Smith",
+            "scoringPlays": [
+                {
+                    "score": "DeVonta Smith 46 Yd pass from Jalen Hurts (Jake Elliott Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "34",
+                    "awayScore": "0",
+                    "teamID": "27",
+                    "scoreDetails": "1 play, 46 yards, 0:07",
+                    "scoreType": "TD",
+                    "scoreTime": "2:40",
+                    "team": "PHI",
+                    "playerIDs": [
+                        "4040715",
+                        "4241478",
+                        "3050478"
+                    ]
+                }
+            ],
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20250209_KC@PHI",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "12.9",
+                "PPR": "16.9",
+                "halfPPR": "14.9"
+            }
+        },
+        "20250126_WSH@PHI": {
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "0.83",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "59",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "4",
+                "recTD": "0",
+                "longRec": "20",
+                "targets": "4",
+                "recYds": "45",
+                "recAvg": "11.3"
+            },
+            "longName": "DeVonta Smith",
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20250126_WSH@PHI",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "4.5",
+                "PPR": "8.5",
+                "halfPPR": "6.5"
+            }
+        },
+        "20250119_LAR@PHI": {
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "0.90",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "57",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "4",
+                "recTD": "0",
+                "longRec": "7",
+                "targets": "4",
+                "recYds": "21",
+                "recAvg": "5.3"
+            },
+            "longName": "DeVonta Smith",
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20250119_LAR@PHI",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "2.1",
+                "PPR": "6.1",
+                "halfPPR": "4.1"
+            }
+        },
+        "20250112_GB@PHI": {
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "0.90",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "54",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "4",
+                "recTD": "0",
+                "longRec": "28",
+                "targets": "4",
+                "recYds": "55",
+                "recAvg": "13.8"
+            },
+            "longName": "DeVonta Smith",
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20250112_GB@PHI",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "5.5",
+                "PPR": "9.5",
+                "halfPPR": "7.5"
+            }
+        },
+        "20241229_DAL@PHI": {
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "0.80",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "52",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "6",
+                "recTD": "2",
+                "longRec": "49",
+                "targets": "7",
+                "recYds": "120",
+                "recAvg": "20.0"
+            },
+            "longName": "DeVonta Smith",
+            "scoringPlays": [
+                {
+                    "score": "DeVonta Smith 22 Yd pass from Kenny Pickett (Jake Elliott Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "14",
+                    "awayScore": "7",
+                    "teamID": "27",
+                    "scoreDetails": "10 plays, 81 yards, 6:11",
+                    "scoreType": "TD",
+                    "scoreTime": "6:38",
+                    "team": "PHI",
+                    "playerIDs": [
+                        "4240703",
+                        "4241478",
+                        "3050478"
+                    ]
+                },
+                {
+                    "score": "DeVonta Smith 25 Yd pass from Tanner McKee (Jake Elliott Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "41",
+                    "awayScore": "7",
+                    "teamID": "27",
+                    "scoreDetails": "7 plays, 75 yards, 4:22",
+                    "scoreType": "TD",
+                    "scoreTime": "10:03",
+                    "team": "PHI",
+                    "playerIDs": [
+                        "4685201",
+                        "4241478",
+                        "3050478"
+                    ]
+                }
+            ],
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20241229_DAL@PHI",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "24.0",
+                "PPR": "30.0",
+                "halfPPR": "27.0"
+            }
+        },
+        "20241222_PHI@WSH": {
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "0.82",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "61",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "6",
+                "recTD": "0",
+                "longRec": "13",
+                "targets": "8",
+                "recYds": "51",
+                "recAvg": "8.5"
+            },
+            "longName": "DeVonta Smith",
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20241222_PHI@WSH",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "5.1",
+                "PPR": "11.1",
+                "halfPPR": "8.1"
+            }
+        },
+        "20241215_PIT@PHI": {
+            "Defense": {
+                "fumblesLost": "0",
+                "defensiveInterceptions": "0",
+                "forcedFumbles": "0",
+                "fumbles": "0",
+                "fumblesRecovered": "1"
+            },
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "0.93",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "74",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "11",
+                "recTD": "1",
+                "longRec": "22",
+                "targets": "12",
+                "recYds": "109",
+                "recAvg": "9.9"
+            },
+            "longName": "DeVonta Smith",
+            "Rushing": {
+                "rushAvg": "1.0",
+                "rushYds": "1",
+                "carries": "1",
+                "longRush": "1",
+                "rushTD": "0"
+            },
+            "scoringPlays": [
+                {
+                    "score": "DeVonta Smith 2 Yd pass from Jalen Hurts (Jake Elliott Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "17",
+                    "awayScore": "3",
+                    "teamID": "27",
+                    "scoreDetails": "9 plays, 45 yards, 4:33",
+                    "scoreType": "TD",
+                    "scoreTime": "9:07",
+                    "team": "PHI",
+                    "playerIDs": [
+                        "4040715",
+                        "4241478",
+                        "3050478"
+                    ]
+                }
+            ],
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20241215_PIT@PHI",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "17.0",
+                "PPR": "28.0",
+                "halfPPR": "22.5"
+            }
+        },
+        "20241208_CAR@PHI": {
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "0.90",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "52",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "4",
+                "recTD": "1",
+                "longRec": "27",
+                "targets": "6",
+                "recYds": "37",
+                "recAvg": "9.3"
+            },
+            "longName": "DeVonta Smith",
+            "scoringPlays": [
+                {
+                    "score": "DeVonta Smith 4 Yd pass from Jalen Hurts (Jake Elliott Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "14",
+                    "awayScore": "10",
+                    "teamID": "27",
+                    "scoreDetails": "7 plays, 44 yards, 1:36",
+                    "scoreType": "TD",
+                    "scoreTime": "0:14",
+                    "team": "PHI",
+                    "playerIDs": [
+                        "4040715",
+                        "4241478",
+                        "3050478"
+                    ]
+                }
+            ],
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20241208_CAR@PHI",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "9.7",
+                "PPR": "13.7",
+                "halfPPR": "11.7"
+            }
+        },
+        "20241114_WSH@PHI": {
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "0.89",
+                "defSnap": "0",
+                "stSnap": "1",
+                "stSnapPct": "0.04",
+                "offSnap": "63",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "4",
+                "recTD": "0",
+                "longRec": "21",
+                "targets": "6",
+                "recYds": "29",
+                "recAvg": "7.3"
+            },
+            "longName": "DeVonta Smith",
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20241114_WSH@PHI",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "2.9",
+                "PPR": "6.9",
+                "halfPPR": "4.9"
+            }
+        },
+        "20241110_PHI@DAL": {
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "0.72",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "49",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "2",
+                "recTD": "0",
+                "longRec": "9",
+                "targets": "3",
+                "recYds": "14",
+                "recAvg": "7.0"
+            },
+            "longName": "DeVonta Smith",
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20241110_PHI@DAL",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "1.4",
+                "PPR": "3.4",
+                "halfPPR": "2.4"
+            }
+        },
+        "20241103_JAX@PHI": {
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "0.96",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "76",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "4",
+                "recTD": "1",
+                "longRec": "46",
+                "targets": "6",
+                "recYds": "87",
+                "recAvg": "21.8"
+            },
+            "longName": "DeVonta Smith",
+            "scoringPlays": [
+                {
+                    "score": "DeVonta Smith 25 Yd pass from Jalen Hurts (Two-Point Pass Conversion Failed)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "28",
+                    "awayScore": "16",
+                    "teamID": "27",
+                    "scoreDetails": "8 plays, 91 yards, 5:08",
+                    "scoreType": "TD",
+                    "scoreTime": "7:43",
+                    "team": "PHI",
+                    "playerIDs": [
+                        "4040715",
+                        "4241478"
+                    ]
+                }
+            ],
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20241103_JAX@PHI",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "14.7",
+                "PPR": "18.7",
+                "halfPPR": "16.7"
+            }
+        },
+        "20241027_PHI@CIN": {
+            "Defense": {
+                "totalTackles": "1",
+                "defTD": "0",
+                "forcedFumbles": "0",
+                "soloTackles": "0",
+                "tfl": "0",
+                "qbHits": "0",
+                "defensiveInterceptions": "0",
+                "sacks": "0",
+                "passDeflections": "0"
+            },
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "0.93",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "57",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "6",
+                "recTD": "1",
+                "longRec": "45",
+                "targets": "7",
+                "recYds": "85",
+                "recAvg": "14.2"
+            },
+            "longName": "DeVonta Smith",
+            "scoringPlays": [
+                {
+                    "score": "DeVonta Smith 45 Yd pass from Jalen Hurts (Jake Elliott Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "17",
+                    "awayScore": "24",
+                    "teamID": "27",
+                    "scoreDetails": "3 plays, 70 yards, 1:33",
+                    "scoreType": "TD",
+                    "scoreTime": "2:43",
+                    "team": "PHI",
+                    "playerIDs": [
+                        "4040715",
+                        "4241478",
+                        "3050478"
+                    ]
+                }
+            ],
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20241027_PHI@CIN",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "14.5",
+                "PPR": "20.5",
+                "halfPPR": "17.5"
+            }
+        },
+        "20241020_PHI@NYG": {
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "0.80",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "53",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "1",
+                "recTD": "0",
+                "longRec": "-2",
+                "targets": "2",
+                "recYds": "-2",
+                "recAvg": "-2.0"
+            },
+            "longName": "DeVonta Smith",
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20241020_PHI@NYG",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "-0.2",
+                "PPR": "0.8",
+                "halfPPR": "0.3"
+            }
+        },
+        "20241013_CLE@PHI": {
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "62",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "3",
+                "recTD": "1",
+                "longRec": "45",
+                "targets": "4",
+                "recYds": "64",
+                "recAvg": "21.3"
+            },
+            "longName": "DeVonta Smith",
+            "scoringPlays": [
+                {
+                    "score": "DeVonta Smith 45 Yd pass from Jalen Hurts (Jake Elliott Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "20",
+                    "awayScore": "13",
+                    "teamID": "27",
+                    "scoreDetails": "4 plays, 70 yards, 1:55",
+                    "scoreType": "TD",
+                    "scoreTime": "7:54",
+                    "team": "PHI",
+                    "playerIDs": [
+                        "4040715",
+                        "4241478",
+                        "3050478"
+                    ]
+                }
+            ],
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20241013_CLE@PHI",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "12.4",
+                "PPR": "15.4",
+                "halfPPR": "13.9"
+            }
+        },
+        "20240922_PHI@NO": {
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "0.76",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "55",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "7",
+                "recTD": "0",
+                "longRec": "21",
+                "targets": "10",
+                "recYds": "79",
+                "recAvg": "11.3"
+            },
+            "longName": "DeVonta Smith",
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20240922_PHI@NO",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "7.9",
+                "PPR": "14.9",
+                "halfPPR": "11.4"
+            }
+        },
+        "20240916_ATL@PHI": {
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "71",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "7",
+                "recTD": "1",
+                "longRec": "19",
+                "targets": "10",
+                "recYds": "76",
+                "recAvg": "10.9"
+            },
+            "longName": "DeVonta Smith",
+            "scoringPlays": [
+                {
+                    "score": "DeVonta Smith 7 Yd pass from Jalen Hurts (Jake Elliott Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "7",
+                    "awayScore": "3",
+                    "teamID": "27",
+                    "scoreDetails": "11 plays, 70 yards, 6:07",
+                    "scoreType": "TD",
+                    "scoreTime": "5:15",
+                    "team": "PHI",
+                    "playerIDs": [
+                        "4040715",
+                        "4241478",
+                        "3050478"
+                    ]
+                }
+            ],
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20240916_ATL@PHI",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "13.6",
+                "PPR": "20.6",
+                "halfPPR": "17.1"
+            }
+        },
+        "20240906_GB@PHI": {
+            "Defense": {
+                "totalTackles": "1",
+                "defTD": "0",
+                "forcedFumbles": "0",
+                "soloTackles": "1",
+                "tfl": "0",
+                "qbHits": "0",
+                "defensiveInterceptions": "0",
+                "sacks": "0",
+                "passDeflections": "0"
+            },
+            "teamAbv": "PHI",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "76",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "7",
+                "recTD": "0",
+                "longRec": "25",
+                "targets": "8",
+                "recYds": "84",
+                "recAvg": "12.0"
+            },
+            "longName": "DeVonta Smith",
+            "playerID": "4241478",
+            "team": "PHI",
+            "teamID": "27",
+            "gameID": "20240906_GB@PHI",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "8.4",
+                "PPR": "15.4",
+                "halfPPR": "11.9"
+            }
+        }
+    }
+}

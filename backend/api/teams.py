@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify
 
 from backend.server.requests import Server
+import backend.server.transformer
 
 team_bp = Blueprint("team", __name__)
 

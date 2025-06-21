@@ -1,9 +1,10 @@
 import os
 import json
+import inspect
 import urllib.request
 import urllib.error
 from dotenv import load_dotenv
-import fantasy_values as fv
+import backend.server.fantasy_values as fv
 
 ################################## UTILITY FUNCTIONS ################################
 def send_to_json(data, file):
@@ -74,6 +75,8 @@ class Server:
             print(f"HTTP error occurred: {e.code} - {e.reason}")
             return {}
         parsed_data: dict = json.loads(data)
+        file_name = inspect.currentframe().f_back.f_code.co_name + ".json"
+        send_to_json(parsed_data, f"{file_name}")
         return parsed_data
 
     ############################## TEAM API CALLS ##############################
@@ -228,7 +231,8 @@ class Server:
     @classmethod
     def get_player_info(cls, player_name=None, player_id=None):
         """
-        fetches overall stats and general info about a specific NFL player from the server.
+        fetches overall stats and general info about a specific NFL player from the server. the response is different depending on whether player_name or player_id is used.
+        if player_name is used, the response will contain a list of players with that name. if player_id is used, the response will contain a single player dictionary.
         :param player_name: the name of the player for whom to fetch information.
         :param player_id: the ID of the player for whom to fetch information.
         :return: a dictionary containing player information.

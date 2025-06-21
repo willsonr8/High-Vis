@@ -1,0 +1,78 @@
+{
+    "statusCode": 200,
+    "body": [
+        {
+            "espnID": "12483",
+            "espnName": "Matthew Stafford",
+            "sleeperBotID": "421",
+            "fantasyProsPlayerID": "9451",
+            "espnIDFull": "12483/matthew-stafford",
+            "fRefID": "StafMa00",
+            "weight": "214",
+            "jerseyNum": "9",
+            "cbsShortName": "M. Stafford",
+            "team": "LAR",
+            "yahooPlayerID": "9265",
+            "age": "37",
+            "espnLink": "https://www.espn.com/nfl/player/_/id/12483/matthew-stafford",
+            "yahooLink": "https://sports.yahoo.com/nfl/players/9265",
+            "bDay": "2/7/1988",
+            "espnHeadshot": "https://a.espncdn.com/i/headshots/nfl/players/full/12483.png",
+            "isFreeAgent": "False",
+            "rotoWirePlayerIDFull": "matthew-stafford-5971",
+            "cbsLongName": "Matthew Stafford",
+            "injury": {
+                "injReturnDate": "",
+                "description": "",
+                "injDate": "",
+                "designation": ""
+            },
+            "teamID": "19",
+            "pos": "QB",
+            "school": "Georgia",
+            "cbsPlayerID": "1114942",
+            "longName": "Matthew Stafford",
+            "rotoWirePlayerID": "5971",
+            "height": "6'3\"",
+            "cbsPlayerIDFull": "1114942/matthew-stafford",
+            "lastGamePlayed": "20250119_LAR@PHI",
+            "playerID": "12483",
+            "exp": "17",
+            "fantasyProsLink": "https://www.fantasypros.com/nfl/players/matthew-stafford.php",
+            "stats": {
+                "Rushing": {
+                    "rushYds": "41.0",
+                    "rushingTwoPointConversion": "0.0",
+                    "carries": "30.0",
+                    "rushTD": "0.0"
+                },
+                "Passing": {
+                    "passAttempts": "517.0",
+                    "passTD": "20.0",
+                    "passYds": "3762.0",
+                    "int": "8.0",
+                    "passingTwoPointConversion": "0.0",
+                    "passCompletions": "340.0"
+                },
+                "gamesPlayed": "16",
+                "Defense": {
+                    "totalTackles": "0.0",
+                    "fumblesLost": "2.0",
+                    "defTD": "0.0",
+                    "fumbles": "6.0",
+                    "fumblesRecovered": "3.0",
+                    "twoPointConversionReturn": "0.0",
+                    "soloTackles": "0.0",
+                    "defensiveInterceptions": "0.0",
+                    "qbHits": "0.0",
+                    "tfl": "0.0",
+                    "passDeflections": "0.0",
+                    "sacks": "0.0"
+                },
+                "teamID": "19",
+                "team": "LAR",
+                "teamAbv": "LAR"
+            }
+        }
+    ]
+}
