@@ -5,16 +5,16 @@ from backend.models.Player import Player
 ############################## PLAYER TRANSFORMATIONS ##############################
 def get_all_players_transformed():
     """
-    Fetches all players from the server and transforms them into a list of Player objects.
+    fetches all players from the server and transforms them into a list of Player objects.
     """
     player_list = Server.get_player_list()
     return player_list
 
 def get_player_by_name_transformed(name):
     """
-    Fetches a player by name from the server and transforms it into a Player object.
-    :param name: The name of the player to fetch.
-    :return: A Player object if found, otherwise None.
+    fetches a player by name from the server and transforms it into a Player object.
+    :param name: the name of the player to fetch.
+    :return: a Player object if found, otherwise None.
     """
     player_data = Server.get_player_info(player_name=name)
     player = Player(player_data)
@@ -22,10 +22,10 @@ def get_player_by_name_transformed(name):
 
 def get_player_by_id_transformed(player_id):
     """
-    Fetches a player by ID from the server and transforms it into a Player object.
+    fetches a player by ID from the server and transforms it into a Player object.
 
-    :param player_id: The ID of the player to fetch.
-    :return: A Player object if found, otherwise None.
+    :param player_id: the ID of the player to fetch.
+    :return: a Player object if found, otherwise None.
     """
     player_data = Server.get_player_info(player_id=player_id)
     player = Player(player_data)
@@ -33,12 +33,12 @@ def get_player_by_id_transformed(player_id):
 
 def get_player_game_stats_transformed(player_id, season):
     """
-    Fetches player game stats for a specific player and season from the server. Includes all games played in the regular
-    season and playoffs.
+    fetches player game stats for a specific player and season from the server. includes all games played in the regular
+    season and playoffs. handles bye weeks and injuries by inserting appropriate entries in the game list.
 
-    :param player_id: The ID of the player to fetch stats for.
-    :param season: The season year for which to fetch the stats.
-    :return: A Player object with stats if found, otherwise None.
+    :param player_id: the ID of the player to fetch stats for.
+    :param season: the season year for which to fetch the stats.
+    :return: a Player object with stats if found, otherwise None.
     """
     # 1. fetches game data for all games that a player PLAYED IN (bye weeks and injuries are not included)
     response = Server.get_nfl_games_and_stats_for_player(player_id=player_id, season_year=season)
@@ -46,8 +46,8 @@ def get_player_game_stats_transformed(player_id, season):
     # 2. transforms the fetched data into a Player object
     game_dict = response["body"]
     rev_player_games = []
-    for key, val in game_dict.items():  # this does yield reversed order of games, so the first game is the most recent
-        game = PlayerGame(key, val)  # uses special constructor to intake dict as value
+    for game_id, stats in game_dict.items():  # this does yield reversed order of games, so the first game is the most recent
+        game = PlayerGame(game_id, {}, stats)  # uses special constructor to intake dict as value
         rev_player_games.append(game)
 
     # at this point, rev_player_games is a list of PlayerGame objects, each representing a game played by player
@@ -58,6 +58,7 @@ def get_player_game_stats_transformed(player_id, season):
     # 4. fetches the team schedule for the given team_id and season
     team_games = (Server.get_nfl_team_schedule(team_id, 2024))["body"]["schedule"]
     # copies the player games in reverse order to maintain the order of games as they were played
+
     player_games = rev_player_games[::-1]
 
     json_games = []
@@ -66,11 +67,12 @@ def get_player_game_stats_transformed(player_id, season):
     last_week = 0  # necessary to track the last week played to determine bye weeks
 
     # 4. iterates through the team games and compares them with the player games to determine if a bye week or injury occurred
-    for idx in range(len(team_games)):  # this will not allow player data for preseason games
+    for idx in range(len(team_games)):
         game = team_games[idx]
         if game.get("seasonType") == "Preseason":
+            # at the moment, we do not support preseason games
             continue
-        game = team_games[idx]
+        game = team_games[idx] # unnecessary ?
 
         week = (game.get("gameWeek"))[-1]
         if week.isdigit():
@@ -78,12 +80,12 @@ def get_player_game_stats_transformed(player_id, season):
 
         if str(week).isdigit() and week - last_week > 1:
             # if this condition is met, it means there was a bye week
-            json_games.append(PlayerGame("Bye", {
+            json_games.append(PlayerGame("Bye", {},{
                 "playerID": player_id,
                 "longName": player_name,
                 "season": season,
                 "teamID": team_id,
-                "teamAbv": game.get("teamAbv"),
+                "teamAbv": None,
                 "fantasyPointsDefault": None,
                 "snapCounts": {},
                 "Defense": {},
@@ -93,7 +95,7 @@ def get_player_game_stats_transformed(player_id, season):
             }).to_dict())
         if game.get("gameID") != player_games[player_game_count].game_id:
             # if this condition is met, it means the player did not play in this game (injury or otherwise)
-            json_games.append(PlayerGame(game.get("gameID"), {
+            json_games.append(PlayerGame(game.get("gameID"), game, {
                 "playerID": player_id,
                 "longName": player_name,
                 "season": season,
@@ -108,11 +110,11 @@ def get_player_game_stats_transformed(player_id, season):
             }).to_dict())
         else:
             # if this condition is met, it means the player played in this game
+            player_games[player_game_count].load_data(game)
             json_games.append(player_games[player_game_count].to_dict())
             player_game_count += 1
         last_week = week
 
-    # 3. compares games in a Player object with games played by the team in the same season add a blank for a bye week and a 0 for injury
     return {"games": json_games, "playerId": player_id, "season": season}
 
 ############################### TEAM TRANSFORMATIONS ###############################
