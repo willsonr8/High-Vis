@@ -1,0 +1,1093 @@
+{
+    "statusCode": 200,
+    "body": [
+        {
+            "teamAbv": "BUF",
+            "teamCity": "Buffalo",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Bills",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/giphcy6ie9mxbnldntsf",
+            "teamID": "4",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "13"
+                ],
+                "2022": [
+                    "7"
+                ],
+                "2025": [
+                    "7"
+                ],
+                "2024": [
+                    "12"
+                ]
+            },
+            "division": "East",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/buf.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "MIA",
+            "teamCity": "Miami",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Dolphins",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/lits6p8ycthy9to70bnt",
+            "teamID": "20",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "10"
+                ],
+                "2022": [
+                    "11"
+                ],
+                "2025": [
+                    "12"
+                ],
+                "2024": [
+                    "6"
+                ]
+            },
+            "division": "East",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/mia.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "NE",
+            "teamCity": "New England",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Patriots",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/moyfxx3dq5pio4aiftnc",
+            "teamID": "22",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "11"
+                ],
+                "2022": [
+                    "10"
+                ],
+                "2025": [
+                    "14"
+                ],
+                "2024": [
+                    "14"
+                ]
+            },
+            "division": "East",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/ne.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "NYJ",
+            "teamCity": "New York",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Jets",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/ekijosiae96gektbo4iw",
+            "teamID": "25",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "7"
+                ],
+                "2022": [
+                    "10"
+                ],
+                "2025": [
+                    "9"
+                ],
+                "2024": [
+                    "12"
+                ]
+            },
+            "division": "East",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/nyj.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "BAL",
+            "teamCity": "Baltimore",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Ravens",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/ucsdijmddsqcj1i9tddd",
+            "teamID": "3",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "13"
+                ],
+                "2022": [
+                    "10"
+                ],
+                "2025": [
+                    "7"
+                ],
+                "2024": [
+                    "14"
+                ]
+            },
+            "division": "North",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/bal.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "CIN",
+            "teamCity": "Cincinnati",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Bengals",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/okxpteoliyayufypqalq",
+            "teamID": "7",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "7"
+                ],
+                "2022": [
+                    "10"
+                ],
+                "2025": [
+                    "10"
+                ],
+                "2024": [
+                    "12"
+                ]
+            },
+            "division": "North",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/cin.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "CLE",
+            "teamCity": "Cleveland",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Browns",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/fgbn8acp4opvyxk13dcy",
+            "teamID": "8",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "5"
+                ],
+                "2022": [
+                    "9"
+                ],
+                "2025": [
+                    "9"
+                ],
+                "2024": [
+                    "10"
+                ]
+            },
+            "division": "North",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/cle.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "PIT",
+            "teamCity": "Pittsburgh",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Steelers",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/xujg9t3t4u5nmjgr54wx",
+            "teamID": "26",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "6"
+                ],
+                "2022": [
+                    "9"
+                ],
+                "2025": [
+                    "5"
+                ],
+                "2024": [
+                    "9"
+                ]
+            },
+            "division": "North",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/pit.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "HOU",
+            "teamCity": "Houston",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Texans",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/bpx88i8nw4nnabuq0oob",
+            "teamID": "13",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "7"
+                ],
+                "2022": [
+                    "6"
+                ],
+                "2025": [
+                    "6"
+                ],
+                "2024": [
+                    "14"
+                ]
+            },
+            "division": "South",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/hou.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "IND",
+            "teamCity": "Indianapolis",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Colts",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/ketwqeuschqzjsllbid5",
+            "teamID": "14",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "11"
+                ],
+                "2022": [
+                    "14"
+                ],
+                "2025": [
+                    "11"
+                ],
+                "2024": [
+                    "14"
+                ]
+            },
+            "division": "South",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/ind.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "JAX",
+            "teamCity": "Jacksonville",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Jaguars",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/qycbib6ivrm9dqaexryk",
+            "teamID": "15",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "9"
+                ],
+                "2022": [
+                    "11"
+                ],
+                "2025": [
+                    "8"
+                ],
+                "2024": [
+                    "12"
+                ]
+            },
+            "division": "South",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/jax.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "TEN",
+            "teamCity": "Tennessee",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Titans",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/pln44vuzugjgipyidsre",
+            "teamID": "31",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "7"
+                ],
+                "2022": [
+                    "6"
+                ],
+                "2025": [
+                    "10"
+                ],
+                "2024": [
+                    "5"
+                ]
+            },
+            "division": "South",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/ten.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "DEN",
+            "teamCity": "Denver",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Broncos",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/t0p7m5cjdjy18rnzzqbx",
+            "teamID": "10",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "9"
+                ],
+                "2022": [
+                    "9"
+                ],
+                "2025": [
+                    "12"
+                ],
+                "2024": [
+                    "14"
+                ]
+            },
+            "division": "West",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/den.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "KC",
+            "teamCity": "Kansas City",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Chiefs",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/ujshjqvmnxce8m4obmvs",
+            "teamID": "16",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "10"
+                ],
+                "2022": [
+                    "8"
+                ],
+                "2025": [
+                    "10"
+                ],
+                "2024": [
+                    "6"
+                ]
+            },
+            "division": "West",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/kc.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "LV",
+            "teamCity": "Las Vegas",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Raiders",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/gzcojbzcyjgubgyb6xf2",
+            "teamID": "17",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "13"
+                ],
+                "2022": [
+                    "6"
+                ],
+                "2025": [
+                    "8"
+                ],
+                "2024": [
+                    "10"
+                ]
+            },
+            "division": "West",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/lv.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "LAC",
+            "teamCity": "Los Angeles",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Chargers",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/dhfidtn8jrumakbogeu4",
+            "teamID": "18",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "5"
+                ],
+                "2022": [
+                    "8"
+                ],
+                "2025": [
+                    "12"
+                ],
+                "2024": [
+                    "5"
+                ]
+            },
+            "division": "West",
+            "conferenceAbv": "AFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/lac.png",
+            "wins": "0",
+            "conference": "American Football Conference"
+        },
+        {
+            "teamAbv": "DAL",
+            "teamCity": "Dallas",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Cowboys",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/ieid8hoygzdlmzo0tnf6",
+            "teamID": "9",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "7"
+                ],
+                "2022": [
+                    "9"
+                ],
+                "2025": [
+                    "10"
+                ],
+                "2024": [
+                    "7"
+                ]
+            },
+            "division": "East",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/dal.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "NYG",
+            "teamCity": "New York",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Giants",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/t6mhdmgizi6qhndh8b9p",
+            "teamID": "24",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "13"
+                ],
+                "2022": [
+                    "9"
+                ],
+                "2025": [
+                    "14"
+                ],
+                "2024": [
+                    "11"
+                ]
+            },
+            "division": "East",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/nyg.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "PHI",
+            "teamCity": "Philadelphia",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Eagles",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/puhrqgj71gobgdkdo6uq",
+            "teamID": "27",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "10"
+                ],
+                "2022": [
+                    "7"
+                ],
+                "2025": [
+                    "9"
+                ],
+                "2024": [
+                    "5"
+                ]
+            },
+            "division": "East",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/phi.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "WSH",
+            "teamCity": "Washington",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Commanders",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/xymxwrxtyj9fhaemhdyd",
+            "teamID": "32",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "14"
+                ],
+                "2022": [
+                    "14"
+                ],
+                "2025": [
+                    "12"
+                ],
+                "2024": [
+                    "14"
+                ]
+            },
+            "division": "East",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/wsh.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "CHI",
+            "teamCity": "Chicago",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Bears",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/wb3ehpt7xhkstyaxwjl1",
+            "teamID": "6",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "13"
+                ],
+                "2022": [
+                    "14"
+                ],
+                "2025": [
+                    "5"
+                ],
+                "2024": [
+                    "7"
+                ]
+            },
+            "division": "North",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/chi.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "DET",
+            "teamCity": "Detroit",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Lions",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/ocvxwnapdvwevupe4tpr",
+            "teamID": "11",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "9"
+                ],
+                "2022": [
+                    "6"
+                ],
+                "2025": [
+                    "8"
+                ],
+                "2024": [
+                    "5"
+                ]
+            },
+            "division": "North",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/det.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "GB",
+            "teamCity": "Green Bay",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Packers",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/gppfvr7n8gljgjaqux2x",
+            "teamID": "12",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "6"
+                ],
+                "2022": [
+                    "14"
+                ],
+                "2025": [
+                    "5"
+                ],
+                "2024": [
+                    "10"
+                ]
+            },
+            "division": "North",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/gb.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "MIN",
+            "teamCity": "Minnesota",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Vikings",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/teguylrnqqmfcwxvcmmz",
+            "teamID": "21",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "13"
+                ],
+                "2022": [
+                    "7"
+                ],
+                "2025": [
+                    "6"
+                ],
+                "2024": [
+                    "6"
+                ]
+            },
+            "division": "North",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/min.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "ATL",
+            "teamCity": "Atlanta",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Falcons",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/d8m7hzpsbrl6pnqht8op",
+            "teamID": "2",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "11"
+                ],
+                "2022": [
+                    "14"
+                ],
+                "2025": [
+                    "5"
+                ],
+                "2024": [
+                    "12"
+                ]
+            },
+            "division": "South",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/atl.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "CAR",
+            "teamCity": "Carolina",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Panthers",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/ervfzgrqdpnc7lh5gqwq",
+            "teamID": "5",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "7"
+                ],
+                "2022": [
+                    "13"
+                ],
+                "2025": [
+                    "14"
+                ],
+                "2024": [
+                    "11"
+                ]
+            },
+            "division": "South",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/car.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "NO",
+            "teamCity": "New Orleans",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Saints",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/grhjkahghjkk17v43hdx",
+            "teamID": "23",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "11"
+                ],
+                "2022": [
+                    "14"
+                ],
+                "2025": [
+                    "11"
+                ],
+                "2024": [
+                    "12"
+                ]
+            },
+            "division": "South",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/no.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "TB",
+            "teamCity": "Tampa Bay",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Buccaneers",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/v8uqiualryypwqgvwcih",
+            "teamID": "30",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "5"
+                ],
+                "2022": [
+                    "11"
+                ],
+                "2025": [
+                    "9"
+                ],
+                "2024": [
+                    "11"
+                ]
+            },
+            "division": "South",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/tb.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "ARI",
+            "teamCity": "Arizona",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Cardinals",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/u9fltoslqdsyao8cpm0k",
+            "teamID": "1",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "14"
+                ],
+                "2022": [
+                    "13"
+                ],
+                "2025": [
+                    "8"
+                ],
+                "2024": [
+                    "11"
+                ]
+            },
+            "division": "West",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/ari.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "LAR",
+            "teamCity": "Los Angeles",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Rams",
+            "nflComLogo1": "https://static.www.nfl.com/image/private/f_auto/league/ayvwcmluj2ohkdlbiegi",
+            "teamID": "19",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "10"
+                ],
+                "2022": [
+                    "7"
+                ],
+                "2025": [
+                    "8"
+                ],
+                "2024": [
+                    "6"
+                ]
+            },
+            "division": "West",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/lar.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "SF",
+            "teamCity": "San Francisco",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "49ers",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/dxibuyxbk0b9ua5ih9hn",
+            "teamID": "28",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "9"
+                ],
+                "2022": [
+                    "9"
+                ],
+                "2025": [
+                    "14"
+                ],
+                "2024": [
+                    "9"
+                ]
+            },
+            "division": "West",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/sf.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        },
+        {
+            "teamAbv": "SEA",
+            "teamCity": "Seattle",
+            "currentStreak": {
+                "length": "0",
+                "result": ""
+            },
+            "loss": "0",
+            "teamName": "Seahawks",
+            "nflComLogo1": "https://res.cloudinary.com/nflleague/image/private/f_auto/league/gcytzwpjdzbpwnwxincg",
+            "teamID": "29",
+            "tie": "0",
+            "byeWeeks": {
+                "2023": [
+                    "5"
+                ],
+                "2022": [
+                    "11"
+                ],
+                "2025": [
+                    "8"
+                ],
+                "2024": [
+                    "10"
+                ]
+            },
+            "division": "West",
+            "conferenceAbv": "NFC",
+            "pa": "0",
+            "pf": "0",
+            "espnLogo1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/sea.png",
+            "wins": "0",
+            "conference": "National Football Conference"
+        }
+    ]
+}

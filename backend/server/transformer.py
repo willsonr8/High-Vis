@@ -139,3 +139,30 @@ def get_player_game_stats_transformed(player_id, season):
     return {"games": json_games, "playerId": player_id, "season": season}
 
 ############################### TEAM TRANSFORMATIONS ###############################
+
+def get_all_nfl_teams_transformed(sort_by="standings", rosters=False, schedules=False, top_performers=True, team_stats=True, team_stats_season=2024):
+    """
+    fetches all NFL teams from the server and transforms them into a list of Team objects.
+
+    :param sort_by: the attribute to sort the teams by.
+    :param rosters: whether to include rosters in the response.
+    :param schedules: whether to include schedules in the response.
+    :param top_performers: whether to include top performers in the response.
+    :param team_stats: whether to include team stats in the response.
+    :param team_stats_season: the season for which to fetch team stats.
+    :return: a list of Team objects.
+    """
+    teams = Server.get_nfl_teams(sort_by, rosters, schedules, top_performers, team_stats, team_stats_season)
+    return teams
+
+def get_team_by_id_transformed(team_id):
+    """
+    fetches a team by ID from the server and transforms it into a Team object.
+
+    :param team_id: the ID of the team to fetch.
+    :return: a Team object if found, otherwise None.
+    """
+    team_data = Server.get_nfl_team_info(team_id=team_id)
+    if not team_data:
+        return None
+    return team_data["body"]
