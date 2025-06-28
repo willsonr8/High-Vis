@@ -2,536 +2,529 @@
     "statusCode": 200,
     "body": {
         "20250209_KC@PHI": {
-            "teamAbv": "PHI",
+            "teamAbv": "KC",
             "snapCounts": {
-                "offSnapPct": "0.77",
-                "defSnap": "0",
-                "stSnap": "2",
-                "stSnapPct": "0.07",
-                "offSnap": "57",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "4",
-                "recTD": "1",
-                "longRec": "46",
-                "targets": "5",
-                "recYds": "69",
-                "recAvg": "17.3"
-            },
-            "longName": "DeVonta Smith",
-            "scoringPlays": [
-                {
-                    "score": "DeVonta Smith 46 Yd pass from Jalen Hurts (Jake Elliott Kick)",
-                    "scorePeriod": "Q3",
-                    "homeScore": "34",
-                    "awayScore": "0",
-                    "teamID": "27",
-                    "scoreDetails": "1 play, 46 yards, 0:07",
-                    "scoreType": "TD",
-                    "scoreTime": "2:40",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4040715",
-                        "4241478",
-                        "3050478"
-                    ]
-                }
-            ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20250209_KC@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "12.9",
-                "PPR": "16.9",
-                "halfPPR": "14.9"
-            }
-        },
-        "20250126_WSH@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.83",
+                "offSnapPct": "0.38",
                 "defSnap": "0",
                 "stSnap": "0",
                 "stSnapPct": "0.00",
-                "offSnap": "59",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "4",
-                "recTD": "0",
-                "longRec": "20",
-                "targets": "4",
-                "recYds": "45",
-                "recAvg": "11.3"
-            },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20250126_WSH@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "4.5",
-                "PPR": "8.5",
-                "halfPPR": "6.5"
-            }
-        },
-        "20250119_LAR@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.90",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "57",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "4",
-                "recTD": "0",
-                "longRec": "7",
-                "targets": "4",
-                "recYds": "21",
-                "recAvg": "5.3"
-            },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20250119_LAR@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "2.1",
-                "PPR": "6.1",
-                "halfPPR": "4.1"
-            }
-        },
-        "20250112_GB@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.90",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "54",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "4",
-                "recTD": "0",
-                "longRec": "28",
-                "targets": "4",
-                "recYds": "55",
-                "recAvg": "13.8"
-            },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20250112_GB@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "5.5",
-                "PPR": "9.5",
-                "halfPPR": "7.5"
-            }
-        },
-        "20241229_DAL@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.80",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "52",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "6",
-                "recTD": "2",
-                "longRec": "49",
-                "targets": "7",
-                "recYds": "120",
-                "recAvg": "20.0"
-            },
-            "longName": "DeVonta Smith",
-            "scoringPlays": [
-                {
-                    "score": "DeVonta Smith 22 Yd pass from Kenny Pickett (Jake Elliott Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "14",
-                    "awayScore": "7",
-                    "teamID": "27",
-                    "scoreDetails": "10 plays, 81 yards, 6:11",
-                    "scoreType": "TD",
-                    "scoreTime": "6:38",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4240703",
-                        "4241478",
-                        "3050478"
-                    ]
-                },
-                {
-                    "score": "DeVonta Smith 25 Yd pass from Tanner McKee (Jake Elliott Kick)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "41",
-                    "awayScore": "7",
-                    "teamID": "27",
-                    "scoreDetails": "7 plays, 75 yards, 4:22",
-                    "scoreType": "TD",
-                    "scoreTime": "10:03",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4685201",
-                        "4241478",
-                        "3050478"
-                    ]
-                }
-            ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241229_DAL@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "24.0",
-                "PPR": "30.0",
-                "halfPPR": "27.0"
-            }
-        },
-        "20241222_PHI@WSH": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.82",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "61",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "6",
-                "recTD": "0",
-                "longRec": "13",
-                "targets": "8",
-                "recYds": "51",
-                "recAvg": "8.5"
-            },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241222_PHI@WSH",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "5.1",
-                "PPR": "11.1",
-                "halfPPR": "8.1"
-            }
-        },
-        "20241215_PIT@PHI": {
-            "Defense": {
-                "fumblesLost": "0",
-                "defensiveInterceptions": "0",
-                "forcedFumbles": "0",
-                "fumbles": "0",
-                "fumblesRecovered": "1"
-            },
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.93",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "74",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "11",
-                "recTD": "1",
-                "longRec": "22",
-                "targets": "12",
-                "recYds": "109",
-                "recAvg": "9.9"
-            },
-            "longName": "DeVonta Smith",
-            "Rushing": {
-                "rushAvg": "1.0",
-                "rushYds": "1",
-                "carries": "1",
-                "longRush": "1",
-                "rushTD": "0"
-            },
-            "scoringPlays": [
-                {
-                    "score": "DeVonta Smith 2 Yd pass from Jalen Hurts (Jake Elliott Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "17",
-                    "awayScore": "3",
-                    "teamID": "27",
-                    "scoreDetails": "9 plays, 45 yards, 4:33",
-                    "scoreType": "TD",
-                    "scoreTime": "9:07",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4040715",
-                        "4241478",
-                        "3050478"
-                    ]
-                }
-            ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241215_PIT@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "17.0",
-                "PPR": "28.0",
-                "halfPPR": "22.5"
-            }
-        },
-        "20241208_CAR@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.90",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "52",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "4",
-                "recTD": "1",
-                "longRec": "27",
-                "targets": "6",
-                "recYds": "37",
-                "recAvg": "9.3"
-            },
-            "longName": "DeVonta Smith",
-            "scoringPlays": [
-                {
-                    "score": "DeVonta Smith 4 Yd pass from Jalen Hurts (Jake Elliott Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "14",
-                    "awayScore": "10",
-                    "teamID": "27",
-                    "scoreDetails": "7 plays, 44 yards, 1:36",
-                    "scoreType": "TD",
-                    "scoreTime": "0:14",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4040715",
-                        "4241478",
-                        "3050478"
-                    ]
-                }
-            ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241208_CAR@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "9.7",
-                "PPR": "13.7",
-                "halfPPR": "11.7"
-            }
-        },
-        "20241114_WSH@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.89",
-                "defSnap": "0",
-                "stSnap": "1",
-                "stSnapPct": "0.04",
-                "offSnap": "63",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "4",
-                "recTD": "0",
-                "longRec": "21",
-                "targets": "6",
-                "recYds": "29",
-                "recAvg": "7.3"
-            },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241114_WSH@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "2.9",
-                "PPR": "6.9",
-                "halfPPR": "4.9"
-            }
-        },
-        "20241110_PHI@DAL": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.72",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "49",
+                "offSnap": "21",
                 "defSnapPct": "0.00"
             },
             "Receiving": {
                 "receptions": "2",
-                "recTD": "0",
-                "longRec": "9",
-                "targets": "3",
-                "recYds": "14",
-                "recAvg": "7.0"
-            },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241110_PHI@DAL",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "1.4",
-                "PPR": "3.4",
-                "halfPPR": "2.4"
-            }
-        },
-        "20241103_JAX@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.96",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "76",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "4",
                 "recTD": "1",
-                "longRec": "46",
-                "targets": "6",
-                "recYds": "87",
-                "recAvg": "21.8"
+                "recAvg": "9.0",
+                "receivingTwoPointConversion": "1",
+                "longRec": "11",
+                "targets": "5",
+                "recYds": "18"
             },
-            "longName": "DeVonta Smith",
+            "longName": "DeAndre Hopkins",
             "scoringPlays": [
                 {
-                    "score": "DeVonta Smith 25 Yd pass from Jalen Hurts (Two-Point Pass Conversion Failed)",
+                    "score": "DeAndre Hopkins 7 Yd pass from Patrick Mahomes (Patrick Mahomes Pass to Justin Watson for Two-Point Conversion)",
                     "scorePeriod": "Q4",
-                    "homeScore": "28",
-                    "awayScore": "16",
-                    "teamID": "27",
-                    "scoreDetails": "8 plays, 91 yards, 5:08",
+                    "homeScore": "40",
+                    "awayScore": "14",
+                    "teamID": "16",
+                    "scoreDetails": "12 plays, 75 yards, 5:07",
                     "scoreType": "TD",
-                    "scoreTime": "7:43",
-                    "team": "PHI",
+                    "scoreTime": "2:54",
+                    "team": "KC",
                     "playerIDs": [
-                        "4040715",
-                        "4241478"
+                        "3139477",
+                        "15795"
                     ]
-                }
-            ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241103_JAX@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "14.7",
-                "PPR": "18.7",
-                "halfPPR": "16.7"
-            }
-        },
-        "20241027_PHI@CIN": {
-            "Defense": {
-                "totalTackles": "1",
-                "defTD": "0",
-                "forcedFumbles": "0",
-                "soloTackles": "0",
-                "tfl": "0",
-                "qbHits": "0",
-                "defensiveInterceptions": "0",
-                "sacks": "0",
-                "passDeflections": "0"
-            },
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.93",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "57",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "6",
-                "recTD": "1",
-                "longRec": "45",
-                "targets": "7",
-                "recYds": "85",
-                "recAvg": "14.2"
-            },
-            "longName": "DeVonta Smith",
-            "scoringPlays": [
+                },
                 {
-                    "score": "DeVonta Smith 45 Yd pass from Jalen Hurts (Jake Elliott Kick)",
-                    "scorePeriod": "Q3",
-                    "homeScore": "17",
-                    "awayScore": "24",
-                    "teamID": "27",
-                    "scoreDetails": "3 plays, 70 yards, 1:33",
+                    "score": "Xavier Worthy 50 Yd pass from Patrick Mahomes (Patrick Mahomes Pass to DeAndre Hopkins for Two-Point Conversion)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "40",
+                    "awayScore": "22",
+                    "teamID": "16",
+                    "scoreDetails": "1 play, 50 yards, 0:08",
                     "scoreType": "TD",
-                    "scoreTime": "2:43",
-                    "team": "PHI",
+                    "scoreTime": "1:48",
+                    "team": "KC",
                     "playerIDs": [
-                        "4040715",
-                        "4241478",
-                        "3050478"
+                        "3139477",
+                        "4683062",
+                        "15795"
                     ]
                 }
             ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241027_PHI@CIN",
+            "playerID": "15795",
+            "team": "KC",
+            "teamID": "16",
+            "gameID": "20250209_KC@PHI",
             "fantasyPoints": "0.0",
             "fantasyPointsDefault": {
-                "standard": "14.5",
-                "PPR": "20.5",
-                "halfPPR": "17.5"
+                "standard": "9.8",
+                "PPR": "11.8",
+                "halfPPR": "10.8"
             }
         },
-        "20241020_PHI@NYG": {
-            "teamAbv": "PHI",
+        "20250126_BUF@KC": {
+            "teamAbv": "KC",
             "snapCounts": {
-                "offSnapPct": "0.80",
+                "offSnapPct": "0.18",
                 "defSnap": "0",
                 "stSnap": "0",
                 "stSnapPct": "0.00",
-                "offSnap": "53",
+                "offSnap": "12",
                 "defSnapPct": "0.00"
             },
             "Receiving": {
                 "receptions": "1",
                 "recTD": "0",
-                "longRec": "-2",
+                "longRec": "11",
                 "targets": "2",
+                "recYds": "11",
+                "recAvg": "11.0"
+            },
+            "longName": "DeAndre Hopkins",
+            "playerID": "15795",
+            "team": "KC",
+            "teamID": "16",
+            "gameID": "20250126_BUF@KC",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "1.1",
+                "PPR": "2.1",
+                "halfPPR": "1.6"
+            }
+        },
+        "20250118_HOU@KC": {
+            "teamAbv": "KC",
+            "snapCounts": {
+                "offSnapPct": "0.31",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "16",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "0",
+                "recTD": "0",
+                "longRec": "0",
+                "targets": "1",
+                "recYds": "0",
+                "recAvg": "0.0"
+            },
+            "longName": "DeAndre Hopkins",
+            "playerID": "15795",
+            "team": "KC",
+            "teamID": "16",
+            "gameID": "20250118_HOU@KC",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "0.0",
+                "PPR": "0.0",
+                "halfPPR": "0.0"
+            }
+        },
+        "20241225_KC@PIT": {
+            "teamAbv": "KC",
+            "snapCounts": {
+                "offSnapPct": "0.47",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "29",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "2",
+                "recTD": "0",
+                "longRec": "4",
+                "targets": "4",
+                "recYds": "7",
+                "recAvg": "3.5"
+            },
+            "longName": "DeAndre Hopkins",
+            "playerID": "15795",
+            "team": "KC",
+            "teamID": "16",
+            "gameID": "20241225_KC@PIT",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "0.7",
+                "PPR": "2.7",
+                "halfPPR": "1.7"
+            }
+        },
+        "20241221_HOU@KC": {
+            "teamAbv": "KC",
+            "snapCounts": {
+                "offSnapPct": "0.49",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "36",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "4",
+                "recTD": "0",
+                "longRec": "15",
+                "targets": "4",
+                "recYds": "37",
+                "recAvg": "9.3"
+            },
+            "longName": "DeAndre Hopkins",
+            "playerID": "15795",
+            "team": "KC",
+            "teamID": "16",
+            "gameID": "20241221_HOU@KC",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "3.7",
+                "PPR": "7.7",
+                "halfPPR": "5.7"
+            }
+        },
+        "20241215_KC@CLE": {
+            "teamAbv": "KC",
+            "snapCounts": {
+                "offSnapPct": "0.45",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "34",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "5",
+                "recTD": "0",
+                "longRec": "12",
+                "targets": "6",
+                "recYds": "36",
+                "recAvg": "7.2"
+            },
+            "longName": "DeAndre Hopkins",
+            "playerID": "15795",
+            "team": "KC",
+            "teamID": "16",
+            "gameID": "20241215_KC@CLE",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "3.6",
+                "PPR": "8.6",
+                "halfPPR": "6.1"
+            }
+        },
+        "20241208_LAC@KC": {
+            "teamAbv": "KC",
+            "snapCounts": {
+                "offSnapPct": "0.55",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "38",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "4",
+                "recTD": "1",
+                "longRec": "10",
+                "targets": "9",
+                "recYds": "32",
+                "recAvg": "8.0"
+            },
+            "longName": "DeAndre Hopkins",
+            "scoringPlays": [
+                {
+                    "score": "DeAndre Hopkins 9 Yd pass from Patrick Mahomes (Matthew Wright Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "13",
+                    "awayScore": "0",
+                    "teamID": "16",
+                    "scoreDetails": "9 plays, 77 yards, 2:41",
+                    "scoreType": "TD",
+                    "scoreTime": "0:47",
+                    "team": "KC",
+                    "playerIDs": [
+                        "3139477",
+                        "15795",
+                        "3128444"
+                    ]
+                }
+            ],
+            "playerID": "15795",
+            "team": "KC",
+            "teamID": "16",
+            "gameID": "20241208_LAC@KC",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "9.2",
+                "PPR": "13.2",
+                "halfPPR": "11.2"
+            }
+        },
+        "20241129_LV@KC": {
+            "teamAbv": "KC",
+            "snapCounts": {
+                "offSnapPct": "0.59",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "42",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "4",
+                "recTD": "0",
+                "longRec": "34",
+                "targets": "9",
+                "recYds": "90",
+                "recAvg": "22.5"
+            },
+            "longName": "DeAndre Hopkins",
+            "playerID": "15795",
+            "team": "KC",
+            "teamID": "16",
+            "gameID": "20241129_LV@KC",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "9.0",
+                "PPR": "13.0",
+                "halfPPR": "11.0"
+            }
+        },
+        "20241124_KC@CAR": {
+            "teamAbv": "KC",
+            "snapCounts": {
+                "offSnapPct": "0.45",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "33",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "5",
+                "recTD": "1",
+                "longRec": "12",
+                "targets": "6",
+                "recYds": "35",
+                "recAvg": "7.0"
+            },
+            "longName": "DeAndre Hopkins",
+            "scoringPlays": [
+                {
+                    "score": "DeAndre Hopkins 3 Yd pass from Patrick Mahomes (Spencer Shrader Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "16",
+                    "awayScore": "27",
+                    "teamID": "16",
+                    "scoreDetails": "10 plays, 75 yards, 3:44",
+                    "scoreType": "TD",
+                    "scoreTime": "2:42",
+                    "team": "KC",
+                    "playerIDs": [
+                        "3139477",
+                        "15795",
+                        "4571557"
+                    ]
+                }
+            ],
+            "playerID": "15795",
+            "team": "KC",
+            "teamID": "16",
+            "gameID": "20241124_KC@CAR",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "9.5",
+                "PPR": "14.5",
+                "halfPPR": "12.0"
+            }
+        },
+        "20241117_KC@BUF": {
+            "teamAbv": "KC",
+            "snapCounts": {
+                "offSnapPct": "0.47",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "26",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "3",
+                "recTD": "0",
+                "longRec": "13",
+                "targets": "4",
+                "recYds": "29",
+                "recAvg": "9.7"
+            },
+            "longName": "DeAndre Hopkins",
+            "playerID": "15795",
+            "team": "KC",
+            "teamID": "16",
+            "gameID": "20241117_KC@BUF",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "2.9",
+                "PPR": "5.9",
+                "halfPPR": "4.4"
+            }
+        },
+        "20241110_DEN@KC": {
+            "teamAbv": "KC",
+            "snapCounts": {
+                "offSnapPct": "0.65",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "44",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "4",
+                "recTD": "0",
+                "longRec": "31",
+                "targets": "5",
+                "recYds": "56",
+                "recAvg": "14.0"
+            },
+            "longName": "DeAndre Hopkins",
+            "playerID": "15795",
+            "team": "KC",
+            "teamID": "16",
+            "gameID": "20241110_DEN@KC",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "5.6",
+                "PPR": "9.6",
+                "halfPPR": "7.6"
+            }
+        },
+        "20241104_TB@KC": {
+            "teamAbv": "KC",
+            "snapCounts": {
+                "offSnapPct": "0.60",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "51",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "8",
+                "recTD": "2",
+                "longRec": "35",
+                "targets": "9",
+                "recYds": "86",
+                "recAvg": "10.8"
+            },
+            "longName": "DeAndre Hopkins",
+            "scoringPlays": [
+                {
+                    "score": "DeAndre Hopkins 1 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "10",
+                    "awayScore": "7",
+                    "teamID": "16",
+                    "scoreDetails": "11 plays, 70 yards, 6:18",
+                    "scoreType": "TD",
+                    "scoreTime": "4:05",
+                    "team": "KC",
+                    "playerIDs": [
+                        "3139477",
+                        "15795",
+                        "3055899"
+                    ]
+                },
+                {
+                    "score": "DeAndre Hopkins 5 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "24",
+                    "awayScore": "17",
+                    "teamID": "16",
+                    "scoreDetails": "15 plays, 78 yards, 8:26",
+                    "scoreType": "TD",
+                    "scoreTime": "4:17",
+                    "team": "KC",
+                    "playerIDs": [
+                        "3139477",
+                        "15795",
+                        "3055899"
+                    ]
+                }
+            ],
+            "playerID": "15795",
+            "team": "KC",
+            "teamID": "16",
+            "gameID": "20241104_TB@KC",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "20.6",
+                "PPR": "28.6",
+                "halfPPR": "24.6"
+            }
+        },
+        "20241027_KC@LV": {
+            "teamAbv": "KC",
+            "snapCounts": {
+                "offSnapPct": "0.32",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "23",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "2",
+                "recTD": "0",
+                "longRec": "16",
+                "targets": "3",
+                "recYds": "29",
+                "recAvg": "14.5"
+            },
+            "longName": "DeAndre Hopkins",
+            "playerID": "15795",
+            "team": "KC",
+            "teamID": "16",
+            "gameID": "20241027_KC@LV",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "2.9",
+                "PPR": "4.9",
+                "halfPPR": "3.9"
+            }
+        },
+        "20241020_TEN@BUF": {
+            "Defense": {
+                "fumblesLost": "0",
+                "defensiveInterceptions": "0",
+                "forcedFumbles": "0",
+                "fumbles": "1",
+                "fumblesRecovered": "0"
+            },
+            "teamAbv": "TEN",
+            "snapCounts": {
+                "offSnapPct": "0.60",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "44",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "1",
+                "recTD": "0",
+                "longRec": "6",
+                "targets": "1",
                 "recYds": "-2",
                 "recAvg": "-2.0"
             },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241020_PHI@NYG",
+            "longName": "DeAndre Hopkins",
+            "playerID": "15795",
+            "team": "TEN",
+            "teamID": "31",
+            "gameID": "20241020_TEN@BUF",
             "fantasyPoints": "0.0",
             "fantasyPointsDefault": {
                 "standard": "-0.2",
@@ -539,133 +532,37 @@
                 "halfPPR": "0.3"
             }
         },
-        "20241013_CLE@PHI": {
-            "teamAbv": "PHI",
+        "20241013_IND@TEN": {
+            "teamAbv": "TEN",
             "snapCounts": {
-                "offSnapPct": "1.00",
+                "offSnapPct": "0.71",
                 "defSnap": "0",
                 "stSnap": "0",
                 "stSnapPct": "0.00",
-                "offSnap": "62",
+                "offSnap": "41",
                 "defSnapPct": "0.00"
             },
             "Receiving": {
-                "receptions": "3",
-                "recTD": "1",
-                "longRec": "45",
-                "targets": "4",
-                "recYds": "64",
-                "recAvg": "21.3"
-            },
-            "longName": "DeVonta Smith",
-            "scoringPlays": [
-                {
-                    "score": "DeVonta Smith 45 Yd pass from Jalen Hurts (Jake Elliott Kick)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "20",
-                    "awayScore": "13",
-                    "teamID": "27",
-                    "scoreDetails": "4 plays, 70 yards, 1:55",
-                    "scoreType": "TD",
-                    "scoreTime": "7:54",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4040715",
-                        "4241478",
-                        "3050478"
-                    ]
-                }
-            ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241013_CLE@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "12.4",
-                "PPR": "15.4",
-                "halfPPR": "13.9"
-            }
-        },
-        "20240922_PHI@NO": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.76",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "55",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "7",
+                "receptions": "4",
                 "recTD": "0",
-                "longRec": "21",
-                "targets": "10",
-                "recYds": "79",
-                "recAvg": "11.3"
+                "longRec": "23",
+                "targets": "6",
+                "recYds": "54",
+                "recAvg": "13.5"
             },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20240922_PHI@NO",
+            "longName": "DeAndre Hopkins",
+            "playerID": "15795",
+            "team": "TEN",
+            "teamID": "31",
+            "gameID": "20241013_IND@TEN",
             "fantasyPoints": "0.0",
             "fantasyPointsDefault": {
-                "standard": "7.9",
-                "PPR": "14.9",
-                "halfPPR": "11.4"
+                "standard": "5.4",
+                "PPR": "9.4",
+                "halfPPR": "7.4"
             }
         },
-        "20240916_ATL@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "1.00",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "71",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "7",
-                "recTD": "1",
-                "longRec": "19",
-                "targets": "10",
-                "recYds": "76",
-                "recAvg": "10.9"
-            },
-            "longName": "DeVonta Smith",
-            "scoringPlays": [
-                {
-                    "score": "DeVonta Smith 7 Yd pass from Jalen Hurts (Jake Elliott Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "7",
-                    "awayScore": "3",
-                    "teamID": "27",
-                    "scoreDetails": "11 plays, 70 yards, 6:07",
-                    "scoreType": "TD",
-                    "scoreTime": "5:15",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4040715",
-                        "4241478",
-                        "3050478"
-                    ]
-                }
-            ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20240916_ATL@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "13.6",
-                "PPR": "20.6",
-                "halfPPR": "17.1"
-            }
-        },
-        "20240906_GB@PHI": {
+        "20240930_TEN@MIA": {
             "Defense": {
                 "totalTackles": "1",
                 "defTD": "0",
@@ -677,33 +574,141 @@
                 "sacks": "0",
                 "passDeflections": "0"
             },
-            "teamAbv": "PHI",
+            "teamAbv": "TEN",
             "snapCounts": {
-                "offSnapPct": "1.00",
+                "offSnapPct": "0.32",
                 "defSnap": "0",
                 "stSnap": "0",
                 "stSnapPct": "0.00",
-                "offSnap": "76",
+                "offSnap": "21",
                 "defSnapPct": "0.00"
             },
             "Receiving": {
-                "receptions": "7",
+                "receptions": "2",
                 "recTD": "0",
-                "longRec": "25",
-                "targets": "8",
-                "recYds": "84",
-                "recAvg": "12.0"
+                "longRec": "16",
+                "targets": "4",
+                "recYds": "31",
+                "recAvg": "15.5"
             },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20240906_GB@PHI",
+            "longName": "DeAndre Hopkins",
+            "playerID": "15795",
+            "team": "TEN",
+            "teamID": "31",
+            "gameID": "20240930_TEN@MIA",
             "fantasyPoints": "0.0",
             "fantasyPointsDefault": {
-                "standard": "8.4",
-                "PPR": "15.4",
-                "halfPPR": "11.9"
+                "standard": "3.1",
+                "PPR": "5.1",
+                "halfPPR": "4.1"
+            }
+        },
+        "20240922_GB@TEN": {
+            "teamAbv": "TEN",
+            "snapCounts": {
+                "offSnapPct": "0.46",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "25",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "6",
+                "recTD": "1",
+                "longRec": "20",
+                "targets": "7",
+                "recYds": "73",
+                "recAvg": "12.2"
+            },
+            "longName": "DeAndre Hopkins",
+            "scoringPlays": [
+                {
+                    "score": "DeAndre Hopkins 11 Yd pass from Will Levis (Nick Folk Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "14",
+                    "awayScore": "27",
+                    "teamID": "31",
+                    "scoreDetails": "7 plays, 68 yards, 3:30",
+                    "scoreType": "TD",
+                    "scoreTime": "4:55",
+                    "team": "TEN",
+                    "playerIDs": [
+                        "4361418",
+                        "15795",
+                        "10621"
+                    ]
+                }
+            ],
+            "playerID": "15795",
+            "team": "TEN",
+            "teamID": "31",
+            "gameID": "20240922_GB@TEN",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "13.3",
+                "PPR": "19.3",
+                "halfPPR": "16.3"
+            }
+        },
+        "20240915_NYJ@TEN": {
+            "teamAbv": "TEN",
+            "snapCounts": {
+                "offSnapPct": "0.44",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "29",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "1",
+                "recTD": "0",
+                "longRec": "9",
+                "targets": "2",
+                "recYds": "9",
+                "recAvg": "9.0"
+            },
+            "longName": "DeAndre Hopkins",
+            "playerID": "15795",
+            "team": "TEN",
+            "teamID": "31",
+            "gameID": "20240915_NYJ@TEN",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "0.9",
+                "PPR": "1.9",
+                "halfPPR": "1.4"
+            }
+        },
+        "20240908_TEN@CHI": {
+            "teamAbv": "TEN",
+            "snapCounts": {
+                "offSnapPct": "0.27",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "17",
+                "defSnapPct": "0.00"
+            },
+            "Receiving": {
+                "receptions": "1",
+                "recTD": "0",
+                "longRec": "8",
+                "targets": "1",
+                "recYds": "8",
+                "recAvg": "8.0"
+            },
+            "longName": "DeAndre Hopkins",
+            "playerID": "15795",
+            "team": "TEN",
+            "teamID": "31",
+            "gameID": "20240908_TEN@CHI",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "0.8",
+                "PPR": "1.8",
+                "halfPPR": "1.3"
             }
         }
     }

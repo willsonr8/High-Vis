@@ -1,3 +1,5 @@
+import ordered_set
+
 from backend.models.Game import PlayerGame
 from backend.server.requests import Server
 from backend.models.Player import Player
@@ -34,7 +36,8 @@ def get_player_by_id_transformed(player_id):
 def get_player_game_stats_transformed(player_id, season):
     """
     fetches player game stats for a specific player and season from the server. includes all games played in the regular
-    season and playoffs. handles bye weeks and injuries by inserting appropriate entries in the game list.
+    season and playoffs. handles bye weeks and injuries by inserting appropriate entries in the game list. handles
+    player trades by iterating through all teams that the player played for in the season.
 
     :param player_id: the ID of the player to fetch stats for.
     :param season: the season year for which to fetch the stats.
@@ -43,23 +46,27 @@ def get_player_game_stats_transformed(player_id, season):
     # 1. fetches game data for all games that a player PLAYED IN (bye weeks and injuries are not included)
     response = Server.get_nfl_games_and_stats_for_player(player_id=player_id, season_year=season)
 
-    # 2. transforms the fetched data into a Player object
+    # 2. transforms the fetched data into a Player object. extracts all team ids that the player played for in the season
     game_dict = response["body"]
     rev_player_games = []
+    all_team_ids = ordered_set.OrderedSet()
     for game_id, stats in game_dict.items():  # this does yield reversed order of games, so the first game is the most recent
         game = PlayerGame(game_id, {}, stats)  # uses special constructor to intake dict as value
         rev_player_games.append(game)
+        all_team_ids.add(game.team_id)  # the first id in the list is the most recent team played for by the player
 
     # at this point, rev_player_games is a list of PlayerGame objects, each representing a game played by player
-    # 3. extract team_id and player_name from the first game in the list
-    team_id = rev_player_games[0].team_id if rev_player_games else None
+    # 3. extract player_name from the first game in the list
+
     player_name = rev_player_games[0].player_name if rev_player_games else None
 
-    # 4. fetches the team schedule for the given team_id and season
-    team_games = (Server.get_nfl_team_schedule(team_id, 2024))["body"]["schedule"]
-    # copies the player games in reverse order to maintain the order of games as they were played
+    # 4. fetches the team schedule for all given team_ids and season
+    all_team_games = dict()
+    for team_id in all_team_ids:
+        team_games = (Server.get_nfl_team_schedule(team_id, season))["body"]["schedule"]
+        all_team_games[team_id] = team_games
 
-    player_games = rev_player_games[::-1]
+    player_games = rev_player_games[::-1] # copies the player games in reverse order to maintain the order of games as they were played
 
     json_games = []
 
@@ -67,12 +74,25 @@ def get_player_game_stats_transformed(player_id, season):
     last_week = 0  # necessary to track the last week played to determine bye weeks
 
     # 4. iterates through the team games and compares them with the player games to determine if a bye week or injury occurred
-    for idx in range(len(team_games)):
+    team_id = all_team_ids[-1]  # starts with the first team that a player played for in the season which is at the end of the list
+    team_games = all_team_games[all_team_ids[-1]]
+
+    idx = 0
+    team_game_number = len(team_games)
+    while idx < team_game_number:
         game = team_games[idx]
+
+        if team_id != player_games[player_game_count].team_id:  # indicates that a player has been traded
+            # updates iteration variables to reflect the new team
+            team_id = player_games[player_game_count].team_id
+            team_games = all_team_games[team_id]
+            team_game_number = len(team_games)
+            continue
+
         if game.get("seasonType") == "Preseason":
             # at the moment, we do not support preseason games
+            idx += 1
             continue
-        game = team_games[idx] # unnecessary ?
 
         week = (game.get("gameWeek"))[-1]
         if week.isdigit():
@@ -114,6 +134,7 @@ def get_player_game_stats_transformed(player_id, season):
             json_games.append(player_games[player_game_count].to_dict())
             player_game_count += 1
         last_week = week
+        idx += 1
 
     return {"games": json_games, "playerId": player_id, "season": season}
 
