@@ -1,5 +1,6 @@
 import ordered_set
 
+from backend.constants import CURRENT_SEASON
 from backend.models.Game import PlayerGame
 from backend.server.requests import Server
 from backend.models.Player import Player
@@ -43,6 +44,12 @@ def get_player_game_stats_transformed(player_id, season):
     :param season: the season year for which to fetch the stats.
     :return: a Player object with stats if found, otherwise None.
     """
+    if int(season) == CURRENT_SEASON:
+        player_info_response = Server.get_player_info(player_id=player_id)
+        team_id = player_info_response["body"].get("teamID")
+        team_schedule_response = Server.get_nfl_team_schedule(team_id, season)
+        return {"games": team_schedule_response["body"]["schedule"], "playerId": player_id, "season": season}
+
     # 1. fetches game data for all games that a player PLAYED IN (bye weeks and injuries are not included)
     response = Server.get_nfl_games_and_stats_for_player(player_id=player_id, season_year=season)
 
