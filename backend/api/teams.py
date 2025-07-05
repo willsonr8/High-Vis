@@ -13,3 +13,7 @@ def get_all_teams(sort_by="standings", rosters=False, schedules=False, top_perfo
     teams = tf.get_all_nfl_teams_transformed(sort_by, rosters, schedules, top_performers, team_stats, season)
     return jsonify(teams)
 
+@team_bp.route("/team_id/<team_id>/<season>/schedule", methods=["GET"])
+def get_team_schedule_by_id(team_id, season=2024):
+    team_schedule = tf.get_nfl_team_schedule_transformed(team_id, season)
+    return jsonify({"schedule": team_schedule})

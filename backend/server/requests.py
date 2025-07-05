@@ -167,6 +167,7 @@ class Server:
         # TODO: check that I can just pass None for the params
         # TODO: check functionality, IDK if this works, and the copilot wrote the params function
         # TODO: check to see if this function uses IDP data
+        # honestly the api response itself is jacked up. i am not sure how to properly use this. currently only returns 2024 projections for a player, 2025 may not be ready yet.
         """
         fetches fantasy point projections for a specific player or team from the server. player_id, team_id
         and archive_year cannot be used together. player_id overrides team_id and week. team_id overrides week.
@@ -247,9 +248,8 @@ class Server:
 
     @classmethod
     def get_nfl_games_and_stats_for_player(cls, player_id=None, team_id=None, game_id=None, number_of_games=None, season_year="2024", fantasy_stat_values: dict = fv.PPR_SCORING):
-        # the season year param is used in the middle of the url, see if it works out of order.
         """
-        fetches the games by game stat line for a specific NFL player from the server.
+        fetches the games by game stat line for a specific NFL player from the server. this can only be used for games played, cannot be used for future seasons/games.
         :param player_id: the ID of the player for whom to fetch games and stats.
         :param team_id: the ID of the team for which to fetch games and stats (optional). this will yield defensive stats for the team. fantasy point calculations are not working for this param.
         :param game_id: the ID of a specific game for which to fetch stats (optional).

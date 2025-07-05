@@ -155,14 +155,13 @@ def get_all_nfl_teams_transformed(sort_by="standings", rosters=False, schedules=
     teams = Server.get_nfl_teams(sort_by, rosters, schedules, top_performers, team_stats, team_stats_season)
     return teams
 
-def get_team_by_id_transformed(team_id):
+def get_nfl_team_schedule_transformed(team_id, season=2024):
     """
-    fetches a team by ID from the server and transforms it into a Team object.
+    fetches the NFL team schedule for a specific team and season from the server.
 
-    :param team_id: the ID of the team to fetch.
-    :return: a Team object if found, otherwise None.
+    :param team_id: the ID of the team to fetch the schedule for.
+    :param season: the season year for which to fetch the schedule.
+    :return: a list of games in the team's schedule.
     """
-    team_data = Server.get_nfl_team_info(team_id=team_id)
-    if not team_data:
-        return None
-    return team_data["body"]
+    team_data = Server.get_nfl_team_schedule(team_id, season)
+    return team_data["body"]["schedule"]
