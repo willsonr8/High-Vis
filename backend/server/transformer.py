@@ -48,6 +48,24 @@ def get_player_game_stats_transformed(player_id, season):
         player_info_response = Server.get_player_info(player_id=player_id)
         team_id = player_info_response["body"].get("teamID")
         team_schedule_response = Server.get_nfl_team_schedule(team_id, season)
+        for game in team_schedule_response["body"]["schedule"]:
+            game["season"] = season
+            game["stats"]= {
+                "playerId": player_id,
+                "playerName": player_info_response["body"].get("longName"),
+                "fantasyPoints": {
+                    "PPR": None,
+                    "halfPPR": None,
+                    "standard": None
+                },
+                "snapCount": {},
+                "stats": {
+                    "defensiveStats": {},
+                    "receivingStats": {},
+                    "rushingStats": {},
+                    "passingStats": {}
+                }
+            }
         return {"games": team_schedule_response["body"]["schedule"], "playerId": player_id, "season": season}
 
     # 1. fetches game data for all games that a player PLAYED IN (bye weeks and injuries are not included)
