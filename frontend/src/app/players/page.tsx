@@ -3,10 +3,11 @@ import React from 'react';
 import NavBar from "@/components/NavBar";
 import PlayerPage from "@/components/player_name/PlayerPage";
 import { useState, useEffect } from "react";
-
+import NewPlayerPage from "@/components/NewPlayerPage";
+import {PlayerInfo} from "@/interfaces/playerInfo";
 
 const PlayerHome: React.FC = () => {
-    const [player, setPlayer] = useState(null)
+    const [player, setPlayer] = useState<PlayerInfo | null>(null);
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false);
 
@@ -25,7 +26,7 @@ const PlayerHome: React.FC = () => {
             <NavBar/>
             {!loading && player ? (
                 <div className={"all-player-page-container text-white"}>
-                    <PlayerPage player_json={player}/>
+                    <NewPlayerPage player={player}/>
                 </div>
             ) : error ? (
                 <p className={"text-white text-center"}>Player data not found. Please try again later.</p>
