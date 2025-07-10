@@ -2,6 +2,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import React, { useState } from 'react';
 import { getPlayerBio } from '@/api/ApiCalls';
 import {useRouter} from "next/navigation";
+import {PlayerInfoProp} from "@/interfaces/playerInfo";
 
 const Search = () => {
   const [term, setTerm] = useState('');
@@ -28,7 +29,7 @@ const Search = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const cleanTerm = validateTerm(term)
-    const playerData = await getPlayerBio(cleanTerm);
+    const playerData: PlayerInfoProp = await getPlayerBio(cleanTerm);
     if (typeof window !== "undefined") {
             sessionStorage.setItem('player', JSON.stringify(playerData));
     }

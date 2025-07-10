@@ -5,6 +5,13 @@ from backend.models.Game import PlayerGame
 from backend.server.requests import Server
 from backend.models.Player import Player
 
+############################## HELPER FUNCTIONS ##############################
+
+# def handle_error(error: Exception, message: str):
+#     if error == ValueError:
+#         return
+#     return
+
 ############################## PLAYER TRANSFORMATIONS ##############################
 def get_all_players_transformed():
     """

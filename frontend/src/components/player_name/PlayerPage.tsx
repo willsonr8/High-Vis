@@ -4,7 +4,7 @@ import RenderTable from "@/components/player_name/Table";
 import RenderLineChart from "@/components/player_name/LineChart";
 import SeasonSelect from "@/components/player_name/Select";
 import DataToggle from "@/components/player_name/DataToggle";
-import {team_dict} from "@/utils/constants";
+import {team_dict} from "@/utils/teamMap";
 import {PlayerPageProps} from "@/interfaces/playerStats";
 
 export interface PlayerStats {

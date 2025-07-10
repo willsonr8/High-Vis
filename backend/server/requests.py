@@ -77,6 +77,8 @@ class Server:
         parsed_data: dict = json.loads(data)
         file_name = inspect.currentframe().f_back.f_code.co_name + ".json"
         send_to_json(parsed_data, f"{file_name}")
+        if parsed_data.get("error"):
+            raise Exception(parsed_data["error"])
         return parsed_data
 
     ############################## TEAM API CALLS ##############################
