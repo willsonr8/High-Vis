@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useMemo} from "react";
 import {PlayerInfo, PlayerInfoProp} from "@/interfaces/playerInfo";
 import {getSessionStorage} from "@/utils/getSessionStorage";
-import {PlayerStats} from "@/interfaces/playerStats";
+import {NewPlayerStats, PlayerStats} from "@/interfaces/playerStats";
 import {getTeamName} from "@/utils/teamMap";
 import SeasonSelect from "@/components/player_name/Select";
 import RenderTable from "@/components/player_name/Table";
@@ -38,7 +38,8 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
         const fetchData = async () => {
             try {
                 const response = await getFantasyPlayerStats(playerID, year);
-                setPlayerData(response);
+                const newPlayerData = NewPlayerStats(response)
+                setPlayerData(newPlayerData);
             } catch (error) {
                 console.error("Error fetching data: ", error);
             }
