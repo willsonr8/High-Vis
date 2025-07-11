@@ -81,7 +81,7 @@ export interface GameStats {
     awayResult?: string;
     encodedGameWeek?: string;
     gameDate: string;
-    gameID: string;
+    gameId: string;
     gameStatus: string;
     gameStatusCode: string;
     gameTimeEpoch?: string;

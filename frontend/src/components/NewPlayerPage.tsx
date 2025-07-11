@@ -13,7 +13,7 @@ import {getFantasyPlayerStats} from "@/api/ApiCalls";
 export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.Element {
     const [playerID, setPlayerID] = useState<string | null>(null)
     const [year, setYear] = useState("2024");
-    const [playerData, setPlayerData] = useState<PlayerStats | []>([]);
+    const [playerData, setPlayerData] = useState<PlayerStats>();
     const [playerInfoLoading, setPlayerInfoLoading] = useState<boolean>(true);
     const [playerDataLoading, setPlayerDataLoading] = useState<boolean>(true);
 
@@ -38,16 +38,20 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
         const fetchData = async () => {
             try {
                 const response = await getFantasyPlayerStats(playerID, year);
-                console.log("Raw response:", response);
                 setPlayerData(response);
-                setPlayerDataLoading(false);
             } catch (error) {
                 console.error("Error fetching data: ", error);
             }
         };
         fetchData();
-    }
-}, [playerID, year]);
+    }}, [playerID, year]);
+
+    useEffect(() => {
+        if (playerData) {
+            setPlayerDataLoading(false)
+            console.log(playerData)
+        }
+    }, [playerData])
 
     return (
         <div>
@@ -84,8 +88,8 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
                     <div className={"data-table shadow-small"}>
                         <div className={"select-container"}>
                             <SeasonSelect year={year} setYear={setYear}/>
+                            <p>{playerData.games[0].gameId}</p>
                         </div>
-                        {/*<span>{playerData.games.gameDate}</span>*/}
                         {/*<RenderTable data={playerData.player_stats} rows={rows} cols={cols}/>*/}
                     </div>)}
             </div>
