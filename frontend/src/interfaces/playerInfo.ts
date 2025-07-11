@@ -126,7 +126,7 @@ export interface PlayerInfo {
     jerseyNum: string;
     lastGamePlayed: string;
     name: string;
-    playerID: string;
+    playerId: string;
     position: string;
     school: string;
     stats: {

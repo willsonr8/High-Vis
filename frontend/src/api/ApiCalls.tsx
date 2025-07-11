@@ -12,7 +12,7 @@ export const getPlayerBio = async (playerName: string) => {
     }
 };
 
-export const getFantasyPlayerStats = async (playerID: string, team: string, year: string) => {
+export const getFantasyPlayerStats = async (playerID: string, year: string) => {
     try {
         const response = await axios.get(`${API_URL}/player/id/${playerID}/player_stats/${year}`);
         return response.data;
