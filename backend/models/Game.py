@@ -34,7 +34,6 @@ class Game:
     def load_data(self, info: dict):
         """handles specific situation in which the game data is loaded after the object is created. this occurs
         in the transformer when player games are addressed first and then the game data is loaded."""
-        self.season = info.get("season")
         self.game_week: str | None = None
         self.encoded_game_week: int | None = None
         self.season_type = info.get("seasonType")
@@ -65,7 +64,6 @@ class Game:
     def to_dict(self):
         return {
             "gameId": self.game_id,
-            "season": self.season,
             "gameWeek": self.game_week,
             "encodedGameWeek": self.encoded_game_week,
             "seasonType": self.season_type,

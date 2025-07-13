@@ -38,6 +38,7 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
         const fetchData = async () => {
             try {
                 const response = await getFantasyPlayerStats(playerID, year);
+                console.log(response.games[0].stats.fantasyPoints.standard)
                 const newPlayerData = NewPlayerStats(response)
                 setPlayerData(newPlayerData);
             } catch (error) {
@@ -89,7 +90,6 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
                     <div className={"data-table shadow-small"}>
                         <div className={"select-container"}>
                             <SeasonSelect year={year} setYear={setYear}/>
-                            <p>{playerData.games[0].gameId}</p>
                         </div>
                         {/*<RenderTable data={playerData.player_stats} rows={rows} cols={cols}/>*/}
                     </div>)}
