@@ -5,6 +5,7 @@ import {NewPlayerStats, PlayerStats} from "@/interfaces/playerStats";
 import {getTeamName} from "@/utils/teamMap";
 import SeasonSelect from "@/components/player_name/Select";
 import RenderTable from "@/components/player_name/Table";
+import RenderNewTable from "@/components/player_name/NewTable"
 import DataToggle from "@/components/player_name/DataToggle";
 import RenderLineChart from "@/components/player_name/LineChart";
 import {getFantasyPlayerStats} from "@/api/ApiCalls";
@@ -91,7 +92,7 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
                         <div className={"select-container"}>
                             <SeasonSelect year={year} setYear={setYear}/>
                         </div>
-                        {/*<RenderTable data={playerData.player_stats} rows={rows} cols={cols}/>*/}
+                        <RenderNewTable games={playerData.games}/>
                     </div>)}
             </div>
             <div className={"container-3"}>

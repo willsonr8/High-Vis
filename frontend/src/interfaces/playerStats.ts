@@ -109,6 +109,10 @@ export interface PlayerStats {
     season: string;
 }
 
+export interface RenderTableProps {
+    games: GameStats[];
+}
+
 export function NewPlayerStats(r: any) {
     const nps: PlayerStats = {
         games: [],
@@ -120,9 +124,7 @@ export function NewPlayerStats(r: any) {
     }
     nps.playerId = r.playerId
     nps.season = r.season
-    //console.log("loading player games: ", r.games)
     for (const game of r.games) {
-        //console.log("loading snap counts: ", game.stats.snapCount)
         try {
             const newSnapCount: SnapCounts = {
                 defSnap: game.stats.snapCount.defSnap,
@@ -132,7 +134,6 @@ export function NewPlayerStats(r: any) {
                 stSnap: game.stats.snapCount.stSnap,
                 stSnapPct: game.stats.snapCount.stSnapPct
             }
-            //console.log("loading passing stats: ", game.stats.stats.passingStats)
             const newPassing: PassingStats = {
                 passYds: game.stats.stats.passingStats.passYds,
                 passTD: game.stats.stats.passingStats.passTD,
@@ -147,7 +148,6 @@ export function NewPlayerStats(r: any) {
                 rtg: game.stats.stats.passingStats.rtg,
                 sacked: game.stats.stats.passingStats.sacked
             }
-            //console.log("loading rushing stats: ", game.stats.stats.rushingStats)
             const newRushing: RushingStats = {  // need value population
                 rushAvg: game.stats.stats.rushingStats.rushAvg,
                 rushYds: game.stats.stats.rushingStats.rushYds,
@@ -156,7 +156,6 @@ export function NewPlayerStats(r: any) {
                 rushTD: game.stats.stats.rushingStats.rushTD,
                 rushTwoPointConversions: game.stats.stats.rushingStats.rushTwoPointConversions
             }
-            //console.log("loading receiving stats: ", game.stats.stats.receivingStats)
             const newReceiving: ReceivingStats = {
                 receptions: game.stats.stats.receivingStats.receptions,
                 recTD: game.stats.stats.receivingStats.recTD,
@@ -166,7 +165,6 @@ export function NewPlayerStats(r: any) {
                 recAvg: game.stats.stats.receivingStats.recAvg,
                 recTwoPointConversions: game.stats.stats.receivingStats.recTwoPointConversions // ?
             }
-            //console.log("loading defense stats: ", game.stats.stats.defensiveStats)
             const newDefense: DefenseStats = {
                 fumblesLost: game.stats.stats.defensiveStats.fumblesLost,
                 defensiveInterceptions: game.stats.stats.defensiveStats.defensiveInterceptions,
@@ -182,14 +180,11 @@ export function NewPlayerStats(r: any) {
                 qbHits: game.stats.stats.defensiveStats.qbHits,
                 twoPointConversionReturns: game.stats.stats.twoPointConversionReturns
             }
-            //console.log("showing stats: ", game.stats)
-            //console.log("loading fantasy stats: ", game.stats.fantasyPoints)
             const newFantasyPoints: FantasyPoints = {
                 standard: game.stats.fantasyPoints.standard,
                 PPR: game.stats.fantasyPoints.PPR,
                 halfPPR: game.stats.fantasyPoints.halfPPR,
             }
-
             const newGame: GameStats = {
                 playerId: game.stats.playerId,
                 playerName: game.stats.playerName,
