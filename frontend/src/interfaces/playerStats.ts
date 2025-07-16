@@ -83,7 +83,7 @@ export interface GameStats {
     teamIDAway: string;
     awayPoints?: string;
     awayResult?: string;
-    encodedGameWeek?: string;
+    encodedGameWeek: number;
     gameDate: string;
     gameId: string;
     gameStatus: string;
@@ -107,6 +107,11 @@ export interface PlayerStats {
     games: GameStats[];
     playerId: string;
     season: string;
+    position: string;
+}
+
+export interface PlayerStatsProps {
+    playerStats: PlayerStats;
 }
 
 export interface RenderTableProps {
@@ -117,7 +122,8 @@ export function NewPlayerStats(r: any) {
     const nps: PlayerStats = {
         games: [],
         playerId: "",
-        season: ""
+        season: "",
+        position: "",
     }
     if (!("games" in r) || !("playerId" in r) || !("season" in r)) {
         return nps
@@ -217,6 +223,15 @@ export function NewPlayerStats(r: any) {
             console.error("An error loading data occurred in game: " + JSON.stringify(game))
         }
     }
-
     return nps
+}
+
+export function EmptyPlayerStats() {
+    const empty: PlayerStats = {
+        games: [],
+        playerId: "",
+        season: "",
+        position: "",
+    }
+    return empty
 }

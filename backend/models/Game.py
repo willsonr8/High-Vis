@@ -2,8 +2,8 @@ class Game:
     def __init__(self, game_id: str, info: dict):
         self.game_id = game_id
         self.season = info.get("season")
-        self.game_week: str | None = None
-        self.encoded_game_week: int | None = None
+        self.game_week: str = info.get("gameWeek")
+        self.encoded_game_week: int = 0
         self.season_type = info.get("seasonType")
         self.home_team = info.get("home")
         self.home_id = info.get("teamIDHome")
@@ -18,6 +18,9 @@ class Game:
         self.away_result = info.get("awayResult")
         self.home_points = info.get("homePts")
         self.away_points = info.get("awayPts")
+
+        if self.game_week:
+            self.load_encoded_game_week()
 
         if self.season_type and self.game_week:
             if self.season_type == "Preseason":
@@ -34,8 +37,7 @@ class Game:
     def load_data(self, info: dict):
         """handles specific situation in which the game data is loaded after the object is created. this occurs
         in the transformer when player games are addressed first and then the game data is loaded."""
-        self.game_week: str | None = None
-        self.encoded_game_week: int | None = None
+        self.game_week: str = info.get("gameWeek")
         self.season_type = info.get("seasonType")
         self.home_team = info.get("home")
         self.home_id = info.get("teamIDHome")
@@ -51,6 +53,8 @@ class Game:
         self.home_points = info.get("homePts")
         self.away_points = info.get("awayPts")
 
+        self.load_encoded_game_week()
+
         if self.season_type == "Preseason":
             self.game_week = info.get("gameWeek")
         elif self.season_type == "Regular Season":
@@ -59,6 +63,24 @@ class Game:
             self.game_week = info.get("gameWeek")
         else:
             raise ValueError(f"Unknown season type: {self.season_type}")
+
+    def load_encoded_game_week(self):
+        if len(self.game_week) == 6:  # one digit game week
+            self.encoded_game_week = self.game_week[-1]
+        elif len(self.game_week) == 7:  # two digit game week
+            self.encoded_game_week = self.game_week[-2:]
+        elif self.game_week == "Wild Card":
+            self.encoded_game_week = 19
+        elif self.game_week == "Divisional Round":
+            self.encoded_game_week = 20
+        elif self.game_week == "Conference Championship":
+            self.encoded_game_week = 21
+        elif self.game_week == "Super Bowl":
+            self.encoded_game_week = 22
+        else:
+            self.encoded_game_week = 0
+        return
+
 
 
     def to_dict(self):

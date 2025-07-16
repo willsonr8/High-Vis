@@ -12,6 +12,14 @@ from backend.models.Player import Player
 #         return
 #     return
 
+def parse_game_week(week: str, last_week: int):
+    if len(week) == 6: # one digit game week
+        encoded_week = week[-1]
+    elif len(week) == 7: # two digit game week
+        encoded_week = week[-2:]
+    else:
+        encoded_week = last_week + 1 # Wild Card, Divisional Round, Conference Round?, Super Bowl, use encoded game week
+    return int(encoded_week)
 ############################## PLAYER TRANSFORMATIONS ##############################
 def get_all_players_transformed():
     """
@@ -126,13 +134,11 @@ def get_player_game_stats_transformed(player_id, season):
             idx += 1
             continue
 
-        week = (game.get("gameWeek"))[-1]
-        if week.isdigit():
-            week = int(week)
+        encoded_game_week: int = parse_game_week(game.get("gameWeek"), last_week)
 
-        if str(week).isdigit() and week - last_week > 1:
+        if encoded_game_week - last_week > 1:
             # if this condition is met, it means there was a bye week
-            json_games.append(PlayerGame("Bye", {},{
+            json_games.append(PlayerGame("Bye", {"gameWeek": f"Week {last_week + 1}", "encodedGameWeek": last_week + 1},{
                 "playerID": player_id,
                 "longName": player_name,
                 "season": season,
@@ -167,7 +173,7 @@ def get_player_game_stats_transformed(player_id, season):
             player_games[player_game_count].load_data(game)
             json_games.append(player_games[player_game_count].to_dict())
             player_game_count += 1
-        last_week = week
+        last_week = encoded_game_week
         idx += 1
 
     return {"games": json_games, "playerId": player_id, "season": season}

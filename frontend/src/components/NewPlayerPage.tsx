@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useMemo} from "react";
 import {PlayerInfo, PlayerInfoProp} from "@/interfaces/playerInfo";
 import {getSessionStorage} from "@/utils/getSessionStorage";
-import {NewPlayerStats, PlayerStats} from "@/interfaces/playerStats";
+import {EmptyPlayerStats, NewPlayerStats, PlayerStats} from "@/interfaces/playerStats";
 import {getTeamName} from "@/utils/teamMap";
 import SeasonSelect from "@/components/player_name/Select";
 import RenderTable from "@/components/player_name/Table";
@@ -13,8 +13,9 @@ import {getFantasyPlayerStats} from "@/api/ApiCalls";
 
 export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.Element {
     const [playerID, setPlayerID] = useState<string | null>(null)
+    const [position, setPosition] = useState<string>("")
     const [year, setYear] = useState("2024");
-    const [playerData, setPlayerData] = useState<PlayerStats>();
+    const [playerData, setPlayerData] = useState<PlayerStats>(EmptyPlayerStats());
     const [playerInfoLoading, setPlayerInfoLoading] = useState<boolean>(true);
     const [playerDataLoading, setPlayerDataLoading] = useState<boolean>(true);
 
@@ -23,7 +24,7 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
         if (player) {
             setPlayerInfoLoading(false)
             setPlayerID(player.playerId)
-            console.log("set player id: ", player.playerId)
+            setPosition(player.position)
         }
     }, [player]);
 
@@ -39,20 +40,19 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
         const fetchData = async () => {
             try {
                 const response = await getFantasyPlayerStats(playerID, year);
-                console.log(response.games[0].stats.fantasyPoints.standard)
-                const newPlayerData = NewPlayerStats(response)
+                const newPlayerData = NewPlayerStats(response);
+                newPlayerData.position = position;
                 setPlayerData(newPlayerData);
             } catch (error) {
                 console.error("Error fetching data: ", error);
             }
         };
         fetchData();
-    }}, [playerID, year]);
+    }}, [playerID, year, position]);
 
     useEffect(() => {
-        if (playerData) {
+        if (playerData != null) {
             setPlayerDataLoading(false)
-            console.log(playerData)
         }
     }, [playerData])
 
@@ -92,7 +92,7 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
                         <div className={"select-container"}>
                             <SeasonSelect year={year} setYear={setYear}/>
                         </div>
-                        <RenderNewTable games={playerData.games}/>
+                        <RenderNewTable playerStats={playerData}/>
                     </div>)}
             </div>
             <div className={"container-3"}>
