@@ -110,6 +110,28 @@ const positionColumns: Record<Position, StatKey[]> = {
   ]
 };
 
+function getStatValue(item: GameStats, key: StatKey) {
+    if (key in item) {
+        if (item[key] == undefined) {
+            return "0";
+        }
+        else {
+            return item[key];
+        }
+    }
+    for (const nested of ["Defense", "Rushing", "Receiving", "Passing", "snapCounts", "fantasyPoints"]) {
+        if (item[nested] && key in item[nested]) {
+            if (item[nested][key] == undefined) {
+                return "0"
+            }
+            else {
+                return item[nested][key]
+            }
+        }
+    }
+    return ""
+}
+
 function getColumnsForPosition(position: string): { key: StatKey; label: string }[] {
     let keys: StatKey[] = positionColumns[position as Position] ?? positionColumns["WR"];
     return keys.filter((key) => key in columnMap).map((key) => columnMap[key]);
@@ -137,6 +159,7 @@ export default function RenderNewTable({ playerStats }: PlayerStatsProps) {
 
     if (loading) return <div>Loading...</div>;
     console.log(games)
+    console.log(columns)
     return (
         <Table>
             <TableHeader columns={columns}>
@@ -148,10 +171,10 @@ export default function RenderNewTable({ playerStats }: PlayerStatsProps) {
             </TableHeader>
             <TableBody items={games}>
                 {(item) => (
-                    <TableRow className={"table-row"} key={item.gameWeek}>
+                    <TableRow className={"table-row"} key={item.encodedGameWeek}>
                         {columns.map((col) => (
                             <TableCell key={col.key}>
-                                <div className="w-24 flex justify-center">{getKeyValue(item, col.key)}</div>
+                                <div className="w-24 flex justify-center">{getStatValue(item, col.key)}</div>
                             </TableCell>
                         ))}
                     </TableRow>
