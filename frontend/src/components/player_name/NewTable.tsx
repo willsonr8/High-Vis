@@ -8,7 +8,7 @@ import {
   getKeyValue} from "@nextui-org/table";
 import React, {useEffect, useState} from "react";
 import {
-    DefenseStats, GameStats,
+    DefenseStats, FantasyPoints, GameStats,
     PassingStats, PlayerStatsProps,
     ReceivingStats,
     RenderTableProps,
@@ -23,7 +23,8 @@ type StatKey =
     | keyof ReceivingStats
     | keyof RushingStats
     | keyof DefenseStats
-    | keyof PassingStats;
+    | keyof PassingStats
+    | keyof FantasyPoints;
 
 export const columnMap: Record<StatKey, { key: StatKey; label: string }> = {
     // General Game Info
@@ -83,28 +84,33 @@ export const columnMap: Record<StatKey, { key: StatKey; label: string }> = {
     qbr: {key: "qbr", label: "QBR"},
     rtg: {key: "rtg", label: "RTG"},
     sacked: {key: "sacked", label: "Sacked"},
+
+    // FantasyPoints
+    PPR: {key: "PPR", label: "PPR Points"},
+    halfPPR: {key: "halfPPR", label: "halfPPR Points"},
+    standard: {key: "standard", label: "standard Points"}
 };
 
 type Position = "QB" | "RB" | "WR" | "DEF";
 
 const positionColumns: Record<Position, StatKey[]> = {
   QB: [
-    "encodedGameWeek", "gameId", "passYds", "passTD", "passInt", "passCmp", "passAtt", "passAvg",
+    "encodedGameWeek", "gameId", "PPR", "passYds", "passTD", "passInt", "passCmp", "passAtt", "passAvg",
     "rushYds", "rushTD", "carries", "longRush", "rushAvg",
     "receptions", "recTD", "recYds", "targets", "recAvg",
     "fumblesLost", "sacked", "qbr"
   ],
   RB: [
-    "encodedGameWeek", "gameId", "rushYds", "rushTD", "carries", "longRush", "rushAvg",
+    "encodedGameWeek", "gameId", "PPR", "rushYds", "rushTD", "carries", "longRush", "rushAvg",
     "receptions", "recYds", "recTD", "targets", "recAvg",
     "fumbles", "fumblesLost"
   ],
   WR: [
-    "encodedGameWeek", "gameId", "receptions", "targets", "recYds", "recTD", "recAvg", "longRec",
+    "encodedGameWeek", "gameId", "PPR", "receptions", "targets", "recYds", "recTD", "recAvg", "longRec",
     "rushYds", "rushTD", "carries", "rushAvg"
   ],
   DEF: [
-    "encodedGameWeek", "gameId", "totalTackles", "soloTackles", "sacks", "tfl", "qbHits",
+    "encodedGameWeek", "gameId", "PPR", "totalTackles", "soloTackles", "sacks", "tfl", "qbHits",
     "defensiveInterceptions", "forcedFumbles", "fumblesRecovered",
     "passDeflections", "defTD", "twoPointConversionReturns"
   ]

@@ -1,624 +1,15 @@
 {
     "statusCode": 200,
     "body": {
-        "20250209_KC@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.77",
-                "defSnap": "0",
-                "stSnap": "2",
-                "stSnapPct": "0.07",
-                "offSnap": "57",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "4",
-                "recTD": "1",
-                "longRec": "46",
-                "targets": "5",
-                "recYds": "69",
-                "recAvg": "17.3"
-            },
-            "longName": "DeVonta Smith",
-            "scoringPlays": [
-                {
-                    "score": "DeVonta Smith 46 Yd pass from Jalen Hurts (Jake Elliott Kick)",
-                    "scorePeriod": "Q3",
-                    "homeScore": "34",
-                    "awayScore": "0",
-                    "teamID": "27",
-                    "scoreDetails": "1 play, 46 yards, 0:07",
-                    "scoreType": "TD",
-                    "scoreTime": "2:40",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4040715",
-                        "4241478",
-                        "3050478"
-                    ]
-                }
-            ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20250209_KC@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "12.9",
-                "PPR": "16.9",
-                "halfPPR": "14.9"
-            }
-        },
-        "20250126_WSH@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.83",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "59",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "4",
-                "recTD": "0",
-                "longRec": "20",
-                "targets": "4",
-                "recYds": "45",
-                "recAvg": "11.3"
-            },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20250126_WSH@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "4.5",
-                "PPR": "8.5",
-                "halfPPR": "6.5"
-            }
-        },
         "20250119_LAR@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.90",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "57",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "4",
-                "recTD": "0",
-                "longRec": "7",
-                "targets": "4",
-                "recYds": "21",
-                "recAvg": "5.3"
-            },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20250119_LAR@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "2.1",
-                "PPR": "6.1",
-                "halfPPR": "4.1"
-            }
-        },
-        "20250112_GB@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.90",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "54",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "4",
-                "recTD": "0",
-                "longRec": "28",
-                "targets": "4",
-                "recYds": "55",
-                "recAvg": "13.8"
-            },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20250112_GB@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "5.5",
-                "PPR": "9.5",
-                "halfPPR": "7.5"
-            }
-        },
-        "20241229_DAL@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.80",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "52",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "6",
-                "recTD": "2",
-                "longRec": "49",
-                "targets": "7",
-                "recYds": "120",
-                "recAvg": "20.0"
-            },
-            "longName": "DeVonta Smith",
-            "scoringPlays": [
-                {
-                    "score": "DeVonta Smith 22 Yd pass from Kenny Pickett (Jake Elliott Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "14",
-                    "awayScore": "7",
-                    "teamID": "27",
-                    "scoreDetails": "10 plays, 81 yards, 6:11",
-                    "scoreType": "TD",
-                    "scoreTime": "6:38",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4240703",
-                        "4241478",
-                        "3050478"
-                    ]
-                },
-                {
-                    "score": "DeVonta Smith 25 Yd pass from Tanner McKee (Jake Elliott Kick)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "41",
-                    "awayScore": "7",
-                    "teamID": "27",
-                    "scoreDetails": "7 plays, 75 yards, 4:22",
-                    "scoreType": "TD",
-                    "scoreTime": "10:03",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4685201",
-                        "4241478",
-                        "3050478"
-                    ]
-                }
-            ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241229_DAL@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "24.0",
-                "PPR": "30.0",
-                "halfPPR": "27.0"
-            }
-        },
-        "20241222_PHI@WSH": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.82",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "61",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "6",
-                "recTD": "0",
-                "longRec": "13",
-                "targets": "8",
-                "recYds": "51",
-                "recAvg": "8.5"
-            },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241222_PHI@WSH",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "5.1",
-                "PPR": "11.1",
-                "halfPPR": "8.1"
-            }
-        },
-        "20241215_PIT@PHI": {
             "Defense": {
-                "fumblesLost": "0",
+                "fumblesLost": "1",
                 "defensiveInterceptions": "0",
                 "forcedFumbles": "0",
-                "fumbles": "0",
-                "fumblesRecovered": "1"
+                "fumbles": "2",
+                "fumblesRecovered": "0"
             },
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.93",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "74",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "11",
-                "recTD": "1",
-                "longRec": "22",
-                "targets": "12",
-                "recYds": "109",
-                "recAvg": "9.9"
-            },
-            "longName": "DeVonta Smith",
-            "Rushing": {
-                "rushAvg": "1.0",
-                "rushYds": "1",
-                "carries": "1",
-                "longRush": "1",
-                "rushTD": "0"
-            },
-            "scoringPlays": [
-                {
-                    "score": "DeVonta Smith 2 Yd pass from Jalen Hurts (Jake Elliott Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "17",
-                    "awayScore": "3",
-                    "teamID": "27",
-                    "scoreDetails": "9 plays, 45 yards, 4:33",
-                    "scoreType": "TD",
-                    "scoreTime": "9:07",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4040715",
-                        "4241478",
-                        "3050478"
-                    ]
-                }
-            ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241215_PIT@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "17.0",
-                "PPR": "28.0",
-                "halfPPR": "22.5"
-            }
-        },
-        "20241208_CAR@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.90",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "52",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "4",
-                "recTD": "1",
-                "longRec": "27",
-                "targets": "6",
-                "recYds": "37",
-                "recAvg": "9.3"
-            },
-            "longName": "DeVonta Smith",
-            "scoringPlays": [
-                {
-                    "score": "DeVonta Smith 4 Yd pass from Jalen Hurts (Jake Elliott Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "14",
-                    "awayScore": "10",
-                    "teamID": "27",
-                    "scoreDetails": "7 plays, 44 yards, 1:36",
-                    "scoreType": "TD",
-                    "scoreTime": "0:14",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4040715",
-                        "4241478",
-                        "3050478"
-                    ]
-                }
-            ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241208_CAR@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "9.7",
-                "PPR": "13.7",
-                "halfPPR": "11.7"
-            }
-        },
-        "20241114_WSH@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.89",
-                "defSnap": "0",
-                "stSnap": "1",
-                "stSnapPct": "0.04",
-                "offSnap": "63",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "4",
-                "recTD": "0",
-                "longRec": "21",
-                "targets": "6",
-                "recYds": "29",
-                "recAvg": "7.3"
-            },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241114_WSH@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "2.9",
-                "PPR": "6.9",
-                "halfPPR": "4.9"
-            }
-        },
-        "20241110_PHI@DAL": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.72",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "49",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "2",
-                "recTD": "0",
-                "longRec": "9",
-                "targets": "3",
-                "recYds": "14",
-                "recAvg": "7.0"
-            },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241110_PHI@DAL",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "1.4",
-                "PPR": "3.4",
-                "halfPPR": "2.4"
-            }
-        },
-        "20241103_JAX@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.96",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "76",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "4",
-                "recTD": "1",
-                "longRec": "46",
-                "targets": "6",
-                "recYds": "87",
-                "recAvg": "21.8"
-            },
-            "longName": "DeVonta Smith",
-            "scoringPlays": [
-                {
-                    "score": "DeVonta Smith 25 Yd pass from Jalen Hurts (Two-Point Pass Conversion Failed)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "28",
-                    "awayScore": "16",
-                    "teamID": "27",
-                    "scoreDetails": "8 plays, 91 yards, 5:08",
-                    "scoreType": "TD",
-                    "scoreTime": "7:43",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4040715",
-                        "4241478"
-                    ]
-                }
-            ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241103_JAX@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "14.7",
-                "PPR": "18.7",
-                "halfPPR": "16.7"
-            }
-        },
-        "20241027_PHI@CIN": {
-            "Defense": {
-                "totalTackles": "1",
-                "defTD": "0",
-                "forcedFumbles": "0",
-                "soloTackles": "0",
-                "tfl": "0",
-                "qbHits": "0",
-                "defensiveInterceptions": "0",
-                "sacks": "0",
-                "passDeflections": "0"
-            },
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.93",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "57",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "6",
-                "recTD": "1",
-                "longRec": "45",
-                "targets": "7",
-                "recYds": "85",
-                "recAvg": "14.2"
-            },
-            "longName": "DeVonta Smith",
-            "scoringPlays": [
-                {
-                    "score": "DeVonta Smith 45 Yd pass from Jalen Hurts (Jake Elliott Kick)",
-                    "scorePeriod": "Q3",
-                    "homeScore": "17",
-                    "awayScore": "24",
-                    "teamID": "27",
-                    "scoreDetails": "3 plays, 70 yards, 1:33",
-                    "scoreType": "TD",
-                    "scoreTime": "2:43",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4040715",
-                        "4241478",
-                        "3050478"
-                    ]
-                }
-            ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241027_PHI@CIN",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "14.5",
-                "PPR": "20.5",
-                "halfPPR": "17.5"
-            }
-        },
-        "20241020_PHI@NYG": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.80",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "53",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "1",
-                "recTD": "0",
-                "longRec": "-2",
-                "targets": "2",
-                "recYds": "-2",
-                "recAvg": "-2.0"
-            },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241020_PHI@NYG",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "-0.2",
-                "PPR": "0.8",
-                "halfPPR": "0.3"
-            }
-        },
-        "20241013_CLE@PHI": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "1.00",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "62",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "3",
-                "recTD": "1",
-                "longRec": "45",
-                "targets": "4",
-                "recYds": "64",
-                "recAvg": "21.3"
-            },
-            "longName": "DeVonta Smith",
-            "scoringPlays": [
-                {
-                    "score": "DeVonta Smith 45 Yd pass from Jalen Hurts (Jake Elliott Kick)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "20",
-                    "awayScore": "13",
-                    "teamID": "27",
-                    "scoreDetails": "4 plays, 70 yards, 1:55",
-                    "scoreType": "TD",
-                    "scoreTime": "7:54",
-                    "team": "PHI",
-                    "playerIDs": [
-                        "4040715",
-                        "4241478",
-                        "3050478"
-                    ]
-                }
-            ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20241013_CLE@PHI",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "12.4",
-                "PPR": "15.4",
-                "halfPPR": "13.9"
-            }
-        },
-        "20240922_PHI@NO": {
-            "teamAbv": "PHI",
-            "snapCounts": {
-                "offSnapPct": "0.76",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "55",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "7",
-                "recTD": "0",
-                "longRec": "21",
-                "targets": "10",
-                "recYds": "79",
-                "recAvg": "11.3"
-            },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20240922_PHI@NO",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "7.9",
-                "PPR": "14.9",
-                "halfPPR": "11.4"
-            }
-        },
-        "20240916_ATL@PHI": {
-            "teamAbv": "PHI",
+            "teamAbv": "LAR",
             "snapCounts": {
                 "offSnapPct": "1.00",
                 "defSnap": "0",
@@ -627,83 +18,1137 @@
                 "offSnap": "71",
                 "defSnapPct": "0.00"
             },
-            "Receiving": {
-                "receptions": "7",
-                "recTD": "1",
-                "longRec": "19",
-                "targets": "10",
-                "recYds": "76",
-                "recAvg": "10.9"
+            "Passing": {
+                "qbr": "46.5",
+                "rtg": "97.2",
+                "sacked": "5-33",
+                "passAttempts": "44",
+                "passAvg": "7.4",
+                "passTD": "2",
+                "passYds": "324",
+                "int": "0",
+                "passCompletions": "26"
             },
-            "longName": "DeVonta Smith",
+            "longName": "Matthew Stafford",
+            "Rushing": {
+                "rushAvg": "2.5",
+                "rushYds": "5",
+                "carries": "2",
+                "longRush": "5",
+                "rushTD": "0"
+            },
             "scoringPlays": [
                 {
-                    "score": "DeVonta Smith 7 Yd pass from Jalen Hurts (Jake Elliott Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "7",
-                    "awayScore": "3",
-                    "teamID": "27",
-                    "scoreDetails": "11 plays, 70 yards, 6:07",
+                    "score": "Tyler Higbee 4 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q1",
+                    "homeScore": "6",
+                    "awayScore": "7",
+                    "teamID": "19",
+                    "scoreDetails": "13 plays, 67 yards, 5:23",
                     "scoreType": "TD",
-                    "scoreTime": "5:15",
-                    "team": "PHI",
+                    "scoreTime": "6:32",
+                    "team": "LAR",
                     "playerIDs": [
-                        "4040715",
-                        "4241478",
-                        "3050478"
+                        "12483",
+                        "2573401",
+                        "4566192"
+                    ]
+                },
+                {
+                    "score": "Colby Parkinson 4 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "28",
+                    "awayScore": "22",
+                    "teamID": "19",
+                    "scoreDetails": "10 plays, 70 yards, 1:48",
+                    "scoreType": "TD",
+                    "scoreTime": "2:48",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "4242557",
+                        "4566192"
                     ]
                 }
             ],
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20240916_ATL@PHI",
-            "fantasyPoints": "0.0",
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20250119_LAR@PHI",
+            "fantasyPoints": "-2.0",
             "fantasyPointsDefault": {
-                "standard": "13.6",
-                "PPR": "20.6",
-                "halfPPR": "17.1"
+                "standard": "20.46",
+                "PPR": "20.46",
+                "halfPPR": "20.46"
             }
         },
-        "20240906_GB@PHI": {
-            "Defense": {
-                "totalTackles": "1",
-                "defTD": "0",
-                "forcedFumbles": "0",
-                "soloTackles": "1",
-                "tfl": "0",
-                "qbHits": "0",
-                "defensiveInterceptions": "0",
-                "sacks": "0",
-                "passDeflections": "0"
-            },
-            "teamAbv": "PHI",
+        "20250113_MIN@LAR": {
+            "teamAbv": "LAR",
             "snapCounts": {
                 "offSnapPct": "1.00",
                 "defSnap": "0",
                 "stSnap": "0",
                 "stSnapPct": "0.00",
-                "offSnap": "76",
+                "offSnap": "53",
                 "defSnapPct": "0.00"
             },
-            "Receiving": {
-                "receptions": "7",
-                "recTD": "0",
-                "longRec": "25",
-                "targets": "8",
-                "recYds": "84",
-                "recAvg": "12.0"
+            "Passing": {
+                "qbr": "72.5",
+                "rtg": "117.7",
+                "sacked": "2-7",
+                "passAttempts": "27",
+                "passAvg": "7.7",
+                "passTD": "2",
+                "passYds": "209",
+                "int": "0",
+                "passCompletions": "19"
             },
-            "longName": "DeVonta Smith",
-            "playerID": "4241478",
-            "team": "PHI",
-            "teamID": "27",
-            "gameID": "20240906_GB@PHI",
+            "longName": "Matthew Stafford",
+            "Rushing": {
+                "rushAvg": "-0.5",
+                "rushYds": "-1",
+                "carries": "2",
+                "longRush": "0",
+                "rushTD": "0"
+            },
+            "scoringPlays": [
+                {
+                    "score": "Kyren Williams 5 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q1",
+                    "homeScore": "7",
+                    "awayScore": "0",
+                    "teamID": "19",
+                    "scoreDetails": "7 plays, 70 yards, 4:38",
+                    "scoreType": "TD",
+                    "scoreTime": "10:22",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "4430737",
+                        "4566192"
+                    ]
+                },
+                {
+                    "score": "Davis Allen 13 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "24",
+                    "awayScore": "3",
+                    "teamID": "19",
+                    "scoreDetails": "5 plays, 39 yards, 1:12",
+                    "scoreType": "TD",
+                    "scoreTime": "0:15",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "4426553",
+                        "4566192"
+                    ]
+                }
+            ],
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20250113_MIN@LAR",
             "fantasyPoints": "0.0",
             "fantasyPointsDefault": {
-                "standard": "8.4",
-                "PPR": "15.4",
-                "halfPPR": "11.9"
+                "standard": "16.26",
+                "PPR": "16.26",
+                "halfPPR": "16.26"
+            }
+        },
+        "20241228_ARI@LAR": {
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "57",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "49.8",
+                "rtg": "71.0",
+                "sacked": "0-0",
+                "passAttempts": "32",
+                "passAvg": "5.9",
+                "passTD": "0",
+                "passYds": "189",
+                "int": "0",
+                "passCompletions": "17"
+            },
+            "longName": "Matthew Stafford",
+            "Rushing": {
+                "rushAvg": "2.7",
+                "rushYds": "16",
+                "carries": "6",
+                "longRush": "12",
+                "rushTD": "0"
+            },
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20241228_ARI@LAR",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "9.16",
+                "PPR": "9.16",
+                "halfPPR": "9.16"
+            }
+        },
+        "20241222_LAR@NYJ": {
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "52",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "47.3",
+                "rtg": "83.2",
+                "sacked": "0-0",
+                "passAttempts": "19",
+                "passAvg": "5.8",
+                "passTD": "1",
+                "passYds": "110",
+                "int": "1",
+                "passCompletions": "14"
+            },
+            "longName": "Matthew Stafford",
+            "Rushing": {
+                "rushAvg": "-1.3",
+                "rushYds": "-4",
+                "carries": "3",
+                "longRush": "-1",
+                "rushTD": "0"
+            },
+            "scoringPlays": [
+                {
+                    "score": "Tyler Higbee 11 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "9",
+                    "awayScore": "16",
+                    "teamID": "19",
+                    "scoreDetails": "3 plays, 21 yards, 1:32",
+                    "scoreType": "TD",
+                    "scoreTime": "10:11",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "2573401",
+                        "4566192"
+                    ]
+                }
+            ],
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20241222_LAR@NYJ",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "7.0",
+                "PPR": "7.0",
+                "halfPPR": "7.0"
+            }
+        },
+        "20241212_LAR@SF": {
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "65",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "64.8",
+                "rtg": "76.2",
+                "sacked": "0-0",
+                "passAttempts": "27",
+                "passAvg": "5.9",
+                "passTD": "0",
+                "passYds": "160",
+                "int": "0",
+                "passCompletions": "16"
+            },
+            "longName": "Matthew Stafford",
+            "Rushing": {
+                "rushAvg": "4.5",
+                "rushYds": "18",
+                "carries": "4",
+                "longRush": "11",
+                "rushTD": "0"
+            },
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20241212_LAR@SF",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "8.2",
+                "PPR": "8.2",
+                "halfPPR": "8.2"
+            }
+        },
+        "20241208_BUF@LAR": {
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "77",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "97.5",
+                "rtg": "132.6",
+                "sacked": "0-0",
+                "passAttempts": "30",
+                "passAvg": "10.7",
+                "passTD": "2",
+                "passYds": "320",
+                "int": "0",
+                "passCompletions": "23"
+            },
+            "longName": "Matthew Stafford",
+            "scoringPlays": [
+                {
+                    "score": "Cooper Kupp 17 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "38",
+                    "awayScore": "21",
+                    "teamID": "19",
+                    "scoreDetails": "7 plays, 70 yards, 3:36",
+                    "scoreType": "TD",
+                    "scoreTime": "0:18",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "2977187",
+                        "4566192"
+                    ]
+                },
+                {
+                    "score": "Puka Nacua 19 Yd pass from Matthew Stafford (Joshua Karty PAT failed)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "44",
+                    "awayScore": "35",
+                    "teamID": "19",
+                    "scoreDetails": "11 plays, 71 yards, 6:55",
+                    "scoreType": "TD",
+                    "scoreTime": "1:54",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "4426515",
+                        "4566192"
+                    ]
+                }
+            ],
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20241208_BUF@LAR",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "20.8",
+                "PPR": "20.8",
+                "halfPPR": "20.8"
+            }
+        },
+        "20241201_LAR@NO": {
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "56",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "68.8",
+                "rtg": "110.2",
+                "sacked": "2-17",
+                "passAttempts": "24",
+                "passAvg": "7.6",
+                "passTD": "2",
+                "passYds": "183",
+                "int": "0",
+                "passCompletions": "14"
+            },
+            "longName": "Matthew Stafford",
+            "Rushing": {
+                "rushAvg": "0.8",
+                "rushYds": "3",
+                "carries": "4",
+                "longRush": "4",
+                "rushTD": "0"
+            },
+            "scoringPlays": [
+                {
+                    "score": "Demarcus Robinson 3 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "6",
+                    "awayScore": "14",
+                    "teamID": "19",
+                    "scoreDetails": "4 plays, 82 yards, 2:06",
+                    "scoreType": "TD",
+                    "scoreTime": "14:57",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "3043116",
+                        "4566192"
+                    ]
+                },
+                {
+                    "score": "Puka Nacua 7 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "14",
+                    "awayScore": "21",
+                    "teamID": "19",
+                    "scoreDetails": "8 plays, 56 yards, 2:59",
+                    "scoreType": "TD",
+                    "scoreTime": "8:54",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "4426515",
+                        "4566192"
+                    ]
+                }
+            ],
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20241201_LAR@NO",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "15.62",
+                "PPR": "15.62",
+                "halfPPR": "15.62"
+            }
+        },
+        "20241124_PHI@LAR": {
+            "Defense": {
+                "fumblesLost": "0",
+                "defensiveInterceptions": "0",
+                "forcedFumbles": "0",
+                "fumbles": "1",
+                "fumblesRecovered": "0"
+            },
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "64",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "79.2",
+                "rtg": "104.3",
+                "sacked": "5-45",
+                "passAttempts": "36",
+                "passAvg": "6.8",
+                "passTD": "2",
+                "passYds": "243",
+                "int": "0",
+                "passCompletions": "24"
+            },
+            "longName": "Matthew Stafford",
+            "Rushing": {
+                "rushAvg": "15.0",
+                "rushYds": "15",
+                "carries": "1",
+                "longRush": "15",
+                "rushTD": "0"
+            },
+            "scoringPlays": [
+                {
+                    "score": "Demarcus Robinson 2 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "14",
+                    "awayScore": "20",
+                    "teamID": "19",
+                    "scoreDetails": "8 plays, 70 yards, 3:58",
+                    "scoreType": "TD",
+                    "scoreTime": "10:51",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "3043116",
+                        "4566192"
+                    ]
+                },
+                {
+                    "score": "Cooper Kupp 27 Yd pass from Matthew Stafford (Two-Point Pass Conversion Failed)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "20",
+                    "awayScore": "37",
+                    "teamID": "19",
+                    "scoreDetails": "8 plays, 68 yards, 1:37",
+                    "scoreType": "TD",
+                    "scoreTime": "1:07",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "2977187"
+                    ]
+                }
+            ],
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20241124_PHI@LAR",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "19.22",
+                "PPR": "19.22",
+                "halfPPR": "19.22"
+            }
+        },
+        "20241117_LAR@NE": {
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "52",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "83.5",
+                "rtg": "142.7",
+                "sacked": "0-0",
+                "passAttempts": "27",
+                "passAvg": "10.9",
+                "passTD": "4",
+                "passYds": "295",
+                "int": "0",
+                "passCompletions": "18"
+            },
+            "longName": "Matthew Stafford",
+            "Rushing": {
+                "rushAvg": "0.0",
+                "rushYds": "0",
+                "carries": "4",
+                "longRush": "3",
+                "rushTD": "0"
+            },
+            "scoringPlays": [
+                {
+                    "score": "Cooper Kupp 5 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "7",
+                    "awayScore": "7",
+                    "teamID": "19",
+                    "scoreDetails": "9 plays, 80 yards, 5:05",
+                    "scoreType": "TD",
+                    "scoreTime": "7:18",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "2977187",
+                        "4566192"
+                    ]
+                },
+                {
+                    "score": "Puka Nacua 12 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "7",
+                    "awayScore": "14",
+                    "teamID": "19",
+                    "scoreDetails": "1 play, 12 yards, 0:04",
+                    "scoreType": "TD",
+                    "scoreTime": "5:45",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "4426515",
+                        "4566192"
+                    ]
+                },
+                {
+                    "score": "Cooper Kupp 69 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "10",
+                    "awayScore": "21",
+                    "teamID": "19",
+                    "scoreDetails": "2 plays, 70 yards, 0:50",
+                    "scoreType": "TD",
+                    "scoreTime": "14:10",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "2977187",
+                        "4566192"
+                    ]
+                },
+                {
+                    "score": "Colby Parkinson 19 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "13",
+                    "awayScore": "28",
+                    "teamID": "19",
+                    "scoreDetails": "7 plays, 72 yards, 3:32",
+                    "scoreType": "TD",
+                    "scoreTime": "3:30",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "4242557",
+                        "4566192"
+                    ]
+                }
+            ],
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20241117_LAR@NE",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "27.8",
+                "PPR": "27.8",
+                "halfPPR": "27.8"
+            }
+        },
+        "20241111_MIA@LAR": {
+            "Defense": {
+                "fumblesLost": "0",
+                "defensiveInterceptions": "0",
+                "forcedFumbles": "0",
+                "fumbles": "2",
+                "fumblesRecovered": "2"
+            },
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "70",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "34.4",
+                "rtg": "77.5",
+                "sacked": "4-36",
+                "passAttempts": "46",
+                "passAvg": "6.4",
+                "passTD": "0",
+                "passYds": "293",
+                "int": "1",
+                "passCompletions": "32"
+            },
+            "longName": "Matthew Stafford",
+            "Rushing": {
+                "rushAvg": "0.0",
+                "rushYds": "0",
+                "carries": "1",
+                "longRush": "0",
+                "rushTD": "0"
+            },
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20241111_MIA@LAR",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "10.72",
+                "PPR": "10.72",
+                "halfPPR": "10.72"
+            }
+        },
+        "20241103_LAR@SEA": {
+            "Defense": {
+                "fumblesLost": "0",
+                "defensiveInterceptions": "0",
+                "forcedFumbles": "0",
+                "fumbles": "1",
+                "fumblesRecovered": "1"
+            },
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "77",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "64.1",
+                "rtg": "83.3",
+                "sacked": "0-0",
+                "passAttempts": "44",
+                "passAvg": "6.8",
+                "passTD": "2",
+                "passYds": "298",
+                "int": "1",
+                "passCompletions": "25"
+            },
+            "longName": "Matthew Stafford",
+            "Rushing": {
+                "rushAvg": "0.0",
+                "rushYds": "0",
+                "carries": "1",
+                "longRush": "0",
+                "rushTD": "0"
+            },
+            "scoringPlays": [
+                {
+                    "score": "Demarcus Robinson 1 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "13",
+                    "awayScore": "10",
+                    "teamID": "19",
+                    "scoreDetails": "11 plays, 75 yards, 6:32",
+                    "scoreType": "TD",
+                    "scoreTime": "8:28",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "3043116",
+                        "4566192"
+                    ]
+                },
+                {
+                    "score": "Demarcus Robinson 39 Yd pass from Matthew Stafford  ",
+                    "scorePeriod": "OT",
+                    "homeScore": "20",
+                    "awayScore": "26",
+                    "teamID": "19",
+                    "scoreDetails": "4 plays, 83 yards, 2:22",
+                    "scoreType": "TD",
+                    "scoreTime": "4:57",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "3043116"
+                    ]
+                }
+            ],
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20241103_LAR@SEA",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "18.92",
+                "PPR": "18.92",
+                "halfPPR": "18.92"
+            }
+        },
+        "20241024_MIN@LAR": {
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "72",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "87.2",
+                "rtg": "124.5",
+                "sacked": "0-0",
+                "passAttempts": "34",
+                "passAvg": "8.2",
+                "passTD": "4",
+                "passYds": "279",
+                "int": "1",
+                "passCompletions": "25"
+            },
+            "longName": "Matthew Stafford",
+            "Rushing": {
+                "rushAvg": "-1.3",
+                "rushYds": "-4",
+                "carries": "3",
+                "longRush": "-1",
+                "rushTD": "0"
+            },
+            "scoringPlays": [
+                {
+                    "score": "Kyren Williams 5 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q1",
+                    "homeScore": "7",
+                    "awayScore": "7",
+                    "teamID": "19",
+                    "scoreDetails": "9 plays, 70 yards, 4:05",
+                    "scoreType": "TD",
+                    "scoreTime": "6:38",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "4430737",
+                        "4566192"
+                    ]
+                },
+                {
+                    "score": "Cooper Kupp 7 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "14",
+                    "awayScore": "14",
+                    "teamID": "19",
+                    "scoreDetails": "10 plays, 70 yards, 5:48",
+                    "scoreType": "TD",
+                    "scoreTime": "10:05",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "2977187",
+                        "4566192"
+                    ]
+                },
+                {
+                    "score": "Demarcus Robinson 25 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "21",
+                    "awayScore": "17",
+                    "teamID": "19",
+                    "scoreDetails": "8 plays, 70 yards, 3:46",
+                    "scoreType": "TD",
+                    "scoreTime": "2:36",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "3043116",
+                        "4566192"
+                    ]
+                },
+                {
+                    "score": "Demarcus Robinson 10 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "28",
+                    "awayScore": "20",
+                    "teamID": "19",
+                    "scoreDetails": "10 plays, 70 yards, 6:30",
+                    "scoreType": "TD",
+                    "scoreTime": "6:17",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "3043116",
+                        "4566192"
+                    ]
+                }
+            ],
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20241024_MIN@LAR",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "25.76",
+                "PPR": "25.76",
+                "halfPPR": "25.76"
+            }
+        },
+        "20241020_LV@LAR": {
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "55",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "39.1",
+                "rtg": "62.6",
+                "sacked": "1-10",
+                "passAttempts": "23",
+                "passAvg": "6.7",
+                "passTD": "0",
+                "passYds": "154",
+                "int": "1",
+                "passCompletions": "14"
+            },
+            "longName": "Matthew Stafford",
+            "Rushing": {
+                "rushAvg": "-1.0",
+                "rushYds": "-2",
+                "carries": "2",
+                "longRush": "-1",
+                "rushTD": "0"
+            },
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20241020_LV@LAR",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "4.96",
+                "PPR": "4.96",
+                "halfPPR": "4.96"
+            }
+        },
+        "20241006_GB@LAR": {
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "78",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "51.3",
+                "rtg": "78.0",
+                "sacked": "3-24",
+                "passAttempts": "45",
+                "passAvg": "5.8",
+                "passTD": "1",
+                "passYds": "260",
+                "int": "1",
+                "passCompletions": "29"
+            },
+            "longName": "Matthew Stafford",
+            "scoringPlays": [
+                {
+                    "score": "Demarcus Robinson 1 Yd pass from Matthew Stafford (Two-Point Run Conversion Failed)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "19",
+                    "awayScore": "24",
+                    "teamID": "19",
+                    "scoreDetails": "11 plays, 91 yards, 2:32",
+                    "scoreType": "TD",
+                    "scoreTime": "3:30",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "3043116"
+                    ]
+                }
+            ],
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20241006_GB@LAR",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "13.4",
+                "PPR": "13.4",
+                "halfPPR": "13.4"
+            }
+        },
+        "20240929_LAR@CHI": {
+            "Defense": {
+                "fumblesLost": "1",
+                "defensiveInterceptions": "0",
+                "forcedFumbles": "0",
+                "fumbles": "1",
+                "fumblesRecovered": "0"
+            },
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "61",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "57.4",
+                "rtg": "77.4",
+                "sacked": "3-21",
+                "passAttempts": "29",
+                "passAvg": "7.7",
+                "passTD": "0",
+                "passYds": "224",
+                "int": "1",
+                "passCompletions": "20"
+            },
+            "longName": "Matthew Stafford",
+            "Rushing": {
+                "rushAvg": "-1.0",
+                "rushYds": "-1",
+                "carries": "1",
+                "longRush": "-1",
+                "rushTD": "0"
+            },
+            "scoringPlays": [
+                {
+                    "score": "Kyren Williams 3 Yd Rush Matthew Stafford Pass To Demarcus Robinson For Two-Point Conversion No Good Pass Incomplete",
+                    "scorePeriod": "Q4",
+                    "homeScore": "17",
+                    "awayScore": "15",
+                    "teamID": "19",
+                    "scoreDetails": "6 plays, 70 yards, 2:42",
+                    "scoreType": "TD",
+                    "scoreTime": "14:55",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "4430737",
+                        "3043116"
+                    ]
+                }
+            ],
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20240929_LAR@CHI",
+            "fantasyPoints": "-2.0",
+            "fantasyPointsDefault": {
+                "standard": "6.86",
+                "PPR": "6.86",
+                "halfPPR": "6.86"
+            }
+        },
+        "20240922_SF@LAR": {
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "58",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "66.1",
+                "rtg": "105.6",
+                "sacked": "3-23",
+                "passAttempts": "25",
+                "passAvg": "8.8",
+                "passTD": "1",
+                "passYds": "221",
+                "int": "0",
+                "passCompletions": "16"
+            },
+            "longName": "Matthew Stafford",
+            "scoringPlays": [
+                {
+                    "score": "Kyren Williams 15 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "7",
+                    "awayScore": "14",
+                    "teamID": "19",
+                    "scoreDetails": "16 plays, 87 yards, 7:44",
+                    "scoreType": "TD",
+                    "scoreTime": "1:11",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "4430737",
+                        "4566192"
+                    ]
+                }
+            ],
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20240922_SF@LAR",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "12.84",
+                "PPR": "12.84",
+                "halfPPR": "12.84"
+            }
+        },
+        "20240915_LAR@ARI": {
+            "Defense": {
+                "fumblesLost": "1",
+                "defensiveInterceptions": "0",
+                "forcedFumbles": "0",
+                "fumbles": "1",
+                "fumblesRecovered": "0"
+            },
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "52",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "22.1",
+                "rtg": "94.1",
+                "sacked": "5-24",
+                "passAttempts": "27",
+                "passAvg": "8.0",
+                "passTD": "0",
+                "passYds": "216",
+                "int": "0",
+                "passCompletions": "19"
+            },
+            "longName": "Matthew Stafford",
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20240915_LAR@ARI",
+            "fantasyPoints": "-2.0",
+            "fantasyPointsDefault": {
+                "standard": "7.64",
+                "PPR": "7.64",
+                "halfPPR": "7.64"
+            }
+        },
+        "20240908_LAR@DET": {
+            "teamAbv": "LAR",
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "78",
+                "defSnapPct": "0.00"
+            },
+            "Passing": {
+                "qbr": "65.8",
+                "rtg": "85.2",
+                "sacked": "2-13",
+                "passAttempts": "49",
+                "passAvg": "6.5",
+                "passTD": "1",
+                "passYds": "317",
+                "int": "1",
+                "passCompletions": "34"
+            },
+            "longName": "Matthew Stafford",
+            "scoringPlays": [
+                {
+                    "score": "Cooper Kupp 9 Yd pass from Matthew Stafford (Joshua Karty Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "17",
+                    "awayScore": "20",
+                    "teamID": "19",
+                    "scoreDetails": "10 plays, 80 yards, 4:39",
+                    "scoreType": "TD",
+                    "scoreTime": "4:30",
+                    "team": "LAR",
+                    "playerIDs": [
+                        "12483",
+                        "2977187",
+                        "4566192"
+                    ]
+                }
+            ],
+            "playerID": "12483",
+            "team": "LAR",
+            "teamID": "19",
+            "gameID": "20240908_LAR@DET",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "15.68",
+                "PPR": "15.68",
+                "halfPPR": "15.68"
             }
         }
     }

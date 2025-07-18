@@ -1,6 +1,13 @@
 import React, {useEffect, useState} from "react";
 import {Select, SelectItem, Selection} from "@nextui-org/react";
-import {DefenseStats, PassingStats, ReceivingStats, RushingStats, SnapCounts} from "@/interfaces/playerStats";
+import {
+    DefenseStats,
+    FantasyPoints,
+    PassingStats,
+    ReceivingStats,
+    RushingStats,
+    SnapCounts
+} from "@/interfaces/playerStats";
 import {columnMap} from "@/components/player_name/NewTable";
 
 const data = [
@@ -86,34 +93,20 @@ const data = [
     },
 ];
 
-export interface DataToggleProp {
-    selectionKey: SelectKey,
-}
-
 type SelectKey =
     | keyof SnapCounts
     | keyof ReceivingStats
     | keyof RushingStats
     | keyof DefenseStats
-    | keyof PassingStats;
-
-function getLabelValues(key: SelectKey): { key: SelectKey, label: string } {
-    const value = columnMap[key];
-    if (!value) {
-        return { key, label: String(key) }; // fallback to key as label
-    }
-    return value as { key: SelectKey; label: string };
-}
+    | keyof PassingStats
+    | keyof FantasyPoints
 
 export default function DataToggle() {
     const [key, setKey] = useState<SelectKey>("receptions");
-    const [label, setLabel] = useState<string>(getLabelValues("receptions").label);
 
     const handleSelectionChange = (selection: Selection) => {
         const selected = selection as string as SelectKey;
-        console.log(selected)
         setKey(selected);
-        setLabel((getLabelValues(selected)).label);
     };
 
     return (
