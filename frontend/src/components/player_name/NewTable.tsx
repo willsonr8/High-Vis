@@ -16,7 +16,7 @@ import {
     SnapCounts
 } from "@/interfaces/playerStats";
 
-type StatKey =
+export type StatKey =
     | "encodedGameWeek"
     | "gameId"
     | keyof SnapCounts
@@ -138,7 +138,7 @@ function getStatValue(item: GameStats, key: StatKey) {
     return ""
 }
 
-function getColumnsForPosition(position: string): { key: StatKey; label: string }[] {
+export function getColumnsForPosition(position: string): { key: StatKey; label: string }[] {
     let keys: StatKey[] = positionColumns[position as Position] ?? positionColumns["WR"];
     return keys.filter((key) => key in columnMap).map((key) => columnMap[key]);
 }
