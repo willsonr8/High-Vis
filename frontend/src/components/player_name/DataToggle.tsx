@@ -110,9 +110,10 @@ export default function DataToggle() {
     const [label, setLabel] = useState<string>(getLabelValues("receptions").label);
 
     const handleSelectionChange = (selection: Selection) => {
-        const selected = Array.from(selection as Set<string>[0] as SelectKey);
+        const selected = selection as string as SelectKey;
+        console.log(selected)
         setKey(selected);
-        setLabel(getLabelValues(selected).label);
+        setLabel((getLabelValues(selected)).label);
     };
 
     return (
