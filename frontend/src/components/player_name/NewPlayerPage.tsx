@@ -102,10 +102,9 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
                     </div>
                 ) : (
                     <div className={"line-chart shadow-small"}>
-                        {/*<div className={"select-container"}>*/}
-                        {/*    <DataToggle selectionKey={selectionKey} setSelectionKey={setSelectionKey}*/}
-                        {/*                selectionLabel={selectionLabel} setSelectionLabel={setSelectionLabel}/>*/}
-                        {/*</div>*/}
+                        <div className={"select-container"}>
+                            <DataToggle/>
+                        </div>
                         {/*<RenderLineChart rows={rows} selectionKey={selectionKey} selectionLabel={selectionLabel}/>*/}
                     </div>)}
             </div>

@@ -25,7 +25,7 @@ type StatKey =
     | keyof DefenseStats
     | keyof PassingStats;
 
-const columnMap: Record<StatKey, { key: StatKey; label: string }> = {
+export const columnMap: Record<StatKey, { key: StatKey; label: string }> = {
     // General Game Info
     encodedGameWeek: {key: "encodedGameWeek", label: "Week"},
     gameId: {key: "gameId", label: "Game"},
@@ -158,8 +158,6 @@ export default function RenderNewTable({ playerStats }: PlayerStatsProps) {
     }, [playerStats]);
 
     if (loading) return <div>Loading...</div>;
-    console.log(games)
-    console.log(columns)
     return (
         <Table>
             <TableHeader columns={columns}>
