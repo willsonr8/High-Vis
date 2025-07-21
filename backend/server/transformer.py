@@ -138,7 +138,7 @@ def get_player_game_stats_transformed(player_id, season):
 
         if encoded_game_week - last_week > 1:
             # if this condition is met, it means there was a bye week
-            json_games.append(PlayerGame("Bye", {"gameWeek": f"Week {last_week + 1}", "encodedGameWeek": last_week + 1},{
+            json_games.append(PlayerGame("Bye", {"gameWeek": f"{last_week + 1}", "encodedGameWeek": last_week + 1},{
                 "playerID": player_id,
                 "longName": player_name,
                 "season": season,

@@ -1,17 +1,12 @@
-import {
-  Table,
-  TableHeader,
-  TableBody,
-  TableColumn,
-  TableRow,
-  TableCell,
-  getKeyValue} from "@nextui-org/table";
+import {Table, TableBody, TableCell, TableColumn, TableHeader, TableRow} from "@nextui-org/table";
 import React, {useEffect, useState} from "react";
 import {
-    DefenseStats, FantasyPoints, GameStats,
-    PassingStats, PlayerStatsProps,
+    DefenseStats,
+    FantasyPoints,
+    GameStats,
+    PassingStats,
+    PlayerStatsProps,
     ReceivingStats,
-    RenderTableProps,
     RushingStats,
     SnapCounts
 } from "@/interfaces/playerStats";
@@ -123,6 +118,15 @@ const positionColumns: Record<Position, StatKey[]> = {
 function getStatValue(item: GameStats, key: StatKey, ByeWeek: boolean) {
     if (ByeWeek && (key != "encodedGameWeek" && key != "gameId")) {
         return ""
+    }
+    if (key == "encodedGameWeek") {
+        return item["gameWeek"]
+    }
+    if (key == "gameId") {
+        if (ByeWeek) {
+            return item[key]
+        }
+        return item.teamAbvAway + " @ " + item.teamAbvHome
     }
     if (key in item) {
         if (item[key] == undefined) {
