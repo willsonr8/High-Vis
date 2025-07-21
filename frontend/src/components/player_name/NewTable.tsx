@@ -95,19 +95,23 @@ type Position = "QB" | "RB" | "WR" | "DEF";
 
 const positionColumns: Record<Position, StatKey[]> = {
   QB: [
-    "encodedGameWeek", "gameId", "PPR", "passYds", "passTD", "passInt", "passCmp", "passAtt", "passAvg",
-    "rushYds", "rushTD", "carries", "longRush", "rushAvg",
-    "receptions", "recTD", "recYds", "targets", "recAvg",
-    "fumblesLost", "sacked", "qbr"
+    "encodedGameWeek", "gameId", "PPR", "passCmp", "passAtt", "passYds", "passTD", "passTwoPointConversions", "passInt", "passAvg", "longPass",
+    "sacked", "qbr", "passRating", "rtg",
+    "carries", "rushYds", "rushTD", "rushAvg", "longRush", "rushTwoPointConversions",
+    "fumbles", "fumblesLost",
+    "targets", "receptions", "recYds", "recTD", "recAvg"
   ],
   RB: [
-    "encodedGameWeek", "gameId", "PPR", "rushYds", "rushTD", "carries", "longRush", "rushAvg",
-    "receptions", "recYds", "recTD", "targets", "recAvg",
-    "fumbles", "fumblesLost"
+    "encodedGameWeek", "gameId", "PPR", "carries", "rushYds", "rushTD", "rushAvg", "longRush", "rushTwoPointConversions",
+    "targets", "receptions", "recYds", "recTD", "recTwoPointConversions", "recAvg", "longRec",
+    "fumbles", "fumblesLost",
+    "passCmp", "passAtt", "passYds", "passTD", "passTwoPointConversions", "passInt", "passAvg", "longPass",
   ],
   WR: [
-    "encodedGameWeek", "gameId", "PPR", "receptions", "targets", "recYds", "recTD", "recAvg", "longRec",
-    "rushYds", "rushTD", "carries", "rushAvg"
+    "encodedGameWeek", "gameId", "PPR", "targets", "receptions", "recYds", "recTD", "recTwoPointConversions", "recAvg", "longRec",
+    "carries", "rushYds", "rushTD", "rushTwoPointConversions", "rushAvg", "longRush", "rushTwoPointConversions",
+    "fumbles", "fumblesLost",
+    "passCmp", "passAtt", "passYds", "passTD", "passTwoPointConversions", "passInt", "passAvg", "longPass",
   ],
   DEF: [
     "encodedGameWeek", "gameId", "PPR", "totalTackles", "soloTackles", "sacks", "tfl", "qbHits",
