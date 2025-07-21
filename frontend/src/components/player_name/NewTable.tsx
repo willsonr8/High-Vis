@@ -109,7 +109,7 @@ const positionColumns: Record<Position, StatKey[]> = {
   ],
   WR: [
     "encodedGameWeek", "gameId", "PPR", "targets", "receptions", "recYds", "recTD", "recTwoPointConversions", "recAvg", "longRec",
-    "carries", "rushYds", "rushTD", "rushTwoPointConversions", "rushAvg", "longRush", "rushTwoPointConversions",
+    "carries", "rushYds", "rushTD", "rushAvg", "longRush", "rushTwoPointConversions",
     "fumbles", "fumblesLost",
     "passCmp", "passAtt", "passYds", "passTD", "passTwoPointConversions", "passInt", "passAvg", "longPass",
   ],
@@ -120,7 +120,10 @@ const positionColumns: Record<Position, StatKey[]> = {
   ]
 };
 
-function getStatValue(item: GameStats, key: StatKey) {
+function getStatValue(item: GameStats, key: StatKey, ByeWeek: boolean) {
+    if (ByeWeek && (key != "encodedGameWeek" && key != "gameId")) {
+        return ""
+    }
     if (key in item) {
         if (item[key] == undefined) {
             return "0";
@@ -182,7 +185,7 @@ export default function RenderNewTable({ playerStats }: PlayerStatsProps) {
                     <TableRow className={"table-row"} key={item.encodedGameWeek}>
                         {columns.map((col) => (
                             <TableCell key={col.key}>
-                                <div className="w-24 flex justify-center">{getStatValue(item, col.key)}</div>
+                                <div className="w-24 flex justify-center">{getStatValue(item, col.key, item.gameId == "Bye")}</div>
                             </TableCell>
                         ))}
                     </TableRow>
