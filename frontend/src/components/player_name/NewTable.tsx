@@ -129,20 +129,20 @@ function getStatValue(item: GameStats, key: StatKey, ByeWeek: boolean) {
         return item.teamAbvAway + " @ " + item.teamAbvHome
     }
     if (key in item) {
-        if (item[key] == undefined) {
+        if ((item as any)[key] == undefined) {
             return "0";
         }
         else {
-            return item[key];
+            return (item as any)[key];
         }
     }
     for (const nested of ["Defense", "Rushing", "Receiving", "Passing", "snapCounts", "fantasyPoints"]) {
-        if (item[nested] && key in item[nested]) {
-            if (item[nested][key] == undefined) {
+        if ((item as any)[nested] && key in (item as any)[nested]) {
+            if ((item as any)[nested][key] == undefined) {
                 return "0"
             }
             else {
-                return item[nested][key]
+                return (item as any)[nested][key]
             }
         }
     }

@@ -28,15 +28,9 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
         }
     }, [player]);
 
-    // kills player stats loading screen when player stats populate
-    useEffect(() => {
-        if (playerData) {
-            setPlayerDataLoading(false)
-        }
-    }, [playerData]);
-
     useEffect(() => {
     if (playerID) {
+        setPlayerDataLoading(true);
         const fetchData = async () => {
             try {
                 const response = await getFantasyPlayerStats(playerID, year);
@@ -45,6 +39,9 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
                 setPlayerData(newPlayerData);
             } catch (error) {
                 console.error("Error fetching data: ", error);
+            }
+            finally {
+                setPlayerDataLoading(false);
             }
         };
         fetchData();
@@ -101,12 +98,8 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
                         Loading ...
                     </div>
                 ) : (
-                    <div className={"line-chart shadow-small"}>
-                        <div className={"select-container"}>
-                            <DataToggle/>
-                        </div>
-                        {/*<RenderLineChart rows={rows} selectionKey={selectionKey} selectionLabel={selectionLabel}/>*/}
-                    </div>)}
+                    <DataToggle position={position} playerData={playerData}/>
+                )}
             </div>
         </div>
     );

@@ -1,11 +1,58 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import {columnMap, StatKey} from "@/components/player_name/NewTable";
+import {
+    DefenseStats, FantasyPoints,
+    GameStats,
+    PassingStats,
+    ReceivingStats,
+    RushingStats,
+    SnapCounts
+} from "@/interfaces/playerStats";
 
 const labelStyle = {
     color: 'black',
 };
 
-export default function RenderLineChart({ rows, selectionKey, selectionLabel }) {
+function getStatValue(game: GameStats, row_path: string): SnapCounts | PassingStats | ReceivingStats | RushingStats | DefenseStats | FantasyPoints | undefined {
+    const validKeys = ["snapCounts", "Passing", "Receiving", "Rushing", "Defense", "fantasyPoints"] as const;
+    if ((validKeys as readonly string[]).includes(row_path)) {
+        return (game as any)[row_path];
+    }
+    return undefined;
+}
+
+
+export default function RenderLineChart({ selectionKey, data }: { selectionKey: StatKey; data: GameStats[] }) {
+    const [rows, setRows] = useState<any[]>([])
+    const [selectionLabel, setSelectionLabel] = useState<string>("")
+
+    useEffect(() => {
+        const temp_row = []
+        let row_path = ""
+        console.log(data)
+        if (data && data.length > 0 && data[0]) {
+            for (const nested of ["fantasyPoints", "Rushing", "Receiving", "Passing", "snapCounts", "Defense"]) {
+                if ((data as any)[0][nested] && selectionKey in (data as any)[0][nested]) {
+                    row_path = nested
+                    break
+                }
+            }
+        }
+        if (row_path == "") {
+            throw new Error("selected data row not found in game stats")
+        }
+        for (const game of data) {
+            const stat = getStatValue(game, row_path)
+            if (stat) {
+                temp_row.push(stat)
+            }
+        }
+        setRows(temp_row)
+        const record = columnMap[selectionKey as keyof typeof columnMap];
+        setSelectionLabel(record.label)
+    }, [selectionKey, data])
+
   const yAxisDomain = [
     0,
     Math.max(...rows.map(row => (row[selectionKey] as number) || 0)) + 5,
@@ -39,7 +86,7 @@ export default function RenderLineChart({ rows, selectionKey, selectionLabel }) 
         }}
         />
         <Tooltip labelStyle={labelStyle} label={selectionLabel}/>
-        <Line type="monotone" dataKey={selectionKey} labelHidden stroke="#8884d8" activeDot={{r: 8}}/>
+        <Line type="monotone" dataKey={selectionKey} stroke="#8884d8" activeDot={{r: 8}}/>
         <text x={"50%"} y={"5%"} textAnchor="middle" dominantBaseline="middle" fill="#fff" fontSize={16} fontWeight="500">
             {`${selectionLabel} by Game Week`}
         </text>
