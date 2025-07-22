@@ -106,11 +106,12 @@ def get_player_game_stats_transformed(player_id, season):
         team_games = (Server.get_nfl_team_schedule(team_id, season))["body"]["schedule"]
         all_team_games[team_id] = team_games
 
-    player_games = rev_player_games[::-1] # copies the player games in reverse order to maintain the order of games as they were played
+    player_games: list[PlayerGame] = rev_player_games[::-1] # copies the player games in reverse order to maintain the order of games as they were played
 
     json_games = []
 
     player_game_count = 0  # essentially a pointer for the player games
+
     last_week = 0  # necessary to track the last week played to determine bye weeks
 
     # 4. iterates through the team games and compares them with the player games to determine if a bye week or injury occurred
@@ -127,11 +128,6 @@ def get_player_game_stats_transformed(player_id, season):
             team_id = player_games[player_game_count].team_id
             team_games = all_team_games[team_id]
             team_game_number = len(team_games)
-            continue
-
-        if game.get("seasonType") == "Preseason":
-            # at the moment, we do not support preseason games
-            idx += 1
             continue
 
         encoded_game_week: int = parse_game_week(game.get("gameWeek"), last_week)
@@ -176,6 +172,14 @@ def get_player_game_stats_transformed(player_id, season):
         last_week = encoded_game_week
         idx += 1
 
+    game_idx = 0
+    while game_idx < len(json_games):  # deletes pre-season games, must be done after load
+        game = json_games[0]
+        if game.get("seasonType") == "Preseason":
+            json_games.pop(0)
+            game_idx += 1
+        else:
+            break
     return {"games": json_games, "playerId": player_id, "season": season}
 
 ############################### TEAM TRANSFORMATIONS ###############################
