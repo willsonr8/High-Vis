@@ -16,18 +16,23 @@ export default function DataToggle({ position, setSelectionKey }: { position: st
     }, [position])
 
     const handleSelectionChange = (selection: Selection) => {
-        const selectedKey = Array.from(selection)[0] as StatKey;
+        if (selection === "all") return;
+        const keys = Array.from(selection);
+        if (keys.length === 0) return; // prevent unselection
+
+        const selectedKey = keys[0] as StatKey;
         setKey(selectedKey);
         setSelectionKey(selectedKey)
     };
 
     return (
         <Select
+            isRequired={true}
             items={options}
             variant={"underlined"}
             color={"secondary"}
             className="max-w-xs"
-            defaultSelectedKeys={[key]}
+            selectedKeys={new Set([key])}
             onSelectionChange={handleSelectionChange}
             aria-label={"Data display selection"}
         >

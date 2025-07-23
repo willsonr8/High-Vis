@@ -26,14 +26,8 @@ function getStatValue(game: GameStats, row_path: string): SnapCounts | PassingSt
 export default function RenderLineChart({ selectionKey, data }: { selectionKey: StatKey; data: GameStats[] }) {
     const [rows, setRows] = useState<any[]>([])
     const [selectionLabel, setSelectionLabel] = useState<string>("")
-    const [lineGraphData, setLineGraphData] = useState<GameStats[]>([])
-    const [isLineGraphLoading, setIsLineGraphLoading] = useState(true)
 
     useEffect(() => {
-        console.log("typeof selectionKey:", typeof selectionKey);
-        console.log("selectionKey instanceof Set:", selectionKey as any instanceof Set);
-        console.log("selectionKey:", selectionKey);
-
         const temp_row = []
         let row_path = ""
         if (data && data.length > 0 && data[0]) {
@@ -50,9 +44,7 @@ export default function RenderLineChart({ selectionKey, data }: { selectionKey: 
                 temp_row.push(stat)
             }
         }
-        console.log(row_path)
         setRows(temp_row)
-        console.log(selectionKey)
         const record = columnMap[selectionKey as keyof typeof columnMap];
         if (!record) {
           console.warn(`Invalid selectionKey: ${selectionKey}`);
