@@ -26,11 +26,16 @@ function getStatValue(game: GameStats, row_path: string): SnapCounts | PassingSt
 export default function RenderLineChart({ selectionKey, data }: { selectionKey: StatKey; data: GameStats[] }) {
     const [rows, setRows] = useState<any[]>([])
     const [selectionLabel, setSelectionLabel] = useState<string>("")
+    const [lineGraphData, setLineGraphData] = useState<GameStats[]>([])
+    const [isLineGraphLoading, setIsLineGraphLoading] = useState(true)
 
     useEffect(() => {
+        console.log("typeof selectionKey:", typeof selectionKey);
+        console.log("selectionKey instanceof Set:", selectionKey as any instanceof Set);
+        console.log("selectionKey:", selectionKey);
+
         const temp_row = []
         let row_path = ""
-        console.log(data)
         if (data && data.length > 0 && data[0]) {
             for (const nested of ["fantasyPoints", "Rushing", "Receiving", "Passing", "snapCounts", "Defense"]) {
                 if ((data as any)[0][nested] && selectionKey in (data as any)[0][nested]) {
@@ -39,18 +44,22 @@ export default function RenderLineChart({ selectionKey, data }: { selectionKey: 
                 }
             }
         }
-        if (row_path == "") {
-            throw new Error("selected data row not found in game stats")
-        }
         for (const game of data) {
             const stat = getStatValue(game, row_path)
             if (stat) {
                 temp_row.push(stat)
             }
         }
+        console.log(row_path)
         setRows(temp_row)
+        console.log(selectionKey)
         const record = columnMap[selectionKey as keyof typeof columnMap];
-        setSelectionLabel(record.label)
+        if (!record) {
+          console.warn(`Invalid selectionKey: ${selectionKey}`);
+          setSelectionLabel("Unknown Stat");
+        } else {
+          setSelectionLabel(record.label);
+}
     }, [selectionKey, data])
 
   const yAxisDomain = [

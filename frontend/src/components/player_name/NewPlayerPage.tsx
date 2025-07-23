@@ -5,7 +5,7 @@ import {EmptyPlayerStats, NewPlayerStats, PlayerStats} from "@/interfaces/player
 import {getTeamName} from "@/utils/teamMap";
 import SeasonSelect from "@/components/player_name/Select";
 import RenderTable from "@/components/player_name/Table";
-import RenderNewTable from "@/components/player_name/NewTable"
+import RenderNewTable, {StatKey} from "@/components/player_name/NewTable"
 import DataToggle from "@/components/player_name/DataToggle";
 import RenderLineChart from "@/components/player_name/LineChart";
 import {getFantasyPlayerStats} from "@/api/ApiCalls";
@@ -18,15 +18,26 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
     const [playerData, setPlayerData] = useState<PlayerStats>(EmptyPlayerStats());
     const [playerInfoLoading, setPlayerInfoLoading] = useState<boolean>(true);
     const [playerDataLoading, setPlayerDataLoading] = useState<boolean>(true);
+    const [selectionKey, setSelectionKey] = useState<StatKey>("PPR");
+    const [isLineGraphLoading, setIsLineGraphLoading] = useState(true)
 
     // kills header loading screen when player populates
     useEffect(()=> {
+        setPlayerInfoLoading(true)
         if (player) {
             setPlayerInfoLoading(false)
             setPlayerID(player.playerId)
             setPosition(player.position)
         }
     }, [player]);
+
+    useEffect(() => {
+        console.log(selectionKey)
+        setIsLineGraphLoading(true)
+        if (selectionKey) {
+            setIsLineGraphLoading(false)
+        }
+    }, [selectionKey])
 
     useEffect(() => {
     if (playerID) {
@@ -50,6 +61,7 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
     useEffect(() => {
         if (playerData != null) {
             setPlayerDataLoading(false)
+            setIsLineGraphLoading(false)
         }
     }, [playerData])
 
@@ -98,7 +110,18 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
                         Loading ...
                     </div>
                 ) : (
-                    <DataToggle position={position} playerData={playerData}/>
+                    <div className={"line-chart shadow-small"}>
+                        <div className={"select-container"}>
+                            <DataToggle position={position} setSelectionKey={setSelectionKey}/>
+                        </div>
+                        {isLineGraphLoading ? (
+                            <div className={"text-white text-center"}>
+                                Loading ...
+                            </div>
+                        ) : (
+                            <RenderLineChart selectionKey={selectionKey} data={playerData.games}/>
+                        )}
+                    </div>
                 )}
             </div>
         </div>
