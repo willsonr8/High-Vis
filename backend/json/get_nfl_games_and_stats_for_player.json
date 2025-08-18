@@ -1,198 +1,291 @@
 {
     "statusCode": 200,
     "body": {
-        "20250209_KC@PHI": {
+        "20250112_WSH@TB": {
             "Defense": {
+                "totalTackles": "1",
                 "fumblesLost": "1",
-                "defensiveInterceptions": "0",
+                "defTD": "0",
                 "forcedFumbles": "0",
                 "fumbles": "1",
-                "fumblesRecovered": "1"
+                "fumblesRecovered": "0",
+                "soloTackles": "1",
+                "tfl": "0",
+                "qbHits": "0",
+                "defensiveInterceptions": "0",
+                "sacks": "0",
+                "passDeflections": "0"
             },
-            "teamAbv": "KC",
+            "Passing": {
+                "qbr": "64.5",
+                "rtg": "146.5",
+                "sacked": "1-2",
+                "passAttempts": "18",
+                "passAvg": "10.3",
+                "passTD": "2",
+                "passYds": "185",
+                "int": "0",
+                "passCompletions": "15"
+            },
+            "Rushing": {
+                "rushAvg": "3.3",
+                "rushYds": "23",
+                "carries": "7",
+                "longRush": "18",
+                "rushTD": "0"
+            },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
+            "scoringPlays": [
+                {
+                    "score": "Mike Evans 1 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "10",
+                    "awayScore": "10",
+                    "teamID": "30",
+                    "scoreDetails": "7 plays, 74 yards, 1:42",
+                    "scoreType": "TD",
+                    "scoreTime": "0:10",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "16737",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Bucky Irving 4 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "17",
+                    "awayScore": "13",
+                    "teamID": "30",
+                    "scoreDetails": "10 plays, 72 yards, 5:59",
+                    "scoreType": "TD",
+                    "scoreTime": "4:31",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4596448",
+                        "3150744"
+                    ]
+                }
+            ],
             "snapCounts": {
                 "offSnapPct": "1.00",
                 "defSnap": "0",
                 "stSnap": "0",
                 "stSnapPct": "0.00",
-                "offSnap": "56",
+                "offSnap": "48",
                 "defSnapPct": "0.00"
             },
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20250112_WSH@TB",
+            "fantasyPoints": "-2.0",
+            "fantasyPointsDefault": {
+                "standard": "16.7",
+                "PPR": "16.7",
+                "halfPPR": "16.7"
+            }
+        },
+        "20250105_NO@TB": {
             "Passing": {
-                "qbr": "11.4",
-                "rtg": "95.4",
-                "sacked": "6-31",
+                "qbr": "91.1",
+                "rtg": "93.4",
+                "sacked": "1-5",
                 "passAttempts": "32",
-                "passAvg": "8.0",
-                "passTD": "3",
-                "passYds": "257",
-                "int": "2",
-                "passingTwoPointConversion": "2",
+                "passAvg": "6.9",
+                "passTD": "2",
+                "passYds": "221",
+                "int": "1",
                 "passCompletions": "21"
             },
-            "longName": "Patrick Mahomes",
             "Rushing": {
-                "rushAvg": "6.3",
-                "rushYds": "25",
-                "carries": "4",
-                "longRush": "8",
+                "rushAvg": "7.6",
+                "rushYds": "68",
+                "carries": "9",
+                "longRush": "28",
                 "rushTD": "0"
             },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
             "scoringPlays": [
                 {
-                    "score": "Xavier Worthy 24 Yd pass from Patrick Mahomes (Two-Point Pass Conversion Failed)",
+                    "score": "Payne Durham 6 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
                     "scorePeriod": "Q3",
-                    "homeScore": "34",
-                    "awayScore": "6",
-                    "teamID": "16",
-                    "scoreDetails": "5 plays, 90 yards, 2:06",
+                    "homeScore": "13",
+                    "awayScore": "16",
+                    "teamID": "30",
+                    "scoreDetails": "10 plays, 72 yards, 4:33",
                     "scoreType": "TD",
-                    "scoreTime": "0:34",
-                    "team": "KC",
+                    "scoreTime": "10:27",
+                    "team": "TB",
                     "playerIDs": [
-                        "3139477",
-                        "4683062"
+                        "3052587",
+                        "4372505",
+                        "3150744"
                     ]
                 },
                 {
-                    "score": "DeAndre Hopkins 7 Yd pass from Patrick Mahomes (Patrick Mahomes Pass to Justin Watson for Two-Point Conversion)",
+                    "score": "Jalen McMillan 32 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
                     "scorePeriod": "Q4",
-                    "homeScore": "40",
-                    "awayScore": "14",
-                    "teamID": "16",
-                    "scoreDetails": "12 plays, 75 yards, 5:07",
+                    "homeScore": "20",
+                    "awayScore": "19",
+                    "teamID": "30",
+                    "scoreDetails": "12 plays, 82 yards, 7:09",
                     "scoreType": "TD",
-                    "scoreTime": "2:54",
-                    "team": "KC",
+                    "scoreTime": "10:09",
+                    "team": "TB",
                     "playerIDs": [
-                        "3139477",
-                        "15795"
-                    ]
-                },
-                {
-                    "score": "Xavier Worthy 50 Yd pass from Patrick Mahomes (Patrick Mahomes Pass to DeAndre Hopkins for Two-Point Conversion)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "40",
-                    "awayScore": "22",
-                    "teamID": "16",
-                    "scoreDetails": "1 play, 50 yards, 0:08",
-                    "scoreType": "TD",
-                    "scoreTime": "1:48",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4683062",
-                        "15795"
+                        "3052587",
+                        "4430834",
+                        "3150744"
                     ]
                 }
             ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20250209_KC@PHI",
-            "fantasyPoints": "-2.0",
-            "fantasyPointsDefault": {
-                "standard": "25.78",
-                "PPR": "25.78",
-                "halfPPR": "25.78"
-            }
-        },
-        "20250126_BUF@KC": {
-            "Defense": {
-                "fumblesLost": "1",
-                "defensiveInterceptions": "0",
-                "forcedFumbles": "0",
-                "fumbles": "1",
-                "fumblesRecovered": "0"
-            },
-            "teamAbv": "KC",
             "snapCounts": {
                 "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "67",
+                "defSnapPct": "0.00"
+            },
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20250105_NO@TB",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "22.64",
+                "PPR": "22.64",
+                "halfPPR": "22.64"
+            }
+        },
+        "20241229_CAR@TB": {
+            "Passing": {
+                "qbr": "90.1",
+                "rtg": "153.0",
+                "sacked": "2-10",
+                "passAttempts": "32",
+                "passAvg": "11.2",
+                "passTD": "5",
+                "passYds": "359",
+                "int": "0",
+                "passCompletions": "27"
+            },
+            "Rushing": {
+                "rushAvg": "2.0",
+                "rushYds": "2",
+                "carries": "1",
+                "longRush": "2",
+                "rushTD": "0"
+            },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
+            "scoringPlays": [
+                {
+                    "score": "Mike Evans 2 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q1",
+                    "homeScore": "7",
+                    "awayScore": "0",
+                    "teamID": "30",
+                    "scoreDetails": "6 plays, 70 yards, 3:25",
+                    "scoreType": "TD",
+                    "scoreTime": "11:35",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "16737",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Mike Evans 1 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "20",
+                    "awayScore": "7",
+                    "teamID": "30",
+                    "scoreDetails": "4 plays, 81 yards, 1:50",
+                    "scoreType": "TD",
+                    "scoreTime": "8:19",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "16737",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Jalen McMillan 10 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "27",
+                    "awayScore": "7",
+                    "teamID": "30",
+                    "scoreDetails": "11 plays, 64 yards, 5:38",
+                    "scoreType": "TD",
+                    "scoreTime": "1:11",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4430834",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Payne Durham 5 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "34",
+                    "awayScore": "14",
+                    "teamID": "30",
+                    "scoreDetails": "10 plays, 94 yards, 5:50",
+                    "scoreType": "TD",
+                    "scoreTime": "5:48",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4372505",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Jalen McMillan 16 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "48",
+                    "awayScore": "14",
+                    "teamID": "30",
+                    "scoreDetails": "9 plays, 85 yards, 5:03",
+                    "scoreType": "TD",
+                    "scoreTime": "13:30",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4430834",
+                        "3150744"
+                    ]
+                }
+            ],
+            "snapCounts": {
+                "offSnapPct": "0.86",
                 "defSnap": "0",
                 "stSnap": "0",
                 "stSnapPct": "0.00",
                 "offSnap": "66",
                 "defSnapPct": "0.00"
             },
-            "Passing": {
-                "qbr": "87.1",
-                "rtg": "111.9",
-                "sacked": "2-12",
-                "passAttempts": "26",
-                "passAvg": "9.4",
-                "passTD": "1",
-                "passYds": "245",
-                "int": "0",
-                "passingTwoPointConversion": "1",
-                "passCompletions": "18"
-            },
-            "longName": "Patrick Mahomes",
-            "Rushing": {
-                "rushAvg": "3.9",
-                "rushYds": "43",
-                "carries": "11",
-                "longRush": "12",
-                "rushTD": "2"
-            },
-            "scoringPlays": [
-                {
-                    "score": "Xavier Worthy 11 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "14",
-                    "awayScore": "10",
-                    "teamID": "16",
-                    "scoreDetails": "11 plays, 70 yards, 6:12",
-                    "scoreType": "TD",
-                    "scoreTime": "4:13",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4683062",
-                        "3055899"
-                    ]
-                },
-                {
-                    "score": "Patrick Mahomes 1 Yd Rush (Harrison Butker Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "21",
-                    "awayScore": "10",
-                    "teamID": "16",
-                    "scoreDetails": "6 plays, 34 yards, 1:44",
-                    "scoreType": "TD",
-                    "scoreTime": "1:55",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "3055899"
-                    ]
-                },
-                {
-                    "score": "Patrick Mahomes 10 Yd Rush (Patrick Mahomes Pass to Justin Watson for Two-Point Conversion)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "29",
-                    "awayScore": "22",
-                    "teamID": "16",
-                    "scoreDetails": "5 plays, 59 yards, 2:41",
-                    "scoreType": "TD",
-                    "scoreTime": "10:14",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477"
-                    ]
-                }
-            ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20250126_BUF@KC",
-            "fantasyPoints": "-2.0",
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20241229_CAR@TB",
+            "fantasyPoints": "0.0",
             "fantasyPointsDefault": {
-                "standard": "31.1",
-                "PPR": "31.1",
-                "halfPPR": "31.1"
+                "standard": "34.56",
+                "PPR": "34.56",
+                "halfPPR": "34.56"
             }
         },
-        "20250118_HOU@KC": {
+        "20241222_TB@DAL": {
             "Defense": {
                 "fumblesLost": "0",
                 "defensiveInterceptions": "0",
@@ -200,65 +293,274 @@
                 "fumbles": "1",
                 "fumblesRecovered": "1"
             },
-            "teamAbv": "KC",
+            "Passing": {
+                "qbr": "66.3",
+                "rtg": "97.3",
+                "sacked": "4-27",
+                "passAttempts": "43",
+                "passAvg": "7.0",
+                "passTD": "2",
+                "passYds": "303",
+                "int": "1",
+                "passCompletions": "31"
+            },
+            "Rushing": {
+                "rushAvg": "14.0",
+                "rushYds": "42",
+                "carries": "3",
+                "longRush": "18",
+                "rushTD": "0"
+            },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
+            "scoringPlays": [
+                {
+                    "score": "Jalen McMillan 11 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "20",
+                    "awayScore": "14",
+                    "teamID": "30",
+                    "scoreDetails": "7 plays, 71 yards, 0:57",
+                    "scoreType": "TD",
+                    "scoreTime": "0:48",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4430834",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Ryan Miller 13 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "26",
+                    "awayScore": "24",
+                    "teamID": "30",
+                    "scoreDetails": "9 plays, 87 yards, 2:07",
+                    "scoreType": "TD",
+                    "scoreTime": "2:36",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4369466",
+                        "3150744"
+                    ]
+                }
+            ],
             "snapCounts": {
                 "offSnapPct": "1.00",
                 "defSnap": "0",
                 "stSnap": "0",
                 "stSnapPct": "0.00",
-                "offSnap": "51",
+                "offSnap": "72",
                 "defSnapPct": "0.00"
             },
-            "Passing": {
-                "qbr": "66.4",
-                "rtg": "98.2",
-                "sacked": "3-15",
-                "passAttempts": "25",
-                "passAvg": "7.1",
-                "passTD": "1",
-                "passYds": "177",
-                "int": "0",
-                "passCompletions": "16"
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20241222_TB@DAL",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "23.32",
+                "PPR": "23.32",
+                "halfPPR": "23.32"
+            }
+        },
+        "20241215_TB@LAC": {
+            "Defense": {
+                "totalTackles": "1",
+                "defTD": "0",
+                "forcedFumbles": "0",
+                "soloTackles": "1",
+                "tfl": "0",
+                "qbHits": "0",
+                "defensiveInterceptions": "0",
+                "sacks": "0",
+                "passDeflections": "0"
             },
-            "longName": "Patrick Mahomes",
+            "Passing": {
+                "qbr": "94.7",
+                "rtg": "135.3",
+                "sacked": "1-5",
+                "passAttempts": "27",
+                "passAvg": "10.7",
+                "passTD": "4",
+                "passYds": "288",
+                "int": "1",
+                "passCompletions": "22"
+            },
             "Rushing": {
-                "rushAvg": "2.0",
-                "rushYds": "14",
-                "carries": "7",
-                "longRush": "15",
+                "rushAvg": "12.5",
+                "rushYds": "25",
+                "carries": "2",
+                "longRush": "21",
                 "rushTD": "0"
             },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
             "scoringPlays": [
                 {
-                    "score": "Travis Kelce 11 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "20",
-                    "awayScore": "12",
-                    "teamID": "16",
-                    "scoreDetails": "13 plays, 81 yards, 7:44",
+                    "score": "Jalen McMillan 26 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q1",
+                    "homeScore": "0",
+                    "awayScore": "7",
+                    "teamID": "30",
+                    "scoreDetails": "7 plays, 70 yards, 3:46",
                     "scoreType": "TD",
-                    "scoreTime": "11:52",
-                    "team": "KC",
+                    "scoreTime": "11:14",
+                    "team": "TB",
                     "playerIDs": [
-                        "3139477",
-                        "15847",
-                        "3055899"
+                        "3052587",
+                        "4430834",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Mike Evans 57 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "17",
+                    "awayScore": "20",
+                    "teamID": "30",
+                    "scoreDetails": "5 plays, 83 yards, 2:54",
+                    "scoreType": "TD",
+                    "scoreTime": "10:23",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "16737",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Mike Evans 35 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "17",
+                    "awayScore": "30",
+                    "teamID": "30",
+                    "scoreDetails": "4 plays, 42 yards, 2:58",
+                    "scoreType": "TD",
+                    "scoreTime": "1:36",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "16737",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Rachaad White 11 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "17",
+                    "awayScore": "37",
+                    "teamID": "30",
+                    "scoreDetails": "9 plays, 66 yards, 6:01",
+                    "scoreType": "TD",
+                    "scoreTime": "7:37",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4697815",
+                        "3150744"
                     ]
                 }
             ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20250118_HOU@KC",
+            "snapCounts": {
+                "offSnapPct": "0.94",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "68",
+                "defSnapPct": "0.00"
+            },
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20241215_TB@LAC",
             "fantasyPoints": "0.0",
             "fantasyPointsDefault": {
-                "standard": "12.48",
-                "PPR": "12.48",
-                "halfPPR": "12.48"
+                "standard": "29.02",
+                "PPR": "29.02",
+                "halfPPR": "29.02"
             }
         },
-        "20241225_KC@PIT": {
-            "teamAbv": "KC",
+        "20241208_LV@TB": {
+            "Defense": {
+                "fumblesLost": "1",
+                "defensiveInterceptions": "0",
+                "forcedFumbles": "0",
+                "fumbles": "1",
+                "fumblesRecovered": "0"
+            },
+            "Passing": {
+                "qbr": "44.6",
+                "rtg": "101.9",
+                "sacked": "4-27",
+                "passAttempts": "29",
+                "passAvg": "10.2",
+                "passTD": "3",
+                "passYds": "295",
+                "int": "2",
+                "passCompletions": "18"
+            },
+            "Rushing": {
+                "rushAvg": "6.0",
+                "rushYds": "12",
+                "carries": "2",
+                "longRush": "7",
+                "rushTD": "0"
+            },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
+            "scoringPlays": [
+                {
+                    "score": "Jalen McMillan 15 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q1",
+                    "homeScore": "7",
+                    "awayScore": "0",
+                    "teamID": "30",
+                    "scoreDetails": "12 plays, 85 yards, 6:53",
+                    "scoreType": "TD",
+                    "scoreTime": "8:07",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4430834",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Rachaad White 5 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q1",
+                    "homeScore": "14",
+                    "awayScore": "0",
+                    "teamID": "30",
+                    "scoreDetails": "5 plays, 52 yards, 2:45",
+                    "scoreType": "TD",
+                    "scoreTime": "3:52",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4697815",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Jalen McMillan 29 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "28",
+                    "awayScore": "13",
+                    "teamID": "30",
+                    "scoreDetails": "5 plays, 80 yards, 1:09",
+                    "scoreType": "TD",
+                    "scoreTime": "1:56",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4430834",
+                        "3150744"
+                    ]
+                }
+            ],
             "snapCounts": {
                 "offSnapPct": "1.00",
                 "defSnap": "0",
@@ -267,455 +569,266 @@
                 "offSnap": "62",
                 "defSnapPct": "0.00"
             },
-            "Passing": {
-                "qbr": "90.3",
-                "rtg": "127.1",
-                "sacked": "0-0",
-                "passAttempts": "38",
-                "passAvg": "8.4",
-                "passTD": "3",
-                "passYds": "320",
-                "int": "0",
-                "passCompletions": "29"
-            },
-            "longName": "Patrick Mahomes",
-            "Rushing": {
-                "rushAvg": "12.0",
-                "rushYds": "12",
-                "carries": "1",
-                "longRush": "12",
-                "rushTD": "0"
-            },
-            "scoringPlays": [
-                {
-                    "score": "Xavier Worthy 7 Yd pass from Patrick Mahomes (Harrison Butker PAT Failed)",
-                    "scorePeriod": "Q1",
-                    "homeScore": "0",
-                    "awayScore": "6",
-                    "teamID": "16",
-                    "scoreDetails": "8 plays, 42 yards, 3:56",
-                    "scoreType": "TD",
-                    "scoreTime": "9:19",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4683062",
-                        "3055899"
-                    ]
-                },
-                {
-                    "score": "Justin Watson 11 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q1",
-                    "homeScore": "0",
-                    "awayScore": "13",
-                    "teamID": "16",
-                    "scoreDetails": "7 plays, 79 yards, 2:33",
-                    "scoreType": "TD",
-                    "scoreTime": "4:00",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "3118892",
-                        "3055899"
-                    ]
-                },
-                {
-                    "score": "Travis Kelce 12 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "10",
-                    "awayScore": "29",
-                    "teamID": "16",
-                    "scoreDetails": "4 plays, 34 yards, 1:24",
-                    "scoreType": "TD",
-                    "scoreTime": "12:38",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "15847",
-                        "3055899"
-                    ]
-                }
-            ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20241225_KC@PIT",
-            "fantasyPoints": "0.0",
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20241208_LV@TB",
+            "fantasyPoints": "-2.0",
             "fantasyPointsDefault": {
-                "standard": "26.0",
-                "PPR": "26.0",
-                "halfPPR": "26.0"
+                "standard": "22.0",
+                "PPR": "22.0",
+                "halfPPR": "22.0"
             }
         },
-        "20241221_HOU@KC": {
-            "teamAbv": "KC",
-            "snapCounts": {
-                "offSnapPct": "1.00",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "74",
-                "defSnapPct": "0.00"
+        "20241201_TB@CAR": {
+            "Defense": {
+                "fumblesLost": "0",
+                "defensiveInterceptions": "0",
+                "forcedFumbles": "0",
+                "fumbles": "2",
+                "fumblesRecovered": "1"
             },
             "Passing": {
-                "qbr": "85.3",
-                "rtg": "93.5",
-                "sacked": "1-9",
-                "passAttempts": "41",
-                "passAvg": "6.3",
+                "qbr": "9.4",
+                "rtg": "69.6",
+                "sacked": "4-31",
+                "passAttempts": "33",
+                "passAvg": "7.1",
                 "passTD": "1",
-                "passYds": "260",
-                "int": "0",
-                "passCompletions": "28"
+                "passYds": "235",
+                "int": "2",
+                "passCompletions": "21"
             },
-            "longName": "Patrick Mahomes",
             "Rushing": {
-                "rushAvg": "6.6",
-                "rushYds": "33",
-                "carries": "5",
-                "longRush": "15",
-                "rushTD": "1"
-            },
-            "scoringPlays": [
-                {
-                    "score": "Patrick Mahomes 15 Yd Rush (Harrison Butker Kick)",
-                    "scorePeriod": "Q1",
-                    "homeScore": "7",
-                    "awayScore": "0",
-                    "teamID": "16",
-                    "scoreDetails": "11 plays, 66 yards, 6:26",
-                    "scoreType": "TD",
-                    "scoreTime": "6:31",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "3055899"
-                    ]
-                },
-                {
-                    "score": "Xavier Worthy 8 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q3",
-                    "homeScore": "24",
-                    "awayScore": "16",
-                    "teamID": "16",
-                    "scoreDetails": "10 plays, 80 yards, 5:44",
-                    "scoreType": "TD",
-                    "scoreTime": "2:42",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4683062",
-                        "3055899"
-                    ]
-                }
-            ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20241221_HOU@KC",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "23.7",
-                "PPR": "23.7",
-                "halfPPR": "23.7"
-            }
-        },
-        "20241215_KC@CLE": {
-            "teamAbv": "KC",
-            "snapCounts": {
-                "offSnapPct": "0.89",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "67",
-                "defSnapPct": "0.00"
-            },
-            "Passing": {
-                "qbr": "59.4",
-                "rtg": "78.7",
-                "sacked": "0-0",
-                "passAttempts": "38",
-                "passAvg": "4.2",
-                "passTD": "2",
-                "passYds": "159",
-                "int": "0",
-                "passCompletions": "19"
-            },
-            "longName": "Patrick Mahomes",
-            "Rushing": {
-                "rushAvg": "7.0",
-                "rushYds": "14",
-                "carries": "2",
+                "rushAvg": "2.7",
+                "rushYds": "8",
+                "carries": "3",
                 "longRush": "10",
                 "rushTD": "0"
             },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
             "scoringPlays": [
                 {
-                    "score": "JuJu Smith-Schuster 7 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
+                    "score": "Mike Evans 2 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
                     "scorePeriod": "Q1",
                     "homeScore": "0",
                     "awayScore": "7",
-                    "teamID": "16",
-                    "scoreDetails": "3 plays, 21 yards, 1:22",
+                    "teamID": "30",
+                    "scoreDetails": "12 plays, 63 yards, 6:06",
                     "scoreType": "TD",
-                    "scoreTime": "12:12",
-                    "team": "KC",
+                    "scoreTime": "4:29",
+                    "team": "TB",
                     "playerIDs": [
-                        "3139477",
-                        "3120348",
-                        "3055899"
-                    ]
-                },
-                {
-                    "score": "Noah Gray 6 Yd pass from Patrick Mahomes (Harrison Butker Kick) (Harrison Butker Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "0",
-                    "awayScore": "14",
-                    "teamID": "16",
-                    "scoreDetails": "14 plays, 87 yards, 6:56",
-                    "scoreType": "TD",
-                    "scoreTime": "4:46",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4240472",
-                        "3055899"
+                        "3052587",
+                        "16737",
+                        "3150744"
                     ]
                 }
             ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20241215_KC@CLE",
+            "snapCounts": {
+                "offSnapPct": "0.98",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "78",
+                "defSnapPct": "0.00"
+            },
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20241201_TB@CAR",
             "fantasyPoints": "0.0",
             "fantasyPointsDefault": {
-                "standard": "15.76",
-                "PPR": "15.76",
-                "halfPPR": "15.76"
+                "standard": "12.2",
+                "PPR": "12.2",
+                "halfPPR": "12.2"
             }
         },
-        "20241208_LAC@KC": {
-            "teamAbv": "KC",
+        "20241124_TB@NYG": {
+            "Defense": {
+                "fumblesLost": "1",
+                "defensiveInterceptions": "0",
+                "forcedFumbles": "0",
+                "fumbles": "2",
+                "fumblesRecovered": "1"
+            },
+            "Passing": {
+                "qbr": "86.9",
+                "rtg": "107.5",
+                "sacked": "0-0",
+                "passAttempts": "30",
+                "passAvg": "9.8",
+                "passTD": "0",
+                "passYds": "294",
+                "int": "0",
+                "passCompletions": "24"
+            },
+            "Rushing": {
+                "rushAvg": "7.3",
+                "rushYds": "29",
+                "carries": "4",
+                "longRush": "10",
+                "rushTD": "1"
+            },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
+            "scoringPlays": [
+                {
+                    "score": "Baker Mayfield 10 Yd Rush (Chase McLaughlin PAT Failed)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "0",
+                    "awayScore": "23",
+                    "teamID": "30",
+                    "scoreDetails": "9 plays, 86 yards, 2:45",
+                    "scoreType": "TD",
+                    "scoreTime": "0:12",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "3150744"
+                    ]
+                }
+            ],
             "snapCounts": {
                 "offSnapPct": "1.00",
                 "defSnap": "0",
                 "stSnap": "0",
                 "stSnapPct": "0.00",
-                "offSnap": "69",
+                "offSnap": "65",
                 "defSnapPct": "0.00"
             },
-            "Passing": {
-                "qbr": "56.8",
-                "rtg": "88.8",
-                "sacked": "3-8",
-                "passAttempts": "37",
-                "passAvg": "5.7",
-                "passTD": "1",
-                "passYds": "210",
-                "int": "0",
-                "passCompletions": "24"
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20241124_TB@NYG",
+            "fantasyPoints": "-2.0",
+            "fantasyPointsDefault": {
+                "standard": "19.66",
+                "PPR": "19.66",
+                "halfPPR": "19.66"
+            }
+        },
+        "20241110_SF@TB": {
+            "Defense": {
+                "fumblesLost": "0",
+                "defensiveInterceptions": "0",
+                "forcedFumbles": "0",
+                "fumbles": "3",
+                "fumblesRecovered": "2"
             },
-            "longName": "Patrick Mahomes",
+            "Passing": {
+                "qbr": "38.0",
+                "rtg": "82.0",
+                "sacked": "2-11",
+                "passAttempts": "29",
+                "passAvg": "4.0",
+                "passTD": "1",
+                "passYds": "116",
+                "int": "0",
+                "passCompletions": "18"
+            },
             "Rushing": {
-                "rushAvg": "4.3",
-                "rushYds": "17",
+                "rushAvg": "1.0",
+                "rushYds": "3",
+                "carries": "3",
+                "longRush": "3",
+                "rushTD": "0"
+            },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
+            "scoringPlays": [
+                {
+                    "score": "Rachaad White 9 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "10",
+                    "awayScore": "10",
+                    "teamID": "30",
+                    "scoreDetails": "4 plays, 21 yards, 1:57",
+                    "scoreType": "TD",
+                    "scoreTime": "11:58",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4697815",
+                        "3150744"
+                    ]
+                }
+            ],
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "61",
+                "defSnapPct": "0.00"
+            },
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20241110_SF@TB",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "8.94",
+                "PPR": "8.94",
+                "halfPPR": "8.94"
+            }
+        },
+        "20241104_TB@KC": {
+            "Passing": {
+                "qbr": "63.1",
+                "rtg": "112.3",
+                "sacked": "2-11",
+                "passAttempts": "31",
+                "passAvg": "6.5",
+                "passTD": "2",
+                "passYds": "200",
+                "int": "0",
+                "passCompletions": "23"
+            },
+            "Rushing": {
+                "rushAvg": "5.0",
+                "rushYds": "20",
                 "carries": "4",
                 "longRush": "10",
                 "rushTD": "0"
             },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
             "scoringPlays": [
                 {
-                    "score": "DeAndre Hopkins 9 Yd pass from Patrick Mahomes (Matthew Wright Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "13",
-                    "awayScore": "0",
-                    "teamID": "16",
-                    "scoreDetails": "9 plays, 77 yards, 2:41",
-                    "scoreType": "TD",
-                    "scoreTime": "0:47",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "15795",
-                        "3128444"
-                    ]
-                }
-            ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20241208_LAC@KC",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "14.1",
-                "PPR": "14.1",
-                "halfPPR": "14.1"
-            }
-        },
-        "20241129_LV@KC": {
-            "Defense": {
-                "fumblesLost": "0",
-                "defensiveInterceptions": "0",
-                "forcedFumbles": "0",
-                "fumbles": "1",
-                "fumblesRecovered": "1"
-            },
-            "teamAbv": "KC",
-            "snapCounts": {
-                "offSnapPct": "1.00",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "71",
-                "defSnapPct": "0.00"
-            },
-            "Passing": {
-                "qbr": "47.0",
-                "rtg": "84.1",
-                "sacked": "5-40",
-                "passAttempts": "46",
-                "passAvg": "6.7",
-                "passTD": "1",
-                "passYds": "306",
-                "int": "0",
-                "passCompletions": "26"
-            },
-            "longName": "Patrick Mahomes",
-            "Rushing": {
-                "rushAvg": "2.0",
-                "rushYds": "4",
-                "carries": "2",
-                "longRush": "5",
-                "rushTD": "0"
-            },
-            "scoringPlays": [
-                {
-                    "score": "Justin Watson 6 Yd pass from Patrick Mahomes (Matthew Wright Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "10",
-                    "awayScore": "3",
-                    "teamID": "16",
-                    "scoreDetails": "7 plays, 53 yards, 3:41",
-                    "scoreType": "TD",
-                    "scoreTime": "2:14",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "3118892",
-                        "3128444"
-                    ]
-                }
-            ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20241129_LV@KC",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "16.64",
-                "PPR": "16.64",
-                "halfPPR": "16.64"
-            }
-        },
-        "20241124_KC@CAR": {
-            "Defense": {
-                "fumblesLost": "0",
-                "defensiveInterceptions": "0",
-                "forcedFumbles": "0",
-                "fumbles": "1",
-                "fumblesRecovered": "0"
-            },
-            "teamAbv": "KC",
-            "snapCounts": {
-                "offSnapPct": "1.00",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "74",
-                "defSnapPct": "0.00"
-            },
-            "Passing": {
-                "qbr": "63.5",
-                "rtg": "120.2",
-                "sacked": "5-43",
-                "passAttempts": "37",
-                "passAvg": "7.3",
-                "passTD": "3",
-                "passYds": "269",
-                "int": "0",
-                "passCompletions": "27"
-            },
-            "longName": "Patrick Mahomes",
-            "Rushing": {
-                "rushAvg": "12.0",
-                "rushYds": "60",
-                "carries": "5",
-                "longRush": "33",
-                "rushTD": "0"
-            },
-            "scoringPlays": [
-                {
-                    "score": "Noah Gray 35 Yd pass from Patrick Mahomes (Spencer Shrader Kick)",
-                    "scorePeriod": "Q1",
-                    "homeScore": "0",
-                    "awayScore": "7",
-                    "teamID": "16",
-                    "scoreDetails": "3 plays, 41 yards, 1:25",
-                    "scoreType": "TD",
-                    "scoreTime": "13:35",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4240472",
-                        "4571557"
-                    ]
-                },
-                {
-                    "score": "Noah Gray 11 Yd pass from Patrick Mahomes (Spencer Shrader Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "6",
-                    "awayScore": "20",
-                    "teamID": "16",
-                    "scoreDetails": "14 plays, 92 yards, 4:30",
-                    "scoreType": "TD",
-                    "scoreTime": "0:44",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4240472",
-                        "4571557"
-                    ]
-                },
-                {
-                    "score": "DeAndre Hopkins 3 Yd pass from Patrick Mahomes (Spencer Shrader Kick)",
+                    "score": "Cade Otton 11 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
                     "scorePeriod": "Q3",
-                    "homeScore": "16",
-                    "awayScore": "27",
-                    "teamID": "16",
-                    "scoreDetails": "10 plays, 75 yards, 3:44",
+                    "homeScore": "10",
+                    "awayScore": "14",
+                    "teamID": "30",
+                    "scoreDetails": "6 plays, 51 yards, 3:24",
                     "scoreType": "TD",
-                    "scoreTime": "2:42",
-                    "team": "KC",
+                    "scoreTime": "11:36",
+                    "team": "TB",
                     "playerIDs": [
-                        "3139477",
-                        "15795",
-                        "4571557"
+                        "3052587",
+                        "4243331",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Ryan Miller 1 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "24",
+                    "awayScore": "24",
+                    "teamID": "30",
+                    "scoreDetails": "10 plays, 71 yards, 1:49",
+                    "scoreType": "TD",
+                    "scoreTime": "0:27",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4369466",
+                        "3150744"
                     ]
                 }
             ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20241124_KC@CAR",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "28.76",
-                "PPR": "28.76",
-                "halfPPR": "28.76"
-            }
-        },
-        "20241117_KC@BUF": {
-            "teamAbv": "KC",
             "snapCounts": {
                 "offSnapPct": "1.00",
                 "defSnap": "0",
@@ -724,228 +837,206 @@
                 "offSnap": "55",
                 "defSnapPct": "0.00"
             },
-            "Passing": {
-                "qbr": "63.3",
-                "rtg": "90.0",
-                "sacked": "2-15",
-                "passAttempts": "33",
-                "passAvg": "5.9",
-                "passTD": "3",
-                "passYds": "196",
-                "int": "2",
-                "passCompletions": "23"
-            },
-            "longName": "Patrick Mahomes",
-            "scoringPlays": [
-                {
-                    "score": "Xavier Worthy 10 Yd pass from Patrick Mahomes (Spencer Shrader Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "6",
-                    "awayScore": "7",
-                    "teamID": "16",
-                    "scoreDetails": "11 plays, 88 yards, 5:27",
-                    "scoreType": "TD",
-                    "scoreTime": "14:53",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4683062",
-                        "4571557"
-                    ]
-                },
-                {
-                    "score": "Noah Gray 2 Yd pass from Patrick Mahomes (Spencer Shrader Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "13",
-                    "awayScore": "14",
-                    "teamID": "16",
-                    "scoreDetails": "9 plays, 40 yards, 4:34",
-                    "scoreType": "TD",
-                    "scoreTime": "2:51",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4240472",
-                        "4571557"
-                    ]
-                },
-                {
-                    "score": "Noah Gray 1 Yd pass from Patrick Mahomes (Spencer Shrader Kick)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "23",
-                    "awayScore": "21",
-                    "teamID": "16",
-                    "scoreDetails": "10 plays, 70 yards, 4:58",
-                    "scoreType": "TD",
-                    "scoreTime": "7:53",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4240472",
-                        "4571557"
-                    ]
-                }
-            ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20241117_KC@BUF",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "17.84",
-                "PPR": "17.84",
-                "halfPPR": "17.84"
-            }
-        },
-        "20241110_DEN@KC": {
-            "teamAbv": "KC",
-            "snapCounts": {
-                "offSnapPct": "1.00",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "68",
-                "defSnapPct": "0.00"
-            },
-            "Passing": {
-                "qbr": "62.7",
-                "rtg": "92.0",
-                "sacked": "4-23",
-                "passAttempts": "42",
-                "passAvg": "6.3",
-                "passTD": "1",
-                "passYds": "266",
-                "int": "0",
-                "passCompletions": "28"
-            },
-            "longName": "Patrick Mahomes",
-            "Rushing": {
-                "rushAvg": "6.3",
-                "rushYds": "19",
-                "carries": "3",
-                "longRush": "12",
-                "rushTD": "0"
-            },
-            "scoringPlays": [
-                {
-                    "score": "Travis Kelce 2 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "10",
-                    "awayScore": "14",
-                    "teamID": "16",
-                    "scoreDetails": "11 plays, 70 yards, 4:55",
-                    "scoreType": "TD",
-                    "scoreTime": "1:44",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "15847",
-                        "3055899"
-                    ]
-                }
-            ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20241110_DEN@KC",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "16.54",
-                "PPR": "16.54",
-                "halfPPR": "16.54"
-            }
-        },
-        "20241104_TB@KC": {
-            "teamAbv": "KC",
-            "snapCounts": {
-                "offSnapPct": "1.00",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "85",
-                "defSnapPct": "0.00"
-            },
-            "Passing": {
-                "qbr": "75.3",
-                "rtg": "116.8",
-                "sacked": "4-31",
-                "passAttempts": "44",
-                "passAvg": "6.6",
-                "passTD": "3",
-                "passYds": "291",
-                "int": "0",
-                "passCompletions": "34"
-            },
-            "longName": "Patrick Mahomes",
-            "Rushing": {
-                "rushAvg": "4.5",
-                "rushYds": "9",
-                "carries": "2",
-                "longRush": "7",
-                "rushTD": "0"
-            },
-            "scoringPlays": [
-                {
-                    "score": "DeAndre Hopkins 1 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "10",
-                    "awayScore": "7",
-                    "teamID": "16",
-                    "scoreDetails": "11 plays, 70 yards, 6:18",
-                    "scoreType": "TD",
-                    "scoreTime": "4:05",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "15795",
-                        "3055899"
-                    ]
-                },
-                {
-                    "score": "Samaje Perine 7 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "17",
-                    "awayScore": "17",
-                    "teamID": "16",
-                    "scoreDetails": "12 plays, 70 yards, 6:36",
-                    "scoreType": "TD",
-                    "scoreTime": "14:14",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "3116389",
-                        "3055899"
-                    ]
-                },
-                {
-                    "score": "DeAndre Hopkins 5 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "24",
-                    "awayScore": "17",
-                    "teamID": "16",
-                    "scoreDetails": "15 plays, 78 yards, 8:26",
-                    "scoreType": "TD",
-                    "scoreTime": "4:17",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "15795",
-                        "3055899"
-                    ]
-                }
-            ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
             "gameID": "20241104_TB@KC",
             "fantasyPoints": "0.0",
             "fantasyPointsDefault": {
-                "standard": "24.54",
-                "PPR": "24.54",
-                "halfPPR": "24.54"
+                "standard": "18.0",
+                "PPR": "18.0",
+                "halfPPR": "18.0"
             }
         },
-        "20241027_KC@LV": {
+        "20241027_ATL@TB": {
+            "Defense": {
+                "fumblesLost": "0",
+                "defensiveInterceptions": "0",
+                "forcedFumbles": "0",
+                "fumbles": "1",
+                "fumblesRecovered": "1"
+            },
+            "Passing": {
+                "qbr": "54.3",
+                "rtg": "94.6",
+                "sacked": "0-0",
+                "passAttempts": "50",
+                "passAvg": "6.6",
+                "passTD": "3",
+                "passYds": "330",
+                "int": "2",
+                "passCompletions": "37"
+            },
+            "Rushing": {
+                "rushAvg": "3.7",
+                "rushYds": "11",
+                "carries": "3",
+                "longRush": "10",
+                "rushTD": "0"
+            },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
+            "scoringPlays": [
+                {
+                    "score": "Cade Otton 5 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q1",
+                    "homeScore": "7",
+                    "awayScore": "7",
+                    "teamID": "30",
+                    "scoreDetails": "15 plays, 70 yards, 8:30",
+                    "scoreType": "TD",
+                    "scoreTime": "4:22",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4243331",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Rachaad White 18 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "14",
+                    "awayScore": "7",
+                    "teamID": "30",
+                    "scoreDetails": "12 plays, 97 yards, 7:09",
+                    "scoreType": "TD",
+                    "scoreTime": "10:28",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4697815",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Cade Otton 4 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "26",
+                    "awayScore": "31",
+                    "teamID": "30",
+                    "scoreDetails": "12 plays, 73 yards, 5:12",
+                    "scoreType": "TD",
+                    "scoreTime": "6:52",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4243331",
+                        "3150744"
+                    ]
+                }
+            ],
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "73",
+                "defSnapPct": "0.00"
+            },
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20241027_ATL@TB",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "24.3",
+                "PPR": "24.3",
+                "halfPPR": "24.3"
+            }
+        },
+        "20241021_BAL@TB": {
+            "Passing": {
+                "qbr": "19.0",
+                "rtg": "97.5",
+                "sacked": "3-14",
+                "passAttempts": "45",
+                "passAvg": "8.2",
+                "passTD": "3",
+                "passYds": "370",
+                "int": "2",
+                "passingTwoPointConversion": "1",
+                "passCompletions": "31"
+            },
+            "Rushing": {
+                "rushAvg": "4.4",
+                "rushYds": "22",
+                "carries": "5",
+                "longRush": "12",
+                "rushTD": "0"
+            },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
+            "scoringPlays": [
+                {
+                    "score": "Mike Evans 25 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q1",
+                    "homeScore": "7",
+                    "awayScore": "0",
+                    "teamID": "30",
+                    "scoreDetails": "8 plays, 70 yards, 4:33",
+                    "scoreType": "TD",
+                    "scoreTime": "10:27",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "16737",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Rachaad White 11 Yd pass from Baker Mayfield (Baker Mayfield Pass to Sterling Shepard for Two-Point Conversion)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "18",
+                    "awayScore": "34",
+                    "teamID": "30",
+                    "scoreDetails": "5 plays, 30 yards, 2:08",
+                    "scoreType": "TD",
+                    "scoreTime": "11:24",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4697815",
+                        "2976592"
+                    ]
+                },
+                {
+                    "score": "Rachaad White 23 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "31",
+                    "awayScore": "41",
+                    "teamID": "30",
+                    "scoreDetails": "7 plays, 52 yards, 1:48",
+                    "scoreType": "TD",
+                    "scoreTime": "1:58",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4697815",
+                        "3150744"
+                    ]
+                }
+            ],
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "82",
+                "defSnapPct": "0.00"
+            },
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20241021_BAL@TB",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "29.0",
+                "PPR": "29.0",
+                "halfPPR": "29.0"
+            }
+        },
+        "20241013_TB@NO": {
             "Defense": {
                 "totalTackles": "1",
                 "defTD": "0",
@@ -957,499 +1048,563 @@
                 "sacks": "0",
                 "passDeflections": "0"
             },
-            "teamAbv": "KC",
-            "snapCounts": {
-                "offSnapPct": "1.00",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "72",
-                "defSnapPct": "0.00"
-            },
             "Passing": {
-                "qbr": "87.0",
-                "rtg": "96.6",
-                "sacked": "1-10",
-                "passAttempts": "38",
-                "passAvg": "6.9",
-                "passTD": "2",
-                "passYds": "262",
-                "int": "1",
-                "passCompletions": "27"
+                "qbr": "49.6",
+                "rtg": "97.6",
+                "sacked": "1-8",
+                "passAttempts": "36",
+                "passAvg": "9.0",
+                "passTD": "4",
+                "passYds": "325",
+                "int": "3",
+                "passCompletions": "24"
             },
-            "longName": "Patrick Mahomes",
             "Rushing": {
-                "rushAvg": "2.8",
-                "rushYds": "17",
-                "carries": "6",
-                "longRush": "14",
+                "rushAvg": "9.7",
+                "rushYds": "29",
+                "carries": "3",
+                "longRush": "12",
                 "rushTD": "0"
             },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
             "scoringPlays": [
                 {
-                    "score": "Travis Kelce 5 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "10",
-                    "awayScore": "14",
-                    "teamID": "16",
-                    "scoreDetails": "13 plays, 70 yards, 8:16",
+                    "score": "Chris Godwin 4 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q1",
+                    "homeScore": "0",
+                    "awayScore": "7",
+                    "teamID": "30",
+                    "scoreDetails": "8 plays, 74 yards, 4:55",
                     "scoreType": "TD",
-                    "scoreTime": "1:57",
-                    "team": "KC",
+                    "scoreTime": "10:05",
+                    "team": "TB",
                     "playerIDs": [
-                        "3139477",
-                        "15847",
-                        "3055899"
+                        "3052587",
+                        "3116165",
+                        "3150744"
                     ]
                 },
                 {
-                    "score": "Xavier Worthy 9 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "13",
-                    "awayScore": "27",
-                    "teamID": "16",
-                    "scoreDetails": "8 plays, 38 yards, 3:01",
+                    "score": "Sean Tucker 36 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "20",
+                    "awayScore": "24",
+                    "teamID": "30",
+                    "scoreDetails": "6 plays, 76 yards, 2:58",
                     "scoreType": "TD",
-                    "scoreTime": "4:59",
-                    "team": "KC",
+                    "scoreTime": "5:39",
+                    "team": "TB",
                     "playerIDs": [
-                        "3139477",
-                        "4683062",
-                        "3055899"
+                        "3052587",
+                        "4430871",
+                        "3150744"
                     ]
-                }
-            ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20241027_KC@LV",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "19.18",
-                "PPR": "19.18",
-                "halfPPR": "19.18"
-            }
-        },
-        "20241020_KC@SF": {
-            "teamAbv": "KC",
-            "snapCounts": {
-                "offSnapPct": "1.00",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "70",
-                "defSnapPct": "0.00"
-            },
-            "Passing": {
-                "qbr": "82.5",
-                "rtg": "44.4",
-                "sacked": "2-9",
-                "passAttempts": "27",
-                "passAvg": "5.7",
-                "passTD": "0",
-                "passYds": "154",
-                "int": "2",
-                "passCompletions": "16"
-            },
-            "longName": "Patrick Mahomes",
-            "Rushing": {
-                "rushAvg": "7.8",
-                "rushYds": "39",
-                "carries": "5",
-                "longRush": "33",
-                "rushTD": "1"
-            },
-            "scoringPlays": [
+                },
                 {
-                    "score": "Patrick Mahomes 1 Yd Run (Harrison Butker Kick)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "12",
-                    "awayScore": "21",
-                    "teamID": "16",
-                    "scoreDetails": "13 plays, 79 yards, 6:43",
+                    "score": "Chris Godwin 55 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "27",
+                    "awayScore": "31",
+                    "teamID": "30",
+                    "scoreDetails": "7 plays, 92 yards, 4:13",
                     "scoreType": "TD",
-                    "scoreTime": "14:13",
-                    "team": "KC",
+                    "scoreTime": "4:25",
+                    "team": "TB",
                     "playerIDs": [
-                        "3139477",
-                        "3055899"
+                        "3052587",
+                        "3116165",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Cade Otton 8 Yd pass from Baker Mayfield (Two-Point Pass Conversion Failed)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "27",
+                    "awayScore": "37",
+                    "teamID": "30",
+                    "scoreDetails": "5 plays, 58 yards, 2:21",
+                    "scoreType": "TD",
+                    "scoreTime": "12:34",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4243331"
                     ]
                 }
             ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20241020_KC@SF",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "14.06",
-                "PPR": "14.06",
-                "halfPPR": "14.06"
-            }
-        },
-        "20241007_NO@KC": {
-            "teamAbv": "KC",
             "snapCounts": {
                 "offSnapPct": "1.00",
                 "defSnap": "0",
                 "stSnap": "0",
                 "stSnapPct": "0.00",
-                "offSnap": "84",
+                "offSnap": "77",
                 "defSnapPct": "0.00"
             },
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20241013_TB@NO",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "28.9",
+                "PPR": "28.9",
+                "halfPPR": "28.9"
+            }
+        },
+        "20241003_TB@ATL": {
             "Passing": {
-                "qbr": "68.8",
-                "rtg": "86.6",
-                "sacked": "2-10",
-                "passAttempts": "39",
-                "passAvg": "8.5",
-                "passTD": "0",
-                "passYds": "331",
-                "int": "1",
-                "passCompletions": "28"
+                "qbr": "81.7",
+                "rtg": "137.5",
+                "sacked": "1-7",
+                "passAttempts": "24",
+                "passAvg": "7.5",
+                "passTD": "3",
+                "passYds": "180",
+                "int": "0",
+                "passCompletions": "19"
             },
-            "longName": "Patrick Mahomes",
             "Rushing": {
-                "rushAvg": "3.7",
-                "rushYds": "22",
+                "rushAvg": "7.0",
+                "rushYds": "42",
                 "carries": "6",
-                "longRush": "9",
+                "longRush": "18",
                 "rushTD": "0"
             },
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20241007_NO@KC",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "14.44",
-                "PPR": "14.44",
-                "halfPPR": "14.44"
-            }
-        },
-        "20240929_KC@LAC": {
-            "teamAbv": "KC",
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
+            "scoringPlays": [
+                {
+                    "score": "Mike Evans 2 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q1",
+                    "homeScore": "7",
+                    "awayScore": "7",
+                    "teamID": "30",
+                    "scoreDetails": "9 plays, 63 yards, 4:18",
+                    "scoreType": "TD",
+                    "scoreTime": "7:36",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "16737",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Mike Evans 23 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "14",
+                    "awayScore": "17",
+                    "teamID": "30",
+                    "scoreDetails": "3 plays, 44 yards, 1:41",
+                    "scoreType": "TD",
+                    "scoreTime": "10:17",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "16737",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Sterling Shepard 4 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "17",
+                    "awayScore": "24",
+                    "teamID": "30",
+                    "scoreDetails": "7 plays, 82 yards, 4:21",
+                    "scoreType": "TD",
+                    "scoreTime": "1:56",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "2976592",
+                        "3150744"
+                    ]
+                }
+            ],
             "snapCounts": {
                 "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "53",
+                "defSnapPct": "0.00"
+            },
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20241003_TB@ATL",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "23.4",
+                "PPR": "23.4",
+                "halfPPR": "23.4"
+            }
+        },
+        "20240929_PHI@TB": {
+            "Defense": {
+                "fumblesLost": "0",
+                "defensiveInterceptions": "0",
+                "forcedFumbles": "0",
+                "fumbles": "1",
+                "fumblesRecovered": "1"
+            },
+            "Passing": {
+                "qbr": "82.1",
+                "rtg": "100.2",
+                "sacked": "2-13",
+                "passAttempts": "47",
+                "passAvg": "7.4",
+                "passTD": "2",
+                "passYds": "347",
+                "int": "0",
+                "passCompletions": "30"
+            },
+            "Rushing": {
+                "rushAvg": "2.5",
+                "rushYds": "10",
+                "carries": "4",
+                "longRush": "10",
+                "rushTD": "1"
+            },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
+            "scoringPlays": [
+                {
+                    "score": "Mike Evans 2 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q1",
+                    "homeScore": "7",
+                    "awayScore": "0",
+                    "teamID": "30",
+                    "scoreDetails": "10 plays, 79 yards, 5:16",
+                    "scoreType": "TD",
+                    "scoreTime": "9:44",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "16737",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Trey Palmer 15 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q1",
+                    "homeScore": "14",
+                    "awayScore": "0",
+                    "teamID": "30",
+                    "scoreDetails": "5 plays, 80 yards, 2:46",
+                    "scoreType": "TD",
+                    "scoreTime": "5:03",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4426407",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Baker Mayfield 1 Yd Run (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "21",
+                    "awayScore": "0",
+                    "teamID": "30",
+                    "scoreDetails": "5 plays, 22 yards, 1:57",
+                    "scoreType": "TD",
+                    "scoreTime": "14:09",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "3150744"
+                    ]
+                }
+            ],
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "77",
+                "defSnapPct": "0.00"
+            },
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20240929_PHI@TB",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "28.88",
+                "PPR": "28.88",
+                "halfPPR": "28.88"
+            }
+        },
+        "20240922_DEN@TB": {
+            "Passing": {
+                "qbr": "13.5",
+                "rtg": "83.3",
+                "sacked": "7-31",
+                "passAttempts": "33",
+                "passAvg": "4.9",
+                "passTD": "1",
+                "passYds": "163",
+                "int": "1",
+                "passCompletions": "25"
+            },
+            "Rushing": {
+                "rushAvg": "0.0",
+                "rushYds": "0",
+                "carries": "1",
+                "longRush": "0",
+                "rushTD": "0"
+            },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
+            "scoringPlays": [
+                {
+                    "score": "Chris Godwin 5 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "7",
+                    "awayScore": "17",
+                    "teamID": "30",
+                    "scoreDetails": "6 plays, 67 yards, 2:45",
+                    "scoreType": "TD",
+                    "scoreTime": "1:50",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "3116165",
+                        "3150744"
+                    ]
+                }
+            ],
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "57",
+                "defSnapPct": "0.00"
+            },
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20240922_DEN@TB",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "9.52",
+                "PPR": "9.52",
+                "halfPPR": "9.52"
+            }
+        },
+        "20240915_TB@DET": {
+            "Defense": {
+                "fumblesLost": "0",
+                "defensiveInterceptions": "0",
+                "forcedFumbles": "0",
+                "fumbles": "2",
+                "fumblesRecovered": "1"
+            },
+            "Passing": {
+                "qbr": "57.8",
+                "rtg": "90.9",
+                "sacked": "5-39",
+                "passAttempts": "19",
+                "passAvg": "9.7",
+                "passTD": "1",
+                "passYds": "185",
+                "int": "1",
+                "passCompletions": "12"
+            },
+            "Rushing": {
+                "rushAvg": "6.8",
+                "rushYds": "34",
+                "carries": "5",
+                "longRush": "12",
+                "rushTD": "1"
+            },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
+            "scoringPlays": [
+                {
+                    "score": "Chris Godwin 41 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "6",
+                    "awayScore": "13",
+                    "teamID": "30",
+                    "scoreDetails": "6 plays, 70 yards, 3:39",
+                    "scoreType": "TD",
+                    "scoreTime": "9:08",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "3116165",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Baker Mayfield 11 Yd Run (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "16",
+                    "awayScore": "20",
+                    "teamID": "30",
+                    "scoreDetails": "6 plays, 70 yards, 2:52",
+                    "scoreType": "TD",
+                    "scoreTime": "0:34",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "3150744"
+                    ]
+                }
+            ],
+            "snapCounts": {
+                "offSnapPct": "1.00",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "48",
+                "defSnapPct": "0.00"
+            },
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20240915_TB@DET",
+            "fantasyPoints": "0.0",
+            "fantasyPointsDefault": {
+                "standard": "19.8",
+                "PPR": "19.8",
+                "halfPPR": "19.8"
+            }
+        },
+        "20240908_WSH@TB": {
+            "Passing": {
+                "qbr": "84.2",
+                "rtg": "146.4",
+                "sacked": "1-9",
+                "passAttempts": "30",
+                "passAvg": "9.6",
+                "passTD": "4",
+                "passYds": "289",
+                "int": "0",
+                "passCompletions": "24"
+            },
+            "Rushing": {
+                "rushAvg": "7.0",
+                "rushYds": "21",
+                "carries": "3",
+                "longRush": "11",
+                "rushTD": "0"
+            },
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
+            "scoringPlays": [
+                {
+                    "score": "Mike Evans 17 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q2",
+                    "homeScore": "13",
+                    "awayScore": "0",
+                    "teamID": "30",
+                    "scoreDetails": "8 plays, 63 yards, 4:23",
+                    "scoreType": "TD",
+                    "scoreTime": "10:53",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "16737",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Chris Godwin 4 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q3",
+                    "homeScore": "23",
+                    "awayScore": "7",
+                    "teamID": "30",
+                    "scoreDetails": "5 plays, 54 yards, 2:10",
+                    "scoreType": "TD",
+                    "scoreTime": "7:11",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "3116165",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Jalen McMillan 32 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "30",
+                    "awayScore": "14",
+                    "teamID": "30",
+                    "scoreDetails": "5 plays, 72 yards, 1:57",
+                    "scoreType": "TD",
+                    "scoreTime": "14:55",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "4430834",
+                        "3150744"
+                    ]
+                },
+                {
+                    "score": "Mike Evans 1 Yd pass from Baker Mayfield (Chase McLaughlin Kick)",
+                    "scorePeriod": "Q4",
+                    "homeScore": "37",
+                    "awayScore": "14",
+                    "teamID": "30",
+                    "scoreDetails": "12 plays, 91 yards, 7:38",
+                    "scoreType": "TD",
+                    "scoreTime": "3:29",
+                    "team": "TB",
+                    "playerIDs": [
+                        "3052587",
+                        "16737",
+                        "3150744"
+                    ]
+                }
+            ],
+            "snapCounts": {
+                "offSnapPct": "0.97",
                 "defSnap": "0",
                 "stSnap": "0",
                 "stSnapPct": "0.00",
                 "offSnap": "62",
                 "defSnapPct": "0.00"
             },
-            "Passing": {
-                "qbr": "65.6",
-                "rtg": "89.0",
-                "sacked": "3-17",
-                "passAttempts": "29",
-                "passAvg": "8.4",
-                "passTD": "1",
-                "passYds": "245",
-                "int": "1",
-                "passCompletions": "19"
-            },
-            "longName": "Patrick Mahomes",
-            "Rushing": {
-                "rushAvg": "2.4",
-                "rushYds": "12",
-                "carries": "5",
-                "longRush": "13",
-                "rushTD": "0"
-            },
-            "scoringPlays": [
-                {
-                    "score": "Xavier Worthy 54 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "10",
-                    "awayScore": "7",
-                    "teamID": "16",
-                    "scoreDetails": "1 play, 54 yards, 0:08",
-                    "scoreType": "TD",
-                    "scoreTime": "4:06",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4683062",
-                        "3055899"
-                    ]
-                }
-            ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20240929_KC@LAC",
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20240908_WSH@TB",
             "fantasyPoints": "0.0",
             "fantasyPointsDefault": {
-                "standard": "14.0",
-                "PPR": "14.0",
-                "halfPPR": "14.0"
+                "standard": "29.66",
+                "PPR": "29.66",
+                "halfPPR": "29.66"
             }
         },
-        "20240922_KC@ATL": {
-            "teamAbv": "KC",
-            "snapCounts": {
-                "offSnapPct": "1.00",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "74",
-                "defSnapPct": "0.00"
-            },
-            "Passing": {
-                "qbr": "55.6",
-                "rtg": "87.2",
-                "sacked": "0-0",
-                "passAttempts": "39",
-                "passAvg": "5.6",
-                "passTD": "2",
-                "passYds": "217",
-                "int": "1",
-                "passCompletions": "26"
-            },
-            "longName": "Patrick Mahomes",
-            "Rushing": {
-                "rushAvg": "2.8",
-                "rushYds": "17",
-                "carries": "6",
-                "longRush": "15",
-                "rushTD": "0"
-            },
-            "scoringPlays": [
-                {
-                    "score": "Rashee Rice 13 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "7",
-                    "awayScore": "7",
-                    "teamID": "16",
-                    "scoreDetails": "13 plays, 79 yards, 6:15",
-                    "scoreType": "TD",
-                    "scoreTime": "8:45",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4428331",
-                        "3055899"
-                    ]
-                },
-                {
-                    "score": "JuJu Smith-Schuster 13 Yd pass from Patrick Mahomes (Harrison Butker PAT failed)",
-                    "scorePeriod": "Q3",
-                    "homeScore": "14",
-                    "awayScore": "22",
-                    "teamID": "16",
-                    "scoreDetails": "11 plays, 80 yards, 6:04",
-                    "scoreType": "TD",
-                    "scoreTime": "1:16",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "3120348",
-                        "3055899"
-                    ]
-                }
-            ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20240922_KC@ATL",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "17.38",
-                "PPR": "17.38",
-                "halfPPR": "17.38"
-            }
-        },
-        "20240915_CIN@KC": {
-            "Defense": {
-                "defTD": "1"
-            },
-            "teamAbv": "KC",
-            "snapCounts": {
-                "offSnapPct": "1.00",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "65",
-                "defSnapPct": "0.00"
-            },
-            "Passing": {
-                "qbr": "27.7",
-                "rtg": "80.6",
-                "sacked": "2-14",
-                "passAttempts": "25",
-                "passAvg": "6.0",
-                "passTD": "2",
-                "passYds": "151",
-                "int": "2",
-                "passCompletions": "18"
-            },
-            "longName": "Patrick Mahomes",
-            "Rushing": {
-                "rushAvg": "7.3",
-                "rushYds": "29",
-                "carries": "4",
-                "longRush": "9",
-                "rushTD": "0"
-            },
-            "scoringPlays": [
-                {
-                    "score": "Rashee Rice 44 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q2",
-                    "homeScore": "10",
-                    "awayScore": "10",
-                    "teamID": "16",
-                    "scoreDetails": "6 plays, 70 yards, 3:14",
-                    "scoreType": "TD",
-                    "scoreTime": "8:50",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4428331",
-                        "3055899"
-                    ]
-                },
-                {
-                    "score": "Wanya Morris 1 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q3",
-                    "homeScore": "17",
-                    "awayScore": "16",
-                    "teamID": "16",
-                    "scoreDetails": "13 plays, 70 yards, 6:39",
-                    "scoreType": "TD",
-                    "scoreTime": "8:21",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4570577",
-                        "3055899"
-                    ]
-                }
-            ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20240915_CIN@KC",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "20.94",
-                "PPR": "20.94",
-                "halfPPR": "20.94"
-            }
-        },
-        "20240905_BAL@KC": {
-            "teamAbv": "KC",
-            "snapCounts": {
-                "offSnapPct": "1.00",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "54",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "1",
-                "recTD": "0",
-                "longRec": "2",
-                "targets": "1",
-                "recYds": "2",
-                "recAvg": "2.0"
-            },
-            "Passing": {
-                "qbr": "65.7",
-                "rtg": "101.9",
-                "sacked": "2-10",
-                "passAttempts": "28",
-                "passAvg": "10.4",
-                "passTD": "1",
-                "passYds": "291",
-                "int": "1",
-                "passCompletions": "20"
-            },
-            "longName": "Patrick Mahomes",
-            "Rushing": {
-                "rushAvg": "1.5",
-                "rushYds": "3",
-                "carries": "2",
-                "longRush": "4",
-                "rushTD": "0"
-            },
-            "scoringPlays": [
-                {
-                    "score": "Xavier Worthy 35 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
-                    "scorePeriod": "Q4",
-                    "homeScore": "27",
-                    "awayScore": "17",
-                    "teamID": "16",
-                    "scoreDetails": "8 plays, 70 yards, 4:22",
-                    "scoreType": "TD",
-                    "scoreTime": "10:25",
-                    "team": "KC",
-                    "playerIDs": [
-                        "3139477",
-                        "4683062",
-                        "3055899"
-                    ]
-                }
-            ],
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20240905_BAL@KC",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "15.14",
-                "PPR": "16.14",
-                "halfPPR": "15.64"
-            }
-        },
-        "20240817_DET@KC": {
-            "teamAbv": "KC",
+        "20240823_MIA@TB": {
             "Passing": {
                 "qbr": "",
-                "rtg": "77.4",
+                "rtg": "118.8",
                 "sacked": "0-0",
-                "passAttempts": "14",
-                "passAvg": "6.6",
+                "passAttempts": "3",
+                "passAvg": "18.0",
                 "passTD": "0",
-                "passYds": "93",
-                "int": "0",
-                "passCompletions": "8"
-            },
-            "longName": "Patrick Mahomes",
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20240817_DET@KC",
-            "fantasyPoints": "0.0",
-            "fantasyPointsDefault": {
-                "standard": "3.72",
-                "PPR": "3.72",
-                "halfPPR": "3.72"
-            }
-        },
-        "20240810_KC@JAX": {
-            "teamAbv": "KC",
-            "Passing": {
-                "qbr": "",
-                "rtg": "92.7",
-                "sacked": "0-0",
-                "passAttempts": "4",
-                "passAvg": "6.8",
-                "passTD": "0",
-                "passYds": "27",
+                "passYds": "54",
                 "int": "0",
                 "passCompletions": "3"
             },
-            "longName": "Patrick Mahomes",
-            "playerID": "3139477",
-            "team": "KC",
-            "teamID": "16",
-            "gameID": "20240810_KC@JAX",
+            "longName": "Baker Mayfield",
+            "playerID": "3052587",
+            "team": "TB",
+            "teamAbv": "TB",
+            "teamID": "30",
+            "gameID": "20240823_MIA@TB",
             "fantasyPoints": "0.0",
             "fantasyPointsDefault": {
-                "standard": "1.08",
-                "PPR": "1.08",
-                "halfPPR": "1.08"
+                "standard": "2.16",
+                "PPR": "2.16",
+                "halfPPR": "2.16"
             }
         }
     }

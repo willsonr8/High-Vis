@@ -1,8 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
 import {Select, SelectItem, Selection} from "@nextui-org/react";
 import {getColumnsForPosition, StatKey} from "@/components/player_name/NewTable";
-import RenderLineChart from "@/components/player_name/LineChart";
-import {GameStats, PlayerStats} from "@/interfaces/playerStats";
 
 export default function DataToggle({ position, setSelectionKey }: { position: string; setSelectionKey: any}) {
     const [options, setOptions] = useState<{key: StatKey; label: string}[]>([]);

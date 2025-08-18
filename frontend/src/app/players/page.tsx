@@ -1,7 +1,6 @@
 "use client"
 import React from 'react';
 import NavBar from "@/components/NavBar";
-import PlayerPage from "@/components/player_name/PlayerPage";
 import { useState, useEffect } from "react";
 import NewPlayerPage from "@/components/player_name/NewPlayerPage";
 import {PlayerInfoProp} from "@/interfaces/playerInfo";

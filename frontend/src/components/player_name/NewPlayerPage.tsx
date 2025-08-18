@@ -1,17 +1,16 @@
-import React, {useEffect, useState, useMemo} from "react";
-import {PlayerInfo, PlayerInfoProp} from "@/interfaces/playerInfo";
-import {getSessionStorage} from "@/utils/getSessionStorage";
+import React, {useEffect, useState} from "react";
+import {PlayerInfoProp} from "@/interfaces/playerInfo";
 import {EmptyPlayerStats, NewPlayerStats, PlayerStats} from "@/interfaces/playerStats";
-import {getTeamName} from "@/utils/teamMap";
 import SeasonSelect from "@/components/player_name/Select";
-import RenderTable from "@/components/player_name/Table";
 import RenderNewTable, {StatKey} from "@/components/player_name/NewTable"
 import DataToggle from "@/components/player_name/DataToggle";
 import RenderLineChart from "@/components/player_name/LineChart";
 import {getFantasyPlayerStats} from "@/api/ApiCalls";
+import PlayerHeader from "@/components/player_name/PlayerHeader";
 
 
 export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.Element {
+    const [playerBio] = useState<PlayerInfoProp>({player: player})
     const [playerID, setPlayerID] = useState<string | null>(null)
     const [position, setPosition] = useState<string>("")
     const [year, setYear] = useState("2024");
@@ -72,24 +71,7 @@ export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.El
                     <div className={"text-white text-center"}>
                         Loading ...
                     </div>
-                ) : (
-                    <div className={"player-bio-container"}>
-                        <div className={"headshot-container"}>
-                            <img src={player["espnHeadshot"]} alt="player image"/>
-                        </div>
-                        <div className={"bio-text-container text-white"}>
-                            <span>{`${player.name}`}</span>
-                            <br/>
-                            <span>{`${player.position}`}</span>
-                            <br/>
-                            <span>{`${player.teamAbv}, #${player.jerseyNum}`}</span>
-                            <br/>
-                            <span>{`${player.age} y/o, ${player.birthday}`}</span>
-                        </div>
-                        <div className={"team-image-container"}>
-                            <img src={`/team_logos/${getTeamName(player.teamAbv)}-logo.png`} alt="team logo image"/>
-                        </div>
-                    </div>)}
+                ) : (<PlayerHeader {...playerBio}/>)}
             </div>
             <div className={"container-2"}>
                 {playerDataLoading ? (
