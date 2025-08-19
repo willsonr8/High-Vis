@@ -11,15 +11,15 @@ export default function PlayerHeader({ player } : PlayerInfoProp) {
                 <img src={player["espnHeadshot"]} alt="player image"/>
             </div>
             <div className={"bio-text-container"}>
-                <div className={"player-name-container"}>
+                <div className={"player-name-container aldrich"}>
                     <span className={"player-name"}>{`${player.name}`}</span>
                 </div>
-                <div className={"player-details-container text-white"}>
+                <div className={"player-details-container"}>
                     <span>{`Position: ${player.position}`}</span>
                     <br/>
-                    <span>{`Team: ${getFullTeamName(player.teamAbv)}, #${player.jerseyNum}`}</span>
-                    <br/>
                     <span>{`School: ${player.school}`}</span>
+                    <br/>
+                    <span>{`Team: ${getFullTeamName(player.teamAbv)}, #${player.jerseyNum}`}</span>
                     <br/>
                     <span>{`Age: ${player.age} y/o, born ${player.birthday}`}</span>
                     <br/>
