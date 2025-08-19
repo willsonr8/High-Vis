@@ -8,7 +8,6 @@ import RenderLineChart from "@/components/player_name/LineChart";
 import {getFantasyPlayerStats} from "@/api/ApiCalls";
 import PlayerHeader from "@/components/player_name/PlayerHeader";
 
-
 export default function NewPlayerPage({ player } : PlayerInfoProp): React.JSX.Element {
     const [playerBio] = useState<PlayerInfoProp>({player: player})
     const [playerID, setPlayerID] = useState<string | null>(null)

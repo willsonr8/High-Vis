@@ -1,25 +1,42 @@
 "use client"
 import React from 'react';
 import NavBar from "@/components/NavBar";
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import NewPlayerPage from "@/components/player_name/NewPlayerPage";
 import {PlayerInfoProp} from "@/interfaces/playerInfo";
+import {useSearchParams} from 'next/navigation';
+import {getPlayerBio} from '@/api/ApiCalls';
 
 const PlayerHome: React.FC = () => {
     const [player, setPlayer] = useState<PlayerInfoProp>();
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false);
+    const searchParams = useSearchParams();
+    const playerName = searchParams?.get('player-name')
 
     useEffect(() => {
-        const storedPlayer = sessionStorage.getItem('player');
-        if(storedPlayer) {
-            setPlayer(JSON.parse(storedPlayer))
+        if (!playerName) {
+            setError(true);
             setLoading(false);
-        } else {
-            setError(true); // Set error state if no player data is found
-            setLoading(false);
+            return;
         }
-    }, []);
+        setLoading(true);
+        getPlayerBio(playerName)
+            .then((data) => {
+                if (data) {
+                    setPlayer(data);
+                    setError(false);
+                } else {
+                    setError(true);
+                }
+                setLoading(false);
+            })
+            .catch(() => {
+                setError(true);
+                setLoading(false);
+            });
+    }, [playerName]);
+
     return (
         <div className={"all-container"}>
             <NavBar/>

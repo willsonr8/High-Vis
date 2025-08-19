@@ -1,9 +1,9 @@
-import {Image} from "@nextui-org/react";
 import React from "react";
 import Link from "next/link";
 import {faXTwitter, faInstagram, faGithub} from '@fortawesome/free-brands-svg-icons';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {transformWithEsbuild} from "vite";
+import {MiniSearch} from "@/components/Search";
+
 function NavBar() {
     return (
             <nav className={"global-navbar"}>
@@ -15,6 +15,9 @@ function NavBar() {
                         <li className={"navbar-item active"}><a href={"/"}>Player Search</a></li>
                         <li className={"navbar-item"}><a href={"#"}>About Us</a></li>
                     </ul>
+                    <div>
+                        <MiniSearch/>
+                    </div>
                     <ul className={"social-icons"}>
                         <li className={"icon"}>
                             <Link href="https://github.com/willsonr8/High-Vis/" target="_blank">

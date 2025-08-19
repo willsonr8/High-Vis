@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {Dispatch, SetStateAction, useEffect} from "react";
 import {Select, SelectItem, Selection} from "@nextui-org/react";
 
 const data = [
@@ -6,7 +6,7 @@ const data = [
     {key: "2023", label: "2023"}
 ]
 
-export default function SeasonSelect({ year, setYear }) {
+export default function SeasonSelect({ year, setYear }: {year: string, setYear: Dispatch<SetStateAction<string>>}) {
   const [value, setValue] = React.useState<Selection>(new Set([year]));
   useEffect(() => {
       const selectedYear = Array.from(value)[0];
@@ -14,7 +14,7 @@ export default function SeasonSelect({ year, setYear }) {
           setYear(selectedYear);
           console.log("Year in Select.tsx: ", selectedYear)
       } else {
-          console.log("Year is not a string")
+          console.error("Year is not a string")
       }
   }, [value, setYear, year]);
   return (
