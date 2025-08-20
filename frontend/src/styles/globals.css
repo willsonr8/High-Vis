@@ -158,6 +158,15 @@ div {
   flex-basis: 0;
 }
 
+.mini-search-form {
+
+}
+
+.mini-submit-button {
+  height: 18px;
+  width: 18px;
+}
+
 .primary-search {
   border-radius: 2rem;
   padding: 9px 2.5rem 9px 2.5rem;

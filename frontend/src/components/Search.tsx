@@ -1,14 +1,16 @@
 import {MagnifyingGlassIcon} from '@heroicons/react/24/outline';
-import React, {ChangeEvent, Dispatch, FormEvent, SetStateAction, useState} from 'react';
+import React, {ChangeEvent, Dispatch, FormEvent, SetStateAction, useEffect, useState, useRef} from 'react';
 import {getPlayerBio} from '@/api/ApiCalls';
 import {useRouter} from "next/navigation";
 import {PlayerInfoProp} from "@/interfaces/playerInfo";
 import {AppRouterInstance} from "next/dist/shared/lib/app-router-context.shared-runtime";
 
-const validateTerm = (inputTerm: string) => inputTerm.replace(/ /g, "_")
+const sanitizeInput = (input: string) => input.replace(/[^a-zA-Z0-9_ ]/g, "");
+
+const validateTerm = (inputTerm: string) => inputTerm.replace(/ /g, "_");
 
 const createHandleChange = (setTerm: Dispatch<SetStateAction<string>>) =>
-    (e: ChangeEvent<HTMLInputElement>)=> setTerm(e.target.value);
+    (e: ChangeEvent<HTMLInputElement>) => setTerm(e.target.value);
 
 const createHandleSubmit = (
     term: string,
@@ -16,7 +18,7 @@ const createHandleSubmit = (
     router: AppRouterInstance
 ) => async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const cleanTerm = validateTerm(term);
+    const cleanTerm = validateTerm(sanitizeInput(term));
     const playerData: PlayerInfoProp = await getPlayerBio(cleanTerm);
     if (playerData) {
         setError(false);
@@ -57,21 +59,35 @@ const Search = () => {
 
 export const MiniSearch = () => {
     const [term, setTerm] = useState('');
+    const [openSearch, setOpenSearch] = useState(false);
     const [searchError, setSearchError] = useState(false);
     const router = useRouter();
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+        if (openSearch && inputRef.current) {
+            inputRef.current.focus();
+        }
+    }, [openSearch]);
 
     return (
         <div>
-            <form className="mini-search-form" onSubmit={createHandleSubmit(term, setSearchError, router)}>
-                <input
-                    type={"text"}
-                    className="mini-search"
-                    placeholder={"Search players"}
-                    value={term}
-                    onChange={createHandleChange(setTerm)}
-                />
-                <button className={"mini-submit"} type="submit">Search</button>
-            </form>
+            {openSearch ?
+                (<form className="mini-search-form" onSubmit={createHandleSubmit(term, setSearchError, router)}>
+                    <input
+                        ref={inputRef}
+                        type={"text"}
+                        className="mini-search"
+                        placeholder={"Search players"}
+                        value={term}
+                        onChange={createHandleChange(setTerm)}
+                        onBlur={() => setOpenSearch(false)}
+                    />
+                    <button type="submit"><MagnifyingGlassIcon className={"mini-submit-button"}/></button>
+                </form>) : (
+                    <button type="button" onClick={() => setOpenSearch(true)}>
+                        <MagnifyingGlassIcon className="mini-submit-button"/></button>
+                )}
         </div>
     )
 }

@@ -1,5 +1,4 @@
 import Search from "@/components/Search"
-import NextSearchBar from "@/components/NextSearchBar";
 
 const HomePage = () => {
     return (

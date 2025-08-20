@@ -13,15 +13,6 @@
                 "sacks": "0",
                 "passDeflections": "0"
             },
-            "teamAbv": "SF",
-            "snapCounts": {
-                "offSnapPct": "0.92",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "70",
-                "defSnapPct": "0.00"
-            },
             "Receiving": {
                 "receptions": "6",
                 "recTD": "1",
@@ -31,6 +22,7 @@
                 "recAvg": "11.5"
             },
             "longName": "Ricky Pearsall",
+            "playerID": "4428209",
             "scoringPlays": [
                 {
                     "score": "Ricky Pearsall 6 Yd pass from Joshua Dobbs (Jake Moody Kick)",
@@ -49,8 +41,16 @@
                     ]
                 }
             ],
-            "playerID": "4428209",
+            "snapCounts": {
+                "offSnapPct": "0.92",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "70",
+                "defSnapPct": "0.00"
+            },
             "team": "SF",
+            "teamAbv": "SF",
             "teamID": "28",
             "gameID": "20250105_SF@ARI",
             "fantasyPoints": "0.0",
@@ -61,23 +61,6 @@
             }
         },
         "20241230_DET@SF": {
-            "teamAbv": "SF",
-            "snapCounts": {
-                "offSnapPct": "0.70",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "45",
-                "defSnapPct": "0.00"
-            },
-            "Receiving": {
-                "receptions": "8",
-                "recTD": "1",
-                "longRec": "40",
-                "targets": "10",
-                "recYds": "141",
-                "recAvg": "17.6"
-            },
             "Passing": {
                 "qbr": "2.3",
                 "rtg": "39.6",
@@ -89,7 +72,14 @@
                 "int": "0",
                 "passCompletions": "0"
             },
-            "longName": "Ricky Pearsall",
+            "Receiving": {
+                "receptions": "8",
+                "recTD": "1",
+                "longRec": "40",
+                "targets": "10",
+                "recYds": "141",
+                "recAvg": "17.6"
+            },
             "Rushing": {
                 "rushAvg": "3.0",
                 "rushYds": "6",
@@ -97,6 +87,8 @@
                 "longRush": "4",
                 "rushTD": "0"
             },
+            "longName": "Ricky Pearsall",
+            "playerID": "4428209",
             "scoringPlays": [
                 {
                     "score": "Ricky Pearsall 3 Yd pass from Brock Purdy (Jake Moody Kick)",
@@ -115,8 +107,16 @@
                     ]
                 }
             ],
-            "playerID": "4428209",
+            "snapCounts": {
+                "offSnapPct": "0.70",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "45",
+                "defSnapPct": "0.00"
+            },
             "team": "SF",
+            "teamAbv": "SF",
             "teamID": "28",
             "gameID": "20241230_DET@SF",
             "fantasyPoints": "0.0",
@@ -127,15 +127,6 @@
             }
         },
         "20241222_SF@MIA": {
-            "teamAbv": "SF",
-            "snapCounts": {
-                "offSnapPct": "0.72",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "46",
-                "defSnapPct": "0.00"
-            },
             "Receiving": {
                 "receptions": "4",
                 "recTD": "0",
@@ -146,7 +137,16 @@
             },
             "longName": "Ricky Pearsall",
             "playerID": "4428209",
+            "snapCounts": {
+                "offSnapPct": "0.72",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "46",
+                "defSnapPct": "0.00"
+            },
             "team": "SF",
+            "teamAbv": "SF",
             "teamID": "28",
             "gameID": "20241222_SF@MIA",
             "fantasyPoints": "0.0",
@@ -157,15 +157,6 @@
             }
         },
         "20241212_LAR@SF": {
-            "teamAbv": "SF",
-            "snapCounts": {
-                "offSnapPct": "0.56",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "30",
-                "defSnapPct": "0.00"
-            },
             "Receiving": {
                 "receptions": "1",
                 "recTD": "0",
@@ -176,7 +167,16 @@
             },
             "longName": "Ricky Pearsall",
             "playerID": "4428209",
+            "snapCounts": {
+                "offSnapPct": "0.56",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "30",
+                "defSnapPct": "0.00"
+            },
             "team": "SF",
+            "teamAbv": "SF",
             "teamID": "28",
             "gameID": "20241212_LAR@SF",
             "fantasyPoints": "0.0",
@@ -187,15 +187,6 @@
             }
         },
         "20241208_CHI@SF": {
-            "teamAbv": "SF",
-            "snapCounts": {
-                "offSnapPct": "0.49",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "30",
-                "defSnapPct": "0.00"
-            },
             "Receiving": {
                 "receptions": "1",
                 "recTD": "0",
@@ -206,7 +197,16 @@
             },
             "longName": "Ricky Pearsall",
             "playerID": "4428209",
+            "snapCounts": {
+                "offSnapPct": "0.49",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "30",
+                "defSnapPct": "0.00"
+            },
             "team": "SF",
+            "teamAbv": "SF",
             "teamID": "28",
             "gameID": "20241208_CHI@SF",
             "fantasyPoints": "0.0",
@@ -217,15 +217,6 @@
             }
         },
         "20241201_SF@BUF": {
-            "teamAbv": "SF",
-            "snapCounts": {
-                "offSnapPct": "0.73",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "35",
-                "defSnapPct": "0.00"
-            },
             "Receiving": {
                 "receptions": "0",
                 "recTD": "0",
@@ -236,7 +227,16 @@
             },
             "longName": "Ricky Pearsall",
             "playerID": "4428209",
+            "snapCounts": {
+                "offSnapPct": "0.73",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "35",
+                "defSnapPct": "0.00"
+            },
             "team": "SF",
+            "teamAbv": "SF",
             "teamID": "28",
             "gameID": "20241201_SF@BUF",
             "fantasyPoints": "0.0",
@@ -247,7 +247,15 @@
             }
         },
         "20241124_SF@GB": {
-            "teamAbv": "SF",
+            "Punting": {
+                "puntReturns": "3",
+                "puntReturnYds": "41",
+                "puntReturnAvg": "13.7",
+                "puntReturnLong": "20",
+                "puntReturnTD": "0"
+            },
+            "longName": "Ricky Pearsall",
+            "playerID": "4428209",
             "snapCounts": {
                 "offSnapPct": "0.67",
                 "defSnap": "0",
@@ -256,16 +264,8 @@
                 "offSnap": "33",
                 "defSnapPct": "0.00"
             },
-            "longName": "Ricky Pearsall",
-            "Punting": {
-                "puntReturns": "3",
-                "puntReturnYds": "41",
-                "puntReturnAvg": "13.7",
-                "puntReturnLong": "20",
-                "puntReturnTD": "0"
-            },
-            "playerID": "4428209",
             "team": "SF",
+            "teamAbv": "SF",
             "teamID": "28",
             "gameID": "20241124_SF@GB",
             "fantasyPoints": "0.0",
@@ -276,15 +276,6 @@
             }
         },
         "20241117_SEA@SF": {
-            "teamAbv": "SF",
-            "snapCounts": {
-                "offSnapPct": "0.59",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "37",
-                "defSnapPct": "0.00"
-            },
             "Receiving": {
                 "receptions": "0",
                 "recTD": "0",
@@ -295,7 +286,16 @@
             },
             "longName": "Ricky Pearsall",
             "playerID": "4428209",
+            "snapCounts": {
+                "offSnapPct": "0.59",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "37",
+                "defSnapPct": "0.00"
+            },
             "team": "SF",
+            "teamAbv": "SF",
             "teamID": "28",
             "gameID": "20241117_SEA@SF",
             "fantasyPoints": "0.0",
@@ -306,15 +306,6 @@
             }
         },
         "20241110_SF@TB": {
-            "teamAbv": "SF",
-            "snapCounts": {
-                "offSnapPct": "0.64",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "41",
-                "defSnapPct": "0.00"
-            },
             "Receiving": {
                 "receptions": "4",
                 "recTD": "1",
@@ -324,6 +315,7 @@
                 "recAvg": "18.3"
             },
             "longName": "Ricky Pearsall",
+            "playerID": "4428209",
             "scoringPlays": [
                 {
                     "score": "Ricky Pearsall 46 Yd pass from Brock Purdy (Jake Moody Kick)",
@@ -342,8 +334,16 @@
                     ]
                 }
             ],
-            "playerID": "4428209",
+            "snapCounts": {
+                "offSnapPct": "0.64",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "41",
+                "defSnapPct": "0.00"
+            },
             "team": "SF",
+            "teamAbv": "SF",
             "teamID": "28",
             "gameID": "20241110_SF@TB",
             "fantasyPoints": "0.0",
@@ -354,15 +354,6 @@
             }
         },
         "20241027_DAL@SF": {
-            "teamAbv": "SF",
-            "snapCounts": {
-                "offSnapPct": "0.59",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "40",
-                "defSnapPct": "0.00"
-            },
             "Receiving": {
                 "receptions": "4",
                 "recTD": "0",
@@ -371,7 +362,6 @@
                 "recYds": "38",
                 "recAvg": "9.5"
             },
-            "longName": "Ricky Pearsall",
             "Rushing": {
                 "rushAvg": "39.0",
                 "rushYds": "39",
@@ -379,8 +369,18 @@
                 "longRush": "39",
                 "rushTD": "0"
             },
+            "longName": "Ricky Pearsall",
             "playerID": "4428209",
+            "snapCounts": {
+                "offSnapPct": "0.59",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "40",
+                "defSnapPct": "0.00"
+            },
             "team": "SF",
+            "teamAbv": "SF",
             "teamID": "28",
             "gameID": "20241027_DAL@SF",
             "fantasyPoints": "0.0",
@@ -391,15 +391,6 @@
             }
         },
         "20241020_KC@SF": {
-            "teamAbv": "SF",
-            "snapCounts": {
-                "offSnapPct": "0.76",
-                "defSnap": "0",
-                "stSnap": "0",
-                "stSnapPct": "0.00",
-                "offSnap": "48",
-                "defSnapPct": "0.00"
-            },
             "Receiving": {
                 "receptions": "3",
                 "recTD": "0",
@@ -409,6 +400,7 @@
                 "recAvg": "7.0"
             },
             "longName": "Ricky Pearsall",
+            "playerID": "4428209",
             "scoringPlays": [
                 {
                     "score": "Brock Purdy 1 Yd Rush Brock Purdy Pass To Ricky Pearsall For Two-Point Conversion No Good Pass Incomplete",
@@ -426,8 +418,16 @@
                     ]
                 }
             ],
-            "playerID": "4428209",
+            "snapCounts": {
+                "offSnapPct": "0.76",
+                "defSnap": "0",
+                "stSnap": "0",
+                "stSnapPct": "0.00",
+                "offSnap": "48",
+                "defSnapPct": "0.00"
+            },
             "team": "SF",
+            "teamAbv": "SF",
             "teamID": "28",
             "gameID": "20241020_KC@SF",
             "fantasyPoints": "0.0",
